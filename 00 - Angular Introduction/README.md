@@ -33,6 +33,7 @@ As a platform, Angular includes:
   
 # download the official Angular CLI
 -  navigate to https://angular.io/cli and follow the instruction to download angular cli.
+-  open the command prompt and run the following command to install the cli.
 
 ```
 npm install -g @angular/cli
@@ -46,5 +47,7 @@ ng new my-first-project
 cd my-first-project
 ng serve 
 ```
--  the project name should not have spaces or test word
--  serve command to run up the server that will run the angular project, then we can access it from the browser
+-  the project name should not have spaces or test word.
+-  a folder with the name ***my-first-project*** will be created in the current working directory.
+-   when you use the ***ng serve*** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
+-   now your first application is up and running on http://localhost:4200/
