@@ -16,4 +16,7 @@
   inline style vs StyleUrl
 
 # selectors
-selectors can be elements, attributes or classes
+selectors can be elements, attributes or css classes
+
+
+# Data Binding
