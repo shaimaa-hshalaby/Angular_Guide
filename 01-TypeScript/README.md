@@ -106,6 +106,7 @@ https://www.typescriptlang.org/play
   ```
 
 The type of the x variable is inferred to be number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
+writing the type here condsidered a redundancy.
 
 
 # Union types
@@ -114,5 +115,27 @@ Union types are used when a variable can hold more than a single type.
     let code: string | number = 'C123';
     code = 123;
   ```
+
+
+# Type Aliases
+it’s common to want to use the same type more than once and refer to it by a single name.
+So we can declare a type and use it as follows:
+
+    ```
+    type Person = {
+        name: string
+        age: number
+        active: boolean
+    }
+    
+    let p1: Person;
+    
+    p1 = {
+        name: 'Aya',
+        age: 20,
+        active:true
+    }
+    
+    ```
 
 
