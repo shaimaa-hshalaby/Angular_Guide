@@ -20,3 +20,4 @@ selectors can be elements, attributes or css classes
 
 
 # Data Binding
+it is some sort of communication between templates(Html) and typescript code to display dynamic data into the templates
