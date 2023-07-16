@@ -8,3 +8,12 @@
 # create components  manually or from angular CLI
 -  ng generate component <COMPONENT_NAME>
 -  ng g c <COMPONENT_NAME>
+
+# inline template vs templateUrl
+- we can use inline template by using the attribute template instead of templateUrl in the Component decoration
+
+# Styling components
+  inline style vs StyleUrl
+
+# selectors
+selectors can be elements, attributes or classes
