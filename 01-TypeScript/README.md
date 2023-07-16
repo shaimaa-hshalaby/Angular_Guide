@@ -122,20 +122,43 @@ it’s common to want to use the same type more than once and refer to it by a s
 So we can declare a type and use it as follows:
 
     ```
-    type Person = {
-        name: string
-        age: number
-        active: boolean
-    }
-    
-    let p1: Person;
-    
-    p1 = {
-        name: 'Aya',
-        age: 20,
-        active:true
-    }
+      type Person = {
+          name: string
+          age: number
+          active: boolean
+      }
+      
+      let p1: Person;
+      
+      p1 = {
+          name: 'Aya',
+          age: 20,
+          active:true
+      }
     
     ```
 
+
+# Functions and Types
+
+  - Return values
+      In the typescript, we can declare the return type after parameters as follows:
+         ```
+            function add(a: number, b:number): number{
+                return a+b;
+            }
+         ```
+      -  in the previous example, the return type is redundant because typescript should infer this.
+      -  function can return void, if there is no return value.
+
+  - any
+      If the type of paramter is not important, we can use the type **any**
+        ```
+        function print(value: any){
+            console.log(value);
+        }
+        
+        ```
+
+  - Generic
 
