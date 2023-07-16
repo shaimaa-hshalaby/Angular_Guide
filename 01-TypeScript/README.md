@@ -162,3 +162,15 @@ So we can declare a type and use it as follows:
 
   - Generic
 
+
+# Classes, Constructors, access modifiers
+
+# short hand notation in the classes
+
+
+# interfaces
+Object type definition
+
+
+# class implements interface
+
