@@ -1,0 +1,2 @@
+- what is the difference between alias and class?
+- what is the difference between let and const
