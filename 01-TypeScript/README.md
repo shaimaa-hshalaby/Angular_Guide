@@ -7,7 +7,10 @@
 
 # Why do we use Typescript?
 -  Javascript is a dynamically typed programming language, functions do not expect specific types of parameters.
--  
+
+# official typescript website
+https://www.typescriptlang.org/
+
 # online Typescript editor
 you can find an online typescript compiler at this link
 https://www.typescriptlang.org/play
