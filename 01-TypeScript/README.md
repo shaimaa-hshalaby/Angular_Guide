@@ -8,6 +8,9 @@
 # Why do we use Typescript?
 -  Javascript is a dynamically typed programming language, functions do not expect specific types of parameters.
 -  
+# online Typescript editor
+you can find an online typescript compiler at this link
+https://www.typescriptlang.org/play
 
 # install Typescript
 -  you need nodejs environment to be installed on your machine.
@@ -67,6 +70,49 @@
               active: false
           }
          ```
+
+    -  Array of Objects
+         ```
+          let persons : {
+              name:string;
+              age:number;
+              active:boolean;
+          }[];
+          
+          persons = [
+              {
+                  name: 'Hamza',
+                  age: 10,
+                  active: true
+              },
+              {
+                  name: 'Omar',
+                  age: 9,
+                  active: false
+              },
+              {
+                  name: 'Ali',
+                  age: 8,
+                  active: true
+              }
+          
+          
+          ]
+        ```
    # Type Inference
-   
+   In TypeScript, there are several places where type inference is used to provide type information when there is no explicit type annotation. For example, in this code
+  ```
+    let x = 30;
+  ```
+
+The type of the x variable is inferred to be number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
+
+
+# Union types
+Union types are used when a variable can hold more than a single type.
+ ```
+    let code: string | number = 'C123';
+    code = 123;
+  ```
+
 
