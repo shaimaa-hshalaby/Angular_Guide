@@ -28,3 +28,9 @@ it is some sort of communication between templates(Html) and typescript code to 
 -  event binding
   (event) = "ts method name"
 -  two way binding
+
+# Directives 
+
+**ngIf** structural directive
+**ngIf else**
+
