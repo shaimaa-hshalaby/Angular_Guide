@@ -21,3 +21,10 @@ selectors can be elements, attributes or css classes
 
 # Data Binding
 it is some sort of communication between templates(Html) and typescript code to display dynamic data into the templates
+-  string interpolation
+    {{  }}
+-  property binding
+  [html_Atr] = "typescript attribute"
+-  event binding
+  (event) = "ts method name"
+-  two way binding
