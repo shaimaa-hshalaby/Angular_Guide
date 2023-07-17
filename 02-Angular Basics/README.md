@@ -31,6 +31,10 @@ it is some sort of communication between templates(Html) and typescript code to 
 
 # Directives 
 
-**ngIf** structural directive
+**ngIf** structural directive which means that it adds and removes elements
 **ngIf else**
+
+**ngStyle**
+**ngClass**
+
 
