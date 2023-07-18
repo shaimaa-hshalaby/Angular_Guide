@@ -38,3 +38,6 @@ it is some sort of communication between templates(Html) and typescript code to 
 **ngClass**
 
 
+# Debugger attached to the browser
+developer tools -> sources -> webpack -> choose your file and add break point
+
