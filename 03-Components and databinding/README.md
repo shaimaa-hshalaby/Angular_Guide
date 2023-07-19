@@ -11,4 +11,4 @@ use @input() decorator
 
 **binding to custom event**
 to pass the event out of the component we use
-      @Output eventName = new EventEmitter(dataType)
+      @Output eventName = new EventEmitter<dataType>()
