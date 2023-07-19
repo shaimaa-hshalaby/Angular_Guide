@@ -58,11 +58,33 @@ the following screenshot gives us a deep dive inside the hierarchy of the angula
 
 ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6f0bf544-ebec-40a9-8138-a4318639f44f)
 
-### AppComponent
-
-![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4b78ed62-372e-436f-85f4-4705c52b0cb3)
-
 ### angular.json
   angular.json file provides project-specific configuration defaults. These are used for build and development tools provided by the Angular CLI.
-for more details about configuration inside angular.json please check the documentation https://angular.io/guide/workspace-config
+for more details about configuration inside angular.json, please check the documentation https://angular.io/guide/workspace-config
+
+### tsconfig.json
+Browsers can't execute TypeScript directly. Typescript must be "transpiled" into JavaScript using the tsc compiler, which requires some configuration.
+so tsconfig.json file holds the default configuration of the tsc compiler that is used 
+for more details about the tsconfig.json, please check the documentation https://angular.io/guide/typescript-configuration
+
+
+### AppComponent
+App Component is the default root component created in the angular-generated project(skeleton).
+
+the component has 
+  - Typescript file.  *(app.component.ts)*
+  - HTML template file.  *(app.component.html)*
+  - CSS template file.  *(app.component.css)*
+  - Testing file.  *(app.component.spec.ts)*
+    
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4b78ed62-372e-436f-85f4-4705c52b0cb3)
+
+inside the component typescript file, we can find a typescript class decorated by *@Component()* decoration with some metadata that refers to the HTML template, CSS file and the selector name.
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/93068d63-5c51-4a5e-ac4f-288ccf9b1ab8)
+
+
+
+### App Module *(app.module.ts)
+
 
