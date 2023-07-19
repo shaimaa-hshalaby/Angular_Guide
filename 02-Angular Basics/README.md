@@ -1,13 +1,5 @@
 # Angular Basics
 
--  angular CLI inject script code to the end of the index.html page, these scripts are responsible for firing angular code to be executed and replace the content of the index page with the component HTML
--  the entry point of the angular is main.ts
--  you will the import *{ AppModule } from './app/app.module'* inside the main.ts file;
--  by default, angular does not scan all your files to search for components, instead, you must register your components inside the *app.module.ts* file by adding the Component name to the **declarations** array inside the *@NgModule()* decoration.
-  
-  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/69c167cf-f97b-4a4c-923c-1bf50941c464)
-
-
 ## Components
 Components are the building blocks that compose an application as shown below:
 
@@ -20,9 +12,35 @@ A component includes:
   3.  style (optional)
         - coded in the component decoration or in a CSS file
         
-
 ### Create components  manually or from angular CLI
--  ng generate component <COMPONENT_NAME>
+
+#### Manual Creation
+1  -  you can create the component files manually by creating a folder inside the app folder and adding the component files as shown in the screenshot below:
+  
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c092e09c-6b41-4f2f-a9c1-b41b6353d09f)
+
+2  -  create the *ManualHelloWorldComponent* Typescript class inside the ts file and export it as follows:
+  ```
+    import {Component} from '@angular/core'
+
+    @Component({
+        selector:'app-manual-hello-world',
+        templateUrl:'./manual-helloworld.component.html',
+        styleUrls:['./manual-helloworld.component.css']
+    })
+    export class ManualHelloWorldComponent{
+    
+    }
+  ```
+
+
+
+
+
+
+--------
+
+     ng generate component <COMPONENT_NAME>
 -  ng g c <COMPONENT_NAME>
 
 ### inline template vs templateUrl
