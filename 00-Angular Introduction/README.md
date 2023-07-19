@@ -86,5 +86,37 @@ inside the component typescript file, we can find a typescript class decorated b
 
 
 ### App Module *(app.module.ts)
+Every application has at least one Angular module, the root module, which must be present for bootstrapping the application on launch. By convention and by default, this NgModule is named AppModule.
+we can check the details of this AppModule inside the file *app.module.ts* 
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/ad6d9393-79d1-4291-9a09-e453a87354e7)
+
+Deep dive inside the app.module.ts file
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0474bd77-cccc-4dce-b622-5b61274f3b97)
+
+
+-  **The @NgModule decorator**
+      -  the @NgModule decorator identifies AppModule as a NgModule class. @NgModule takes a metadata object that tells Angular how to compile and launch the application.
+-  **declarations array**
+     -  The module's declarations array tells Angular which components belong to that module. As you create more components, add them to declarations.
+     -  we can declare components, pipes and directives in the declarations array.
+     -  components, pipes and directives must belong to one module only
+     -  to register components to a module, we must do 3 steps:
+         - export the component, pipe or directive from the file where we wrote it.
+         - import the component, pipe or directive to the module file
+         - add it to the *declarations* array
+         - 
+-  **Imports array**
+    -  The module's imports array appears exclusively in the @NgModule metadata object. It tells Angular about other NgModules that this particular module needs to function properly.
+ 
+- **Providers array**
+    -  The providers array is where you list the services the application needs. When you list services here, they are available app-wide.
+
+- **bootstrap array**
+    -  The application launches by bootstrapping the root AppModule, which is also referred to as an entryComponent.
+    -  the bootstrapping process creates the component(s) listed in the bootstrap array and inserts each one into the browser DOM.
+    -  while you can put more than one component, most application bootstrap a single root component (AppComponent by default).
+  
 
 
