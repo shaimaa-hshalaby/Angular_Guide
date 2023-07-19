@@ -1,9 +1,29 @@
 # Angular Basics
 
--  angular CLI inject script code to the end of the index.html page, these scripts is responsible for firing angular code to be executed and replace the content of the index page with the component html
+-  angular CLI inject script code to the end of the index.html page, these scripts are responsible for firing angular code to be executed and replace the content of the index page with the component HTML
 -  the entry point of the angular is main.ts
--  you will find this statement import { AppModule } from './app/app.module';
--  by default, angular does not scan all your files to search for components, instead you should tell angular about your components
+-  you will the import *{ AppModule } from './app/app.module'* inside the main.ts file;
+-  by default, angular does not scan all your files to search for components, instead, you must register your components inside the *app.module.ts* file by adding the Component name to the **declarations** array inside the *@NgModule()* decoration.
+  
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/69c167cf-f97b-4a4c-923c-1bf50941c464)
+
+
+# Components
+Components are the building blocks that compose an application as shown below:
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4422da23-d889-48bc-850b-59addd449725)
+
+A component includes:
+    1. Typescript class decorated by @Component()
+    2. HTML template 
+        - coded in the component decoration or in an HTML file
+    3. style (optional)
+        - coded in the component decoration or in a CSS file
+        
+
+
+
+
 
 # create components  manually or from angular CLI
 -  ng generate component <COMPONENT_NAME>
