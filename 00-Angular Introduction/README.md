@@ -43,12 +43,26 @@ npm install -g @angular/cli
 
 To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace and use the following commands:
 ```
-ng new my-first-project
-cd my-first-project
+ng new hello-angular-world
+cd hello-angular-world
 ng serve 
 ```
 -  the project name should not have spaces or test word.
--  a folder with the name ***my-first-project*** will be created in the current working directory.
+-  a folder with the name **hello-angular-world*** will be created in the current working directory.
 -  when creating the skeleton project, angular will ask you some questions to configure the application, and you can choose the default answers for now.
--  when you use the ***ng serve*** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
+-  when you use the **ng serve** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
 -  now your first application is up and running on http://localhost:4200/ with a default landing page.
+
+# Angular project hierarchy
+the following screenshot gives us a deep dive inside the hierarchy of the angular skeleton project to understand the structure:
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6f0bf544-ebec-40a9-8138-a4318639f44f)
+
+### AppComponent
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4b78ed62-372e-436f-85f4-4705c52b0cb3)
+
+### angular.json
+  angular.json file provides project-specific configuration defaults. These are used for build and development tools provided by the Angular CLI.
+for more details about configuration inside angular.json please check the documentation https://angular.io/guide/workspace-config
+
