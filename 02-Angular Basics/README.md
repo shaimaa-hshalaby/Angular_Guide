@@ -8,35 +8,35 @@
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/69c167cf-f97b-4a4c-923c-1bf50941c464)
 
 
-# Components
+## Components
 Components are the building blocks that compose an application as shown below:
 
 ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4422da23-d889-48bc-850b-59addd449725)
 
 A component includes:
-    1. Typescript class decorated by @Component()
-    2. HTML template 
+  1.  Typescript class decorated by **@Component()**
+  2.  HTML template 
         - coded in the component decoration or in an HTML file
-    3. style (optional)
+  3.  style (optional)
         - coded in the component decoration or in a CSS file
         
 
-
-
-
-
-# create components  manually or from angular CLI
+### Create components  manually or from angular CLI
 -  ng generate component <COMPONENT_NAME>
 -  ng g c <COMPONENT_NAME>
 
-# inline template vs templateUrl
+### inline template vs templateUrl
 - we can use inline template by using the attribute template instead of templateUrl in the Component decoration
 
-# Styling components
+### Styling components
   inline style vs StyleUrl
 
-# selectors
+### selectors
 selectors can be elements, attributes or css classes
+
+
+## Module
+Every application has at least one Angular module, the root module, which must be present for bootstrapping the application on launch. By convention and by default, this NgModule is named AppModule.
 
 
 # Data Binding
