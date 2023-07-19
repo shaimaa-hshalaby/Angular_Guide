@@ -15,11 +15,11 @@ A component includes:
 ### Create components  manually or from angular CLI
 
 #### Manual Creation
-1  -  you can create the component files manually by creating a folder inside the app folder and adding the component files as shown in the screenshot below:
+1.  Create the component files manually by creating a folder inside the app folder and add the component files as shown in the screenshot below:
   
 ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c092e09c-6b41-4f2f-a9c1-b41b6353d09f)
 
-2  -  create the *ManualHelloWorldComponent* Typescript class inside the ts file and export it as follows:
+2.  create the *ManualHelloWorldComponent* Typescript class inside the *manual-helloworld.component.ts* file and export it as follows:
   ```
     import {Component} from '@angular/core'
 
@@ -33,12 +33,31 @@ A component includes:
     }
   ```
 
+3.  Add the HTML code that represents the component layout to the template file *manual-helloworld.component.html*, as an example:
+  ```
+    <h1>Manual Hello World Component</h1>
+    <p> Creating a template file for the Manual Hello World component</p>
+  ```
 
+4. We can add CSS code to *manual-helloworld.component.css*, as an example:
+  ```
+    p {
+        background-color: bisque;
+        color: blue;
+    }
+  ```
 
+5. Add The component to the AppModule inside the *app.module.ts* file as follows:
+   
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72d7a2b9-2ba5-4fb4-b976-6bf4dc0ca289)
+ 
 
-
-
---------
+6. clear the content of the AppComponent's HTML template file *app.component.html* to add our custom code.
+7. simply add the tag *<app-manual-hello-world>* that represent *ManualHelloWorldComponent* inside the *app.component.html* file
+   
+  ```
+  <app-manual-hello-world></app-manual-hello-world>
+  ```
 
      ng generate component <COMPONENT_NAME>
 -  ng g c <COMPONENT_NAME>
