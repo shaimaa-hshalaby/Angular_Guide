@@ -100,6 +100,7 @@ Deep dive inside the app.module.ts file
       -  the @NgModule decorator identifies AppModule as a NgModule class. @NgModule takes a metadata object that tells Angular how to compile and launch the application.
 -  **declarations array**
      -  The module's declarations array tells Angular which components belong to that module. As you create more components, add them to declarations.
+     -  by default, angular does not scan all your files to search for components, instead, you must register your components by yourself.
      -  we can declare components, pipes and directives in the declarations array.
      -  components, pipes and directives must belong to one module only
      -  to register components to a module, we must do 3 steps:
@@ -118,5 +119,12 @@ Deep dive inside the app.module.ts file
     -  the bootstrapping process creates the component(s) listed in the bootstrap array and inserts each one into the browser DOM.
     -  while you can put more than one component, most application bootstrap a single root component (AppComponent by default).
   
+### main.ts file
+
+-  the entry point of the angular application is the main.ts file
+-  we can find the content of the main.ts file in the following screenshot:
+  
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3734806a-35ee-4aed-bea8-ac432463c18b)
+
 
 
