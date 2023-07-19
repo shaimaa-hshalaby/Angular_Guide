@@ -58,7 +58,15 @@ A component includes:
   ```
   <app-manual-hello-world></app-manual-hello-world>
   ```
+8. open a template, navigate to the project folder, then run the following command to compile and build the application
+  ```
+   ng serve
+  ```
+10. navigate to http://localhost:4200/, you will find the page include your ManualHelloWorldComponent
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/20b32250-ddde-4535-accb-0a3355adb2d9)
 
+
+-----------------------
      ng generate component <COMPONENT_NAME>
 -  ng g c <COMPONENT_NAME>
 
