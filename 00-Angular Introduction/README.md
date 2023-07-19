@@ -41,7 +41,7 @@ npm install -g @angular/cli
 
 # Setup Hello World Angular Application
 
-To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace use the following commands:
+To create, build, and serve a new, basic Angular project on a development server, go to the parent directory of your new workspace and use the following commands:
 ```
 ng new my-first-project
 cd my-first-project
@@ -49,5 +49,6 @@ ng serve
 ```
 -  the project name should not have spaces or test word.
 -  a folder with the name ***my-first-project*** will be created in the current working directory.
--   when you use the ***ng serve*** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
--   now your first application is up and running on http://localhost:4200/
+-  when creating the skeleton project, angular will ask you some questions to configure the application, and you can choose the default answers for now.
+-  when you use the ***ng serve*** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
+-  now your first application is up and running on http://localhost:4200/ with a default landing page.
