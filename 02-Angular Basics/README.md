@@ -130,7 +130,8 @@ A component includes:
                                             
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/5bd95627-83af-4af8-9332-0f61dc092a0a)
 
-     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/e0e7f034-1605-4d25-987a-d9dde0c0e62a)
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/940e52f4-8406-4139-a8c9-5ff54a4feb56)
+
 
 
 8. angular CLI should recompile and rebuild the application automatically as we execute the command *ng serve* before, so navigate to http://localhost:4200
