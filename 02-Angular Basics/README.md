@@ -101,6 +101,7 @@ A component includes:
     
     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b1f2303b-943c-418b-8163-39883b5fa04c)
 
+---------------
 #### Create Component Using Angular ClI
 
 1. open a terminal, then navigate to the project folder and run one of the following commands:
@@ -125,15 +126,20 @@ A component includes:
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0040fc87-4827-48d4-8701-2720c18a6408)     vv  
 
-6. inside the AppComponent add the tag name that represents this automatic component as follows:
+6. inside the AppComponent HTML template, add the tag name that represents this automatic component as follows:
                                             
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/5bd95627-83af-4af8-9332-0f61dc092a0a)
 
-7. angular CLI should recompile and rebuild the application automatically as we execute the command *ng serve* before, so navigate to http://localhost:4200
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/e0e7f034-1605-4d25-987a-d9dde0c0e62a)
+
+
+8. angular CLI should recompile and rebuild the application automatically as we execute the command *ng serve* before, so navigate to http://localhost:4200
    and check the output
 
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/732b208f-a11f-4efd-8a8a-7dc20516cfe3)
 
-    
+------------------------
+
 ### inline template vs templateUrl
 - we can use inline template by using the attribute template instead of templateUrl in the Component decoration
 
