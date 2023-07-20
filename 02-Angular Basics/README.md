@@ -15,24 +15,54 @@ A component includes:
 ### Create components  manually or from angular CLI
 
 #### Manual Creation
-1.  Create the component files manually by creating a folder inside the app folder and add the component files as shown in the screenshot below:
+1.  Create the component files manually by creating a folder inside the app folder and add the component files as shown in the screenshot below, let's call the it *ManualHelloWorldComponent*:
   
-![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c092e09c-6b41-4f2f-a9c1-b41b6353d09f)
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c092e09c-6b41-4f2f-a9c1-b41b6353d09f)
 
 2.  create the *ManualHelloWorldComponent* Typescript class inside the *manual-helloworld.component.ts* file and export it as follows:
-  ```
-    import {Component} from '@angular/core'
-
-    @Component({
-        selector:'app-manual-hello-world',
-        templateUrl:'./manual-helloworld.component.html',
-        styleUrls:['./manual-helloworld.component.css']
-    })
-    export class ManualHelloWorldComponent{
+      ```
+        import {Component} from '@angular/core'
     
-    }
-  ```
-
+        @Component({
+            selector:'app-manual-hello-world',
+            templateUrl:'./manual-helloworld.component.html',
+            styleUrls:['./manual-helloworld.component.css']
+        })
+        export class ManualHelloWorldComponent{
+        
+        }
+      ```
+    
+      **selector**: is the tag name which will represent this component *<app-manual-hello-world></app-manual-hello-world>*.
+      
+      **templateUrl**: the path to the component HTML file, or you can use the **template** attribute instead to include the HTML code inside the decorator as follows:
+      
+        ```
+          @Component({
+            selector:'app-manual-hello-world',
+      
+            template:`<h1>Manual Hello World Component</h1>
+            <p>creating a template file for the Manual Hello World component</p>`,
+      
+            styleUrls:['./manual-helloworld.component.css']
+        })
+        ```
+    
+      **styleUrls**: an array of CSS files paths, or you can use the **style** attribute instead to include the style code inside the decorator as follows:
+     
+         ```
+        @Component({
+            selector:'app-manual-hello-world',
+            templateUrl:'./manual-helloworld.component.html',
+          
+            styles:[`p {
+                background-color: bisque;
+                color: blue;
+            }`]
+        })
+         ```
+    
+        
 3.  Add the HTML code that represents the component layout to the template file *manual-helloworld.component.html*, as an example:
   ```
     <h1>Manual Hello World Component</h1>
