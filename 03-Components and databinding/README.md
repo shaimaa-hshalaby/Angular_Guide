@@ -12,3 +12,7 @@ use @input() decorator
 **binding to custom event**
 to pass the event out of the component we use
       @Output eventName = new EventEmitter<dataType>()
+
+the event emitter can reach to the outer component or the parent component not the sublings 
+
+### style encapsulation 
