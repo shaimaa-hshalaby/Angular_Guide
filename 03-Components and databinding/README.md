@@ -17,3 +17,9 @@ the event emitter can reach to the outer component or the parent component not t
 
 ### style encapsulation 
 angular increase attribute (component id) to each element in the template and css style of the component will be applicable only for the element with that attribute
+
+you can change the behaviour of encapsulation by adding encapsulation attribute to the @Component decorator
+there are 3 valid values for this attribute
+-  ViewEncapsulation.Emulated // default
+-  ViewEncapsulation.None  // the css will affect globally
+-  ViewEncapsulation.ShadowDom
