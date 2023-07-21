@@ -27,3 +27,17 @@ there are 3 valid values for this attribute
 ## using local reference in a template
 you can add #reference_name to the opening tag of any html element, this is a reference that holds the Element with its attributes and values.
 this reference can be used only in the template not ts file, you can pass it to ts file as a paramater
+
+## access the dom with @viewChild
+1. give the element a ref #ref_name
+2. in ts file add property with type ElementRef and decorate it with @viewchild("ref_name")
+3. cast it to the real type to be able to extract the values that you want
+
+## <ng-content>
+by default angular ignores the content inside the component tag, but if you want angular to consider it, you can use <ng-content>
+
+----------------------
+
+## Angular LifeCycle methods
+need to write in details when will each hook called by the angular !!!
+
