@@ -23,3 +23,7 @@ there are 3 valid values for this attribute
 -  ViewEncapsulation.Emulated // default
 -  ViewEncapsulation.None  // the css will affect globally
 -  ViewEncapsulation.ShadowDom
+
+## using local reference in a template
+you can add #reference_name to the opening tag of any html element, this is a reference that holds the Element with its attributes and values.
+this reference can be used only in the template not ts file, you can pass it to ts file as a paramater
