@@ -16,3 +16,4 @@ to pass the event out of the component we use
 the event emitter can reach to the outer component or the parent component not the sublings 
 
 ### style encapsulation 
+angular increase attribute (component id) to each element in the template and css style of the component will be applicable only for the element with that attribute
