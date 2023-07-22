@@ -16,3 +16,18 @@ Directives
 accessing element directly from the ElementRef is not a good practise, you can use Renderer
 
 ## Renderer 
+in some cases angular does not access the dom -in some cases angular does not run inside the browser- so accessing the dom may throw errors in such cases.
+the better scenario is to access the renderer 
+the class is Renderer2
+try method setStyle()
+
+
+** creating directive by ng cli
+ng g d <directive_name>
+
+more about renderer 
+https://angular.io/api/core/Renderer2
+
+
+@HostListener() inside the directive
+
