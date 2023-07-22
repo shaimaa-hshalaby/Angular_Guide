@@ -31,3 +31,8 @@ https://angular.io/api/core/Renderer2
 
 @HostListener() inside the directive
 
+@HostBinding('dom property name') for easier link the renderer properties to attribute
+
+**Binding to Directive properties** --> these properties can be added to the tag as attributes
+annotate properties with @Input()
+
