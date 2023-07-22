@@ -36,3 +36,9 @@ https://angular.io/api/core/Renderer2
 **Binding to Directive properties** --> these properties can be added to the tag as attributes
 annotate properties with @Input()
 
+
+## Create Custom structural directive
+-  TemplateRef
+-  ViewContainerRef
+-  property setter
+
