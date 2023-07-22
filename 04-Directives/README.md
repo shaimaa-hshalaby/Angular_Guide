@@ -44,3 +44,4 @@ annotate properties with @Input()
 
 
 ## ngSwitch
+[ngSwitch]="value"
