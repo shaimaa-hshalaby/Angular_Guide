@@ -1,0 +1,24 @@
+
+<div class="container">
+  <app-add-server 
+      (nServerCreated)="onServerAdded($event)" 
+      (bluePrintCreated)="onBluePrintAdded($event)"></app-add-server>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server-element *ngFor="let server of servers" [srvElement]="server">
+
+           <p>{{server.name}} from inside the appComponent</p>
+
+      </app-server-element>
+    </div>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-xs-12">
+      <div class="panel panel-default" *ngFor="let server of servers">
+        <div class="panel heading">{{server.name}}</div>
+        <div class="panel-body"><p>{{server.content}}</p></div>
+      </div>
+  </div>
+</div> -->

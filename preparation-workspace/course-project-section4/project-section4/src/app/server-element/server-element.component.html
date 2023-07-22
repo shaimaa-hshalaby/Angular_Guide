@@ -1,0 +1,6 @@
+<div class="panel panel-default">
+    <div class="panel-heading" #heading>{{element.name}}</div>
+    <div class="panel-body" [ngClass]="{'blueprint':element.type ==='blueprint'}"><p>{{element.content}}</p></div>
+</div>
+
+<ng-content></ng-content>

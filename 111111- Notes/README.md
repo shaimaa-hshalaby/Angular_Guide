@@ -1,5 +1,5 @@
-# 36 packages are looking for funding
-# run `npm fund` for details
+### 36 packages are looking for funding
+### run `npm fund` for details
 ------
 
 The message you mentioned is related to the npm package manager. When you see the message "36 packages are looking for funding" and it suggests running npm fund for details, it means that there are 36 packages in your project that are seeking financial support or sponsorship.
@@ -8,4 +8,13 @@ Running the npm fund command will provide you with more information about these 
 
 This feature was introduced by npm to help open-source developers and maintainers receive financial support for their work. By contributing to the funding of these packages, you can help ensure their continued development and maintenance.
 
+
+### Property 'xxxxxxx' has no initializer and is not definitely assigned in the constructor.
+
+Just go to tsconfig.json and set
+
+"compilerOptions": {
+    "strictPropertyInitialization": false,
+    ...
+}
 

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (onIncrementInterval)="onIncrementIntervalListener($event)"></app-game-control>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd-component *ngFor="let odd of oddList" [odd]="odd"></app-odd-component>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-even-component *ngFor="let even of evenList" [even]="even"></app-even-component>
+  </div>
+</div>
+</div>

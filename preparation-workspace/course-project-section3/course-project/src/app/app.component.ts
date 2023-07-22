@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+  featureSelected:string = 'recipe';
+
+  onFeatureSelectedListener(featureSelected:string){
+    this.featureSelected = featureSelected;
+  }
 }

@@ -1,17 +1,22 @@
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col">
        <img src="" alt="" class="image-responsive">
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
-        <h1>Recipe Name</h1>
+    <div class="col">
+        <h1>{{recipe.title}}</h1>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
-        <p>Recipe Description</p>
+    <div class="col">
+        <p>{{recipe.description}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+       <img [src]="recipe.imageUrl" [alt]="recipe.title" style="max-height: 300px;">
     </div>
 </div>
