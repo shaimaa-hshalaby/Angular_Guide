@@ -140,4 +140,8 @@ A component includes:
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/732b208f-a11f-4efd-8a8a-7dc20516cfe3)
 
 
+   For more details about *ng generate* command, check the documentation link https://angular.io/cli/generate#component-command
+   
+
+
 
