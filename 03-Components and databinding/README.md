@@ -18,6 +18,18 @@ it is some sort of communication between templates(Html) and typescript code to 
 **ngStyle**
 **ngClass**
 
+------------------------
+
+### inline template vs templateUrl
+- we can use inline template by using the attribute template instead of templateUrl in the Component decoration
+
+### Styling components
+  inline style vs StyleUrl
+
+### selectors
+selectors can be elements, attributes or css classes
+
+
 
 # Debugger attached to the browser
 developer tools -> sources -> webpack -> choose your file and add break point
