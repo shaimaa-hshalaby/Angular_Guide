@@ -18,23 +18,23 @@
 1. Create *ViewEncapsulationEmulatedComponent* and specify encapsulation type in the *@Component()* decorator with Emulated - it is not necessary because it is the default -as follows:
    
     ```
-          import { Component, ViewEncapsulation } from '@angular/core';
-          @Component({
-            selector: 'app-view-encapsulation-emulated',
-            template: `<p>paragraph inside ViewEncapsulationEmulatedComponent</p>`,
-            styles: [
-              `
-               p {
-                  background-color: pink;
-               }
-              `
-            ],
-            encapsulation: ViewEncapsulation.Emulated
-          })
-          
-          export class ViewEncapsulationEmulatedComponent {
-          
-          }
+        import { Component, ViewEncapsulation } from '@angular/core';
+        @Component({
+          selector: 'app-view-encapsulation-emulated',
+          template: `<p>paragraph inside ViewEncapsulationEmulatedComponent</p>`,
+          styles: [
+            `
+             p {
+                background-color: pink;
+             }
+            `
+          ],
+          encapsulation: ViewEncapsulation.Emulated
+        })
+        
+        export class ViewEncapsulationEmulatedComponent {
+        
+        }
 
     ```
 
@@ -68,7 +68,7 @@
 
 ### ViewEncapsulation.ShadowDom 
 
-1. Create *ViewEncapsulationShadowDomComponent* and specify encapsulation type in the *@Component()* decorator with *ViewEncapsulation.ShadowDom* and add a style to <h2> inside the component styles -as follows:
+1. Create *ViewEncapsulationShadowDomComponent* and specify encapsulation type in the *@Component()* decorator with *ViewEncapsulation.ShadowDom*, then add a style to the heading tag h2 inside the component styles attribute as follows:
    
     ```
           import { Component, ViewEncapsulation } from '@angular/core';
@@ -88,8 +88,6 @@
           export class ViewEncapsulationShadowDomComponent {
           
           }
-
-
     ```
 
 2. Add the following code to the root component template *app.component.html*
@@ -102,12 +100,12 @@
 3. run the application, and navigate to http://localhost:4200/.
    
     
-4. and observe the style difference between the heading written inside the *ViewEncapsulationShadowDomComponent* and the heading written outside it. 
+4. observe the style difference between the heading h2 written inside the *ViewEncapsulationShadowDomComponent* and the heading h2 written outside it. 
    
     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/9b517b4f-72c0-4101-864f-06be7bc31ee7)
 
 
-5. If you use the browser developer tool, you can observe that the angular added the heading tag <h2> which is written inside the component under a #shadow-root element which encapsulates the styles and prevent them from leaking out. (this depends on the native ShadowDOM APIs)
+5. If you use the browser developer tool, you can observe that the angular added the heading tag h2 that is written inside the component under a **#shadow-root** element which encapsulates the styles and prevent them from leaking out. (this depends on the native ShadowDOM APIs)
    
    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72599eb7-94e1-422e-a25d-bede5fcd4f2a)
 
