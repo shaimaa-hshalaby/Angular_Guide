@@ -109,5 +109,53 @@
    
    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72599eb7-94e1-422e-a25d-bede5fcd4f2a)
 
+-----
+
+### ViewEncapsulation.None
+
+1. Create *ViewEncapsulationNoneComponent* and specify encapsulation type in the *@Component()* decorator with *ViewEncapsulation.None*, then add a style to the heading tag h1 inside the component styles attribute as follows:
+   
+    ```
+          import { Component, ViewEncapsulation } from '@angular/core';
+
+          @Component({
+            selector: 'app-view-encapsulation-none',
+            template: `<h1>heading inside the view-encapsulation-none component</h1>`,
+            styles: [
+              `
+               h1 {
+                  background-color: yellow;
+               }
+              `
+            ],
+            encapsulation: ViewEncapsulation.None
+          })
+          export class ViewEncapsulationNoneComponent {
+          
+          }
+    ```
+
+2. Add the following code to the root component template *app.component.html*
+
+    ```
+      <app-view-encapsulation-none></app-view-encapsulation-none>
+      <h1>heading outside the view-encapsulation-none component</h1>
+    ```
+
+3. run the application, and navigate to http://localhost:4200/.
+   
+    
+4. observe the style difference between the heading h1 written inside the *ViewEncapsulationNoneComponent* and the heading h1 written outside it, you will find that both of them have the same style which means that the style is applied globally and not specified only to the components' elements
+   
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/cab1fcad-54f5-43af-ba07-4e3002342bfd)
+
+
+
+5. Using the browser developer tools again, you will find that the angular does not add the component identifier to the style like the Emulate mode
+   
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/a6a64736-f911-4a07-9d33-15deeb5f1925)
+
+
+
 
 
