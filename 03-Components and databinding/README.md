@@ -50,9 +50,19 @@
     ```
       ng serve
     ```
+    
 4. navigate to http://localhost:4200/, and observe the style difference between the paragraph written inside the *ViewEncapsulationEmulatedComponent* and the paragraph written outside it. 
    
-   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/f676a6f2-d52e-44db-840d-5aa99eade913)
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/231a2076-af6d-4ba8-9a58-d03a45ad8588)
 
-5. If you use the browser developer tool to Observe the 
+
+5. If you use the browser developer tool, you can observe that the angular added an attribute which represents the component's unique identifier to the whole elements in each component view templates. and also changes the component's styles to include this attribute as shown in the screenshots below:
+   
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/4162c554-b218-44a7-9c91-9070cdef2c64)
+
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/ac492952-6f90-4109-818c-4df665d87de5)
+
+6. Those attributes are the reason why the styles of each component don’t leak out to other components.
+
+
 
