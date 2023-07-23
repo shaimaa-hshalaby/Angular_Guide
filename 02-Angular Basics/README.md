@@ -247,14 +247,22 @@ A component includes:
     ```
 
 6. Add the following HTML code to the OnChangesParentComponent template file *on-changes-parent.component.html*
+   
    ```
       <label for="message">Enter your message</label>
       <input type="text" name="message" [(ngModel)]="message">
       <app-on-changes-component [message]="message"></app-on-changes-component>
    ```
 
+7. Add the selector tag of the OnChangesParentComponent to the root Component template *app.component.html* as follows:
+   
+   ```
+      <app-on-changes-parent></app-on-changes-parent>
+   ```
+   
+9. the following GIF clarify the behaviour of the ngOnChange() hook method.
 
-![ngOnChange_behaviour_700](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/aa9179b5-b5ae-463c-9d4b-44173e775ae4)
+    ![ngOnChange_behaviour_700](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/aa9179b5-b5ae-463c-9d4b-44173e775ae4)
 
 
 ---------------------------------------
