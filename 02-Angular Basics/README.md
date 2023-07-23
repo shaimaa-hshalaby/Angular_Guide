@@ -207,8 +207,8 @@ A component includes:
 #### OnChanges()
 
 1. Create OnChangesComponent that implements OnChanges interface.
-2. Add an implementation of the hook method *ngOnChange()* that logs the *SimpleChanges* object that is passed by the angular framework when the *ngOnChange()* hook called.
-3. add data-bound property *message* decorated by @Input()
+2. Add an implementation of the hook method *ngOnChange()* that logs the *SimpleChanges* object that is passed by the angular framework when the *ngOnChange()* hook is called when an input or output binding value changes.
+3. Add data-bound property *message* decorated by @Input()
    
      ```
           import { Component, OnChanges, SimpleChanges, Input} from '@angular/core';
@@ -228,8 +228,32 @@ A component includes:
           }
 
      ```
-  4. add the 
-4. add *OnChangesParentComponent* 
+     > notice that the template in the component is inline-template.
+
+4. Add *OnChangesParentComponent* Component to test changes in @input() binding message property in *OnChangesComponent*
+   
+     ```
+     
+        import { Component } from '@angular/core';
+    
+        @Component({
+          selector: 'app-on-changes-parent',
+          templateUrl: './on-changes-parent.component.html'
+        })
+        export class OnChangesParentComponent {
+          message:string='';
+        }
+     
+    ```
+
+6. Add the following HTML code to the OnChangesParentComponent template file *on-changes-parent.component.html*
+   ```
+      <label for="message">Enter your message</label>
+      <input type="text" name="message" [(ngModel)]="message">
+      <app-on-changes-component [message]="message"></app-on-changes-component>
+   ```
+
+7. 
 
 *SimpleChanges* Class structure is shown below:
 
