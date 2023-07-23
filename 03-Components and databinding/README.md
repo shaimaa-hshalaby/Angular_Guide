@@ -64,5 +64,52 @@
 
 6. Those attributes are the reason why the styles of each component don’t leak out to other components.
 
+-----
+
+### ViewEncapsulation.ShadowDom 
+
+1. Create *ViewEncapsulationShadowDomComponent* and specify encapsulation type in the *@Component()* decorator with *ViewEncapsulation.ShadowDom* and add a style to <h2> inside the component styles -as follows:
+   
+    ```
+          import { Component, ViewEncapsulation } from '@angular/core';
+
+          @Component({
+            selector: 'app-view-encapsulation-shadow-dom',
+            template: `<h2>heading 2 inside the view-encapsulation-shadow-dom component</h2>`,
+            styles: [
+              `
+               h2 {
+                  background-color: green;
+               }
+              `
+            ],
+            encapsulation: ViewEncapsulation.ShadowDom
+          })
+          export class ViewEncapsulationShadowDomComponent {
+          
+          }
+
+
+    ```
+
+2. Add the following code to the root component template *app.component.html*
+
+    ```
+      <app-view-encapsulation-shadow-dom></app-view-encapsulation-shadow-dom>
+      <h2>heading 2 outside the view-encapsulation-shadow-dom component</h2>
+    ```
+
+3. run the application, and navigate to http://localhost:4200/.
+   
+    
+4. and observe the style difference between the heading written inside the *ViewEncapsulationShadowDomComponent* and the heading written outside it. 
+   
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/9b517b4f-72c0-4101-864f-06be7bc31ee7)
+
+
+5. If you use the browser developer tool, you can observe that the angular added the heading tag <h2> which is written inside the component under a #shadow-root element which encapsulates the styles and prevent them from leaking out. (this depends on the native ShadowDOM APIs)
+   
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72599eb7-94e1-422e-a25d-bede5fcd4f2a)
+
 
 
