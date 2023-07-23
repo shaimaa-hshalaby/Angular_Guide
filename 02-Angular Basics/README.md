@@ -253,7 +253,13 @@ A component includes:
       <app-on-changes-component [message]="message"></app-on-changes-component>
    ```
 
-7. 
+![ngOnChange_behaviour](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b46815c2-3e41-44e4-bd31-741d4c839f5f)
+
+
+
+
+
+---------------------------------------
 
 *SimpleChanges* Class structure is shown below:
 
