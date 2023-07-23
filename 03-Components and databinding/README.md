@@ -106,6 +106,7 @@
 
 
 5. If you use the browser developer tool, you can observe that the angular added the heading tag h2 that is written inside the component under a **#shadow-root** element which encapsulates the styles and prevent them from leaking out. (this depends on the native ShadowDOM APIs)
+and The styles of components are only added to the shadow DOM host, ensuring that they only affect elements within their respective components' views.
    
    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72599eb7-94e1-422e-a25d-bede5fcd4f2a)
 
