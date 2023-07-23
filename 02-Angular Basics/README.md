@@ -166,6 +166,74 @@ A component includes:
     | OnDestroy |	ngOnDestroy	| Just before the directive is destroyed.|---|
 
 
+#### OnInit()
+
+-  let's create OnInitComponent to check the sequence that angular follow to call hook methods
+
+ ```
+     import { Component } from '@angular/core';
+
+      @Component({
+        selector: 'app-on-init-component',
+        templateUrl: './on-init.component.html',
+        styleUrls: ['./on-init.component.css']
+      })
+      export class OnInitComponent {
+
+        constructor(){
+          console.log("[OnInitComponentComponent] inside the constructor")
+        }
+        ngOnInit(): void {
+          console.log("[OnInitComponentComponent] inside ngOnInit hook method")
+        }
+      
+      }
+
+ ```
+
+-  add the tag selector of the OnInitComponent to the AppComponent template
+ 
+  ```
+    <app-on-init-component></app-on-init-component>
+  ```
+
+- navigate to http://localhost:4200/, and then check the console to find that *constructor()* is called before *OnInit()* method as shown below:
+
+
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c7a277c4-2710-4820-9122-d1d2d0f0b7f4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --------------------------------------
 ## Modules 
    
