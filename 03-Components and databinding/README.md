@@ -1,83 +1,13 @@
 
+## View encapsulation
+-    In Angular, a component's styles can be encapsulated within the component's host element so that they don't affect the rest of the application.
+-    The default mode is *ViewEncapsulation.Emulated*
+-    Add *encapsulation* attribute to *@Component()* decorator to specify which encapsulation mode will be activated.
+-    There are 3 valid encapsulation modes as show in the table below
+  
 
-# Data Binding
-it is some sort of communication between templates(Html) and typescript code to display dynamic data into the templates
--  string interpolation
-    {{  }}
--  property binding
-  [html_Atr] = "typescript attribute"
--  event binding
-  (event) = "ts method name"
--  two way binding
-
-# Directives 
-
-**ngIf** structural directive which means that it adds and removes elements
-**ngIf else**
-
-**ngStyle**
-**ngClass**
-
-------------------------
-
-### inline template vs templateUrl
-- we can use inline template by using the attribute template instead of templateUrl in the Component decoration
-
-### Styling components
-  inline style vs StyleUrl
-
-### selectors
-selectors can be elements, attributes or css classes
-
-
-
-# Debugger attached to the browser
-developer tools -> sources -> webpack -> choose your file and add break point
-
-
-
-
-
-# Component and Databinding
-
-**property binding**
-
-**binding to custom property**
-we know how to bind data to a property in the same component
-but how to send data to a property in a nested component
-use @input() decorator
-
-**assigning alias to the @input(alias) decorator**
-
-**binding to custom event**
-to pass the event out of the component we use
-      @Output eventName = new EventEmitter<dataType>()
-
-the event emitter can reach to the outer component or the parent component not the sublings 
-
-### style encapsulation 
-angular increase attribute (component id) to each element in the template and css style of the component will be applicable only for the element with that attribute
-
-you can change the behaviour of encapsulation by adding encapsulation attribute to the @Component decorator
-there are 3 valid values for this attribute
--  ViewEncapsulation.Emulated // default
--  ViewEncapsulation.None  // the css will affect globally
--  ViewEncapsulation.ShadowDom
-
-## using local reference in a template
-you can add #reference_name to the opening tag of any html element, this is a reference that holds the Element with its attributes and values.
-this reference can be used only in the template not ts file, you can pass it to ts file as a paramater
-
-## access the dom with @viewChild
-1. give the element a ref #ref_name
-2. in ts file add property with type ElementRef and decorate it with @viewchild("ref_name")
-3. cast it to the real type to be able to extract the values that you want
-
-## <ng-content>
-by default angular ignores the content inside the component tag, but if you want angular to consider it, you can use <ng-content>
-
-----------------------
-
-## Angular LifeCycle methods
-need to write in details when will each hook called by the angular !!!
-
+|     ENCAPSULATION MODE     |     DETAILS    |
+|---|---|
+|    ViewEncapsulation.Emulated    |   The component styles are only applied to the component's view and do not affect other elements in the application, emulating Shadow DOM behaviour.|
+|    ViewEncapsulation.ShadowDom    | Angular uses the browser's built-in Shadow DOM API to enclose the component's view inside a ShadowRoot.<br /> When Angular was created; most browsers were not supporting Shadow Dom.|
+|    ViewEncapsulation.None     |  Any styles specified for the component are actually globally applied and can affect any HTML element present within the application.|
