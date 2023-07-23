@@ -155,7 +155,7 @@ A component includes:
     | HOOK INTERFACE|	HOOK METHOD	| DETAILS | NOTES
     |---|---|---|---|
     | OnChanges |	ngOnChanges	| When an input or output binding value changes.| -  This happens frequently, so any operation you perform here impacts performance significantly.<br /> -  If your component has no inputs or you use it without providing any inputs, the framework will not call ngOnChanges(). |
-    | OnInit |	ngOnInit	| After the first ngOnChanges.|---|
+    | OnInit |	ngOnInit	| After the first ngOnChanges.|-   Constructors should do no more than set the initial local variables to simple values.<br />-  An ngOnInit() is a good place for a component to fetch its initial data.|
     | DoCheck |	ngDoCheck	| Developer's custom change detection.|---|
     | AfterContentInit |	ngAfterContentInit	| After component content is initialized.|---|
     | AfterContentChecked | ngAfterContentChecked	| After every check of component content.|---|
