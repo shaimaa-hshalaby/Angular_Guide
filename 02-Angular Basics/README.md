@@ -33,7 +33,7 @@ A component includes:
         }
       ```
     
-      **selector**: is the tag name which will represent this component *<app-manual-hello-world></app-manual-hello-world>*.
+      **selector**:  A selector instructs Angular to instantiate this component wherever it finds the corresponding tag in template HTML, for example, when angular finds *<app-manual-hello-world></app-manual-hello-world>* tag, it will instantiate the ManualHelloWorldComponent in the same place where the tag appears.
       
       **templateUrl**: the path to the component HTML file, or you can use the **template** attribute instead to include the HTML code inside the decorator as follows:
       
@@ -47,6 +47,10 @@ A component includes:
             styleUrls:['./manual-helloworld.component.css']
         })
         ```
+    
+    -  A template is a block of HTML that tells Angular how to render the component in your application.
+    -  If you want your template to span multiple lines, use backticks (`)
+    -  An Angular component requires a template defined using template or templateUrl. You cannot have both statements in a component.
     
       **styleUrls**: an array of CSS files paths, or you can use the **style** attribute instead to include the style code inside the decorator as follows:
      
@@ -63,13 +67,13 @@ A component includes:
          ```
     
         
-3.  Add the HTML code that represents the component layout to the template file *manual-helloworld.component.html*, as an example:
+4.  Add the HTML code that represents the component layout to the template file *manual-helloworld.component.html*, as an example:
       ```
         <h1>Manual Hello World Component</h1>
         <p> Creating a template file for the Manual Hello World component</p>
       ```
 
-4. We can add CSS code to *manual-helloworld.component.css*, as an example:
+5. We can add CSS code to *manual-helloworld.component.css*, as an example:
       ```
         p {
             background-color: bisque;
@@ -77,13 +81,13 @@ A component includes:
         }
       ```
 
-5. Add The component to the AppModule inside the *app.module.ts* file as follows:
+6. Add The component to the AppModule inside the *app.module.ts* file as follows:
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/72d7a2b9-2ba5-4fb4-b976-6bf4dc0ca289)
  
 
-6. clear the generated content of the AppComponent's HTML template file *app.component.html* to add our custom code.
-7. simply add the tag *<app-manual-hello-world>* that represent *ManualHelloWorldComponent* inside the *app.component.html* file
+7. clear the generated content of the AppComponent's HTML template file *app.component.html* to add our custom code.
+8. simply add the tag *<app-manual-hello-world>* that represent *ManualHelloWorldComponent* inside the *app.component.html* file
    
       ```
       <app-manual-hello-world></app-manual-hello-world>
@@ -92,7 +96,7 @@ A component includes:
 
     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/a7623703-0180-4c9e-9160-0ad36f7b34e3)
 
-8. open a template, navigate to the project folder, and then run the following command to compile and build the application
+9. open a template, navigate to the project folder, and then run the following command to compile and build the application
       ```
        cd ./hello-angular-world
        ng serve
@@ -141,6 +145,9 @@ A component includes:
 
 
    For more details about *ng generate* command and its options, check the documentation link https://angular.io/cli/generate#component-command
+
+
+### Component LifeCycle 
    
 
 
