@@ -146,8 +146,26 @@ A component includes:
 
    For more details about *ng generate* command and its options, check the documentation link https://angular.io/cli/generate#component-command
 
+### Component Lifecycle
+-  A component instance has a lifecycle that starts when Angular instantiates the component class and renders the component view along with its child views.
+-  There are lifecycle hook interfaces, Each interface defines the prototype for a single hook method, whose name is the interface name prefixed with ng. For example, the *OnInit* interface has a hook method named *ngOnInit()*.
+-  You don't have to implement all (or any) of the lifecycle hooks, just the ones you need.
+-  Lifecycle hook methods called by Angular are shown below:
+  
+    | HOOK INTERFACE|	HOOK METHOD	| DETAILS | NOTES
+    |---|---|---|---|
+    | OnChanges |	ngOnChanges	| When an input or output binding value changes.| -  This happens frequently, so any operation you perform here impacts performance significantly.<br /> -  If your component has no inputs or you use it without providing any inputs, the framework will not call ngOnChanges(). |
+    | OnInit |	ngOnInit	| After the first ngOnChanges.|---|
+    | DoCheck |	ngDoCheck	| Developer's custom change detection.|---|
+    | AfterContentInit |	ngAfterContentInit	| After component content is initialized.|---|
+    | AfterContentChecked | ngAfterContentChecked	| After every check of component content.|---|
+    | AfterViewInit	 |	ngAfterViewInit	| After the views of a component are initialized.|---|
+    | AfterViewChecked |	ngAfterViewChecked	| After every check of the views of a component.|---|
+    | OnDestroy |	ngOnDestroy	| Just before the directive is destroyed.|---|
 
-### Component LifeCycle 
+
+--------------------------------------
+## Modules 
    
 
 
