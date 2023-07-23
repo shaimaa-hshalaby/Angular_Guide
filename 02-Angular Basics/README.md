@@ -206,7 +206,39 @@ A component includes:
 
 #### OnChanges()
 
--   add the 
+1. Create OnChangesComponent that implements OnChanges interface.
+2. Add an implementation of the hook method *ngOnChange()* that logs the *SimpleChanges* object that is passed by the angular framework when the *ngOnChange()* hook called.
+     ```
+          import { Component, OnChanges, SimpleChanges, Input} from '@angular/core';
+
+          @Component({
+            selector: 'app-on-changes-component',
+            templateUrl: './on-changes.component.html',
+            styleUrls: ['./on-changes.component.css']
+          })
+          export class OnChangesComponent implements OnChanges{
+            @Input() message:string ='';
+          
+            constructor(){
+              console.log("[OnChangesComponent] inside the constructor")
+            }
+            ngOnInit(): void {
+              console.log("[OnChangesComponent] inside ngOnInit hook method")
+            }
+          
+            ngOnChanges(changes: SimpleChanges): void {
+              console.log("[OnChangesComponent] inside ngOnChanges hook method")
+              console.log(JSON.stringify(changes))
+            }
+          
+          }
+
+     ```
+
+*SimpleChanges* Class structure is shown below:
+
+![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3618dd33-59ff-40e1-9e82-8f009fe75f36)
+
 
 
 
