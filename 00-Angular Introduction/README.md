@@ -6,8 +6,7 @@ As a platform, Angular includes:
 -  A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
 -  A suite of developer tools to help you develop, build, test, and update your code
 -  With Angular, you're taking advantage of a platform that can scale from single-developer projects to enterprise-level applications. Angular is designed to make updating as straightforward as possible, so take advantage of the latest developments with minimal effort.
-
-
+  
 
 # Angular versions?
 
@@ -17,6 +16,18 @@ As a platform, Angular includes:
 -  the angular2 is totally different than angular1, but the later versions are depending on the angular2
 -  after the angular2 version, the difference between version and version is very minor and the angular later versions are backwards compatible changes.
 -  the angular team releases a new version every 6 months
+
+# Angular concepts
+
+-  Angular implements core and optional functionality as a set of TypeScript libraries that you import into your applications.
+-  The basic building blocks of the Angular framework are **Angular components** that are organized into **NgModules**.
+-  NgModules collect related code into functional sets.
+-  an Angular application is defined by a set of NgModules.
+-  An application always has at least a root module that enables bootstrapping(launching the application).
+-  Component defines views (screen elements).
+-  Components use services (inject into components and provide specific functionality)
+-  Modules, components and services are classes that use decorators. for example(@NgModule{},@Component{}, ... )
+-  decorators are used in Angular to mark the class type and provide metadata that tells Angular how to use these classes.
 
 # What is npm?
 -  npm stands for Node Package Manager.
