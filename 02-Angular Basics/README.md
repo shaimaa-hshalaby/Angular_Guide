@@ -168,42 +168,45 @@ A component includes:
 
 #### OnInit()
 
--  let's create OnInitComponent to check the sequence that angular follow to call hook methods
-
- ```
-     import { Component } from '@angular/core';
-
-      @Component({
-        selector: 'app-on-init-component',
-        templateUrl: './on-init.component.html',
-        styleUrls: ['./on-init.component.css']
-      })
-      export class OnInitComponent {
-
-        constructor(){
-          console.log("[OnInitComponentComponent] inside the constructor")
-        }
-        ngOnInit(): void {
-          console.log("[OnInitComponentComponent] inside ngOnInit hook method")
-        }
+  1.  let's create OnInitComponent to check the sequence that angular follow to call hook methods.
+  2.  create the Component class which implements *OnInit* interface
+  3.  add an implementation of the hook method ngOnInit() that logs some information.
+     
+       ```
+           import { Component } from '@angular/core';
       
-      }
+            @Component({
+              selector: 'app-on-init-component',
+              templateUrl: './on-init.component.html',
+              styleUrls: ['./on-init.component.css']
+            })
+            export class OnInitComponent implements OnInit {
+      
+              constructor(){
+                console.log("[OnInitComponent] inside the constructor")
+              }
+              ngOnInit(): void {
+                console.log("[OnInitComponent] inside ngOnInit hook method")
+              }
+            
+            }
+      
+       ```
+    
+  4.  add the tag selector of the OnInitComponent to the AppComponent template
+     
+      ```
+        <app-on-init-component></app-on-init-component>
+      ```
+    
+  5. navigate to http://localhost:4200/, and then check the console to find that the *constructor()* of OnInitComponent is called before its *OnInit()* method as shown below:
+    
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c7a277c4-2710-4820-9122-d1d2d0f0b7f4)
+    
 
- ```
+#### OnChanges()
 
--  add the tag selector of the OnInitComponent to the AppComponent template
- 
-  ```
-    <app-on-init-component></app-on-init-component>
-  ```
-
-- navigate to http://localhost:4200/, and then check the console to find that *constructor()* is called before *OnInit()* method as shown below:
-
-
-    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c7a277c4-2710-4820-9122-d1d2d0f0b7f4)
-
-
-
+-   add the 
 
 
 
