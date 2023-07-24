@@ -59,21 +59,26 @@ When you generate an Angular application with the Angular CLI, the *app.componen
    > Notice that the event click is written (click) inside the element HTML tag, it is an angular syntax.
    
 5. Add the event handlers for the 3 buttons to the Component Typescript class as follows:
+     ```
+          // +1 btn click event handler
+          increaseCounter(){
+            this.counter++;
+          }
+      
+          // -1 btn click event handler
+          decreaseCounter(){
+            this.counter--;
+          }
+      
+          // reset btn click event handler
+          reset(){
+            this.counter=0;
+          }
    
-   ```
-       // +1 btn click event handler
-       increaseCounter(){
-         this.counter++;
-       }
-   
-       // -1 btn click event handler
-       decreaseCounter(){
-         this.counter--;
-       }
-   
-       // reset btn click event handler
-       reset(){
-         this.counter=0;
-       }
+      ```
 
-   ```
+6. The output should be as the GIF below:
+      
+      ![Untitled design](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/da827fc6-dae8-418b-9d7e-2ce009888178)
+
+
