@@ -16,21 +16,25 @@ For the parent to be able to pass a property value to the child component, there
   2.  decorate the component properties with @Input() to be accessible from outside the component.
      
         ```
-         import { Component, Input } from '@angular/core';
-                @Component({
-                  selector: 'app-child-component',
-                  template: `
-                  <h1>{{messageHeader}}</h1>
-                  <p>{{messageBody}}</p>
-                  `
-                })
-                export class ChildComponentComponent {
-                
-                  @Input() messageHeader:string=''
-                  @Input('msgBody') messageBody:string='';
-                
-                }
+            import { Component, Input } from '@angular/core';
+            
+            @Component({
+              selector: 'app-child-component',
+              template: `
+              <h1>{{messageHeader}}</h1>
+              <p>{{messageBody}}</p>
+              `
+            })
+            export class ChildComponentComponent {
+            
+              @Input() messageHeader:string=''
+              @Input('msgBody') messageBody:string='';
+            
+            }
         ```
 
-3. you can add alias to the @Input decorator 
+3. you can add an alias to the @Input() decorator to be used by the accessor instead of the original property name. for example, we have added *msgBody* as an alias for the property *messageBody* so the parent component will use the alias msgBody to access this property
+
+4. create a parent component which have 2 proprties also 
+5. 
      
