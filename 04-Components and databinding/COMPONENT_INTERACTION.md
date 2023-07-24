@@ -142,3 +142,22 @@ If you need to have control over the injecting property value process to apply a
             }
     
        ```
+----------------------
+## Understanding template variables
+
+-  In the template, you use the hash symbol, #, to declare a template variable.
+-  we can refer to the template variable anywhere in the template, but we cannot use it inside the component class.
+-  
+
+
+
+
+
+------------------------
+
+## Sending data from a child component to a parent component
+-  The child component uses the @Output() property to raise an event to notify the parent of the change
+-  The property decorated with @Output() should be of the type EventEmitter<T>
+-  EventEmitter<T> is generic, So when you create a property of this type, you should specify the type of data this event is going to carry.
+
+
