@@ -157,6 +157,9 @@ and The styles of components are only added to the shadow DOM host, ensuring tha
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/a6a64736-f911-4a07-9d33-15deeb5f1925)
 
 
-
+-------
+### To do list 
+- style.css
+- how to add bootstrap styles to angular application
 
 
