@@ -9,34 +9,70 @@ In the same manner, we call the host component the parent component and the nest
 
  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3192b5f9-ab12-4d22-a3e2-1dc8e5445321)
 
-For the parent to be able to pass a property value to the child component, there are some steps we must follow:
+For the parent to be able to pass a property value to the child component, the child component property must be marked as accessible from the parent by decorated it by *@Input()* follow the steps to pass value from parent to child:
 
  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/73d79188-5d9b-4637-85f7-5d5f03bbd1b1)
 
-  1.  create a child component with a simple HTML template that displays 2 properties *messageBody* & *messageHeader* by string manipulation *{{ property }}*
-  2.  decorate the component properties with @Input() to be accessible from outside the component.
-     
-        ```
-            import { Component, Input } from '@angular/core';
+  1.  create a child component that has  properties *messageBody* & *messageHeader*.
+      ```
+
+       export class ChildComponentComponent {
             
-            @Component({
+              messageHeader:string=''
+              messageBody:string='';
+            
+            }
+
+       ```
+     
+  3.  add an HTML code to its template to display values of the 2 properties by string manipulation *{{ property }}*
+
+      ```   
+           @Component({
               selector: 'app-child-component',
               template: `
               <h1>{{messageHeader}}</h1>
               <p>{{messageBody}}</p>
               `
             })
-            export class ChildComponentComponent {
-            
-              @Input() messageHeader:string=''
-              @Input('msgBody') messageBody:string='';
-            
-            }
-        ```
+      ```
+     
+  5.  decorate the component properties with @Input() to be accessible from the parent component.
+     
+          ```
+             @Input() messageHeader:string=''
+             @Input() messageBody:string='';
+          ```
 
-3. you can add an alias to the @Input() decorator to be used by the accessor instead of the original property name. for example, we have added *msgBody* as an alias for the property *messageBody* so the parent component will use the alias msgBody to access this property
 
-4. create a parent component which have 2 proprties also
+7. you can add an alias to the @Input() decorator to be used by the parent component instead of the original property name. For example, we have added *msgBody* as an alias for the property *messageBody* so the parent component will use the alias msgBody to access this property
+
+      ```
+         @Input() messageHeader:string=''
+         @Input('msgBody') messageBody:string='';
+      ```
+
+9. below is the complete code of the Child component
+     
+      ```
+          import { Component, Input } from '@angular/core';
+          
+          @Component({
+            selector: 'app-child-component',
+            template: `
+            <h1>{{messageHeader}}</h1>
+            <p>{{messageBody}}</p>
+            `
+          })
+          export class ChildComponentComponent {
+          
+            @Input() messageHeader:string=''
+            @Input('msgBody') messageBody:string='';
+          
+          }
+      ```
+
+10. create a parent component which has 2 properties also
      ```
           import { Component } from '@angular/core';
           
@@ -52,7 +88,7 @@ For the parent to be able to pass a property value to the child component, there
           }
       ```
    
-6. Create the parent component html template file *parent-component.component.html* and add the following HTML code to it
+11. Create the parent component html template file *parent-component.component.html* and add the following HTML code to it
      ```
   
           <app-child-component [messageHeader]="headerMsg" [msgBody]="bodyMsg">
@@ -60,11 +96,11 @@ For the parent to be able to pass a property value to the child component, there
           </app-child-component>
   
      ```
-7. add the following html code to the root component template *app.component.html*
+10. add the following HTML code to the root component template *app.component.html*
      ```
          <app-parent-component></app-parent-component>
      ```
-8. build the project and navigate to the http://localhost:4200/, you will find the values inside the parent class have been passed to the child html template.
+11. build the project and navigate to the http://localhost:4200/, you will find the values inside the parent class have been passed to the child html template.
 9. the following image clarifies how the angular process passes the values from the parent component to the nested components
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/48ce5232-59a1-4282-a139-85164cff4b3b)
