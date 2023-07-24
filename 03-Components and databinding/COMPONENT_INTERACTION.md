@@ -59,8 +59,12 @@ For the parent to be able to pass a property value to the child component, there
           </app-child-component>
   
      ```
-
-7. the following image clarifies how the angular process passes the values from the parent component to the nested components
+7. add the following html code to the root component template *app.component.html*
+     ```
+         <app-parent-component></app-parent-component>
+     ```
+8. build the project and navigate to the http://localhost:4200/ 
+9. the following image clarifies how the angular process passes the values from the parent component to the nested components
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/48ce5232-59a1-4282-a139-85164cff4b3b)
 
