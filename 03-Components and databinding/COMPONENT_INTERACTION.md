@@ -36,7 +36,7 @@ For the parent to be able to pass a property value to the child component, there
 3. you can add an alias to the @Input() decorator to be used by the accessor instead of the original property name. for example, we have added *msgBody* as an alias for the property *messageBody* so the parent component will use the alias msgBody to access this property
 
 4. create a parent component which have 2 proprties also
-       ```
+     ```
           import { Component } from '@angular/core';
           
           @Component({
@@ -45,11 +45,11 @@ For the parent to be able to pass a property value to the child component, there
           })
           
           export class ParentComponentComponent {
-            headerMsg:string=''
-            bodyMsg:string=''
+            headerMsg:string='Header Value from the parent'
+            bodyMsg:string='Body value from the parent'
           
           }
-    ```
+      ```
    
 6. Create the parent component html template file *parent-component.component.html* and add the following HTML code to it
      ```
@@ -63,7 +63,7 @@ For the parent to be able to pass a property value to the child component, there
      ```
          <app-parent-component></app-parent-component>
      ```
-8. build the project and navigate to the http://localhost:4200/ 
+8. build the project and navigate to the http://localhost:4200/, you will find the values inside the parent class have been passed to the child html template.
 9. the following image clarifies how the angular process passes the values from the parent component to the nested components
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/48ce5232-59a1-4282-a139-85164cff4b3b)
