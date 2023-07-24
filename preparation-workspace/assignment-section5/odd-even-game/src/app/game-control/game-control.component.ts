@@ -9,6 +9,7 @@ export class GameControlComponent implements OnInit {
 
   counter:number;
   interval:any;
+  value:number = 30;
 
   @Output() onIncrementInterval:EventEmitter<number> = new EventEmitter();
   
