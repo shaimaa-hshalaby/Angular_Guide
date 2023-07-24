@@ -20,8 +20,11 @@ When you generate an Angular application with the Angular CLI, the *app.componen
       name:string = 'Shaimaa'
    ```
 
-3. Add **string interpolation** to the component template *app.component.html* to display the value of the property dynamically in the HTML as follows: 
+3. Add **text interpolation** to the component template *app.component.html* to display the value of the property dynamically in the HTML as follows: 
 
    ```
      <p> Hi {{name}}</p>
    ```
+
+4. Angular replaces *{{name}}* with the value of the corresponding component property. In this case, the page will display
+   > Hi Shaimaa
