@@ -68,4 +68,33 @@ For the parent to be able to pass a property value to the child component, there
    
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/48ce5232-59a1-4282-a139-85164cff4b3b)
 
+#### Intercept input property changes with a setter
 
+If you need to have control over the injecting property value process to apply a validation or add some related info, you should follow the following steps:
+  1. make the property private
+  2. add setter and getter to the property
+  3. decorate the setter method with *@input()* instead of decorating the property itself.
+  4. below is the upgraded version of the ChildComponent class
+
+       ```
+            export class ChildComponentComponent {
+            
+              @Input() 
+                set messageHeader(messageHeader:string){
+                  this._messageHeader = messageHeader;
+                }
+                get messageHeader(){
+                  return this._messageHeader
+                }
+                private _messageHeader:string=''
+            
+              @Input('msgBody') 
+              set messageBody(messageBody:string){
+                this._messageBody = messageBody;
+              }
+              get messageBody(){return this._messageBody}
+              private _messageBody:string='';
+            
+            }
+    
+       ```
