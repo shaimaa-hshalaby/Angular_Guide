@@ -47,7 +47,7 @@ When you generate an Angular application with the Angular CLI, the *app.componen
      <p>Counter is {{counter}}</p>
     ```
 
-4. Add 3 buttons to the html template to increase, decrease and reset the counter and use the template statements to add events' handlers to the click event for each button as follows:
+4. Add 3 buttons to the html template to increase, decrease and reset the counter and use the template statements to add events' listeners to the click event for each button as follows:
    
    ```
       <button (click)="increaseCounter()"> +1 </button>
@@ -58,3 +58,22 @@ When you generate an Angular application with the Angular CLI, the *app.componen
 
    > Notice that the event click is written (click) inside the element HTML tag, it is an angular syntax.
    
+5. Add the event handlers for the 3 buttons to the Component Typescript class as follows:
+   
+   ```
+       // +1 btn click event handler
+       increaseCounter(){
+         this.counter++;
+       }
+   
+       // -1 btn click event handler
+       decreaseCounter(){
+         this.counter--;
+       }
+   
+       // reset btn click event handler
+       reset(){
+         this.counter=0;
+       }
+
+   ```
