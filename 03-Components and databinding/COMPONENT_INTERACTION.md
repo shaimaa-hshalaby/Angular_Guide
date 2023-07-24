@@ -7,7 +7,7 @@ As an HTML Tree, we call the parent element and the child element to the contain
 
 In the same manner, we call the host component the parent component and the nested component the child component 
 
-  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3192b5f9-ab12-4d22-a3e2-1dc8e5445321)
+ ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3192b5f9-ab12-4d22-a3e2-1dc8e5445321)
 
 For the parent to be able to pass a property value to the child component, there are some steps we must follow:
  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/73d79188-5d9b-4637-85f7-5d5f03bbd1b1)
