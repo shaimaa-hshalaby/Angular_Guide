@@ -1,4 +1,11 @@
 
+### Sharing Data between parent and child components
+To share data between parent and child components, we use *@Input()* & *@Output()* decorators.
+In this tutorial, we are going to explain how to use these decorators.
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c549391c-1b0a-4e93-aa3f-853c197b420d)
+
+
 ### Use @input() to pass data from the parent component to the child component
 
 As an HTML Tree, we call the parent element and the child element to the container element and its content.
