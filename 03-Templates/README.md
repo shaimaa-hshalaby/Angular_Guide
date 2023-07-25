@@ -161,6 +161,15 @@ In an Angular template, a binding creates a live connection between a part of th
 ------------------
 ### Event Binding
 
+Event binding lets you listen for and respond to user actions such as keystrokes, mouse movements, clicks, and touches.
+
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3d8e240c-1f5b-4a21-8ec1-cb1678766e7a)
+
+The event binding listens to the event that occurs with this element and executes the template statement.
+template statement may be a method in the component statement or an expression to be executed.
+
+
+
 
 --------------------------
 
