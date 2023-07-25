@@ -120,10 +120,17 @@ In an Angular template, a binding creates a live connection between a part of th
 
 ### property binding
 
+-   property binding moves the data in one direction, from the component instance to the target element in the template
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/30444a22-1005-4023-9673-c653957cec87)
 
 
 
 
+
+
+
+
+--------------------------
 
 #### To do 
 template variables
