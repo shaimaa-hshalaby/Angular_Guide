@@ -82,3 +82,9 @@ When you generate an Angular application with the Angular CLI, the *app.componen
       ![Untitled design](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/da827fc6-dae8-418b-9d7e-2ce009888178)
 
 
+#### Statement context
+-   Statements have a context — a particular part of the application to which the statement belongs.
+-   Statements can refer only to what's in the statement context, which is typically the component instance such as event handlers and properties.
+-   The statement context may also refer to properties of the template's own context. (such template reference variable)
+-   Template context names take precedence over component context names(If they have the same name)
+
