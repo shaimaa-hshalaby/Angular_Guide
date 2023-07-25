@@ -88,3 +88,45 @@ When you generate an Angular application with the Angular CLI, the *app.componen
 -   The statement context may also refer to properties of the template's own context. (such template reference variable)
 -   Template context names take precedence over component context names(If they have the same name)
 
+-  Angular applies the following precedence logic to determine the context:
+      -   The template variable name.
+      -   A name in the directive's context.
+      -   The component's member names.
+---------------------------
+### Template Expressions
+In Angular, template expressions are computations or assignments done in the template inside the interpolation curly braces. This expression is considered local and only exists inside the template.
+
+
+
+
+
+
+---------------------------
+
+## Understanding Binding
+In an Angular template, a binding creates a live connection between a part of the UI created from a template (a DOM element, directive, or component) and the model (the component instance to which the template belongs).
+
+#### Binding types:
+-   text interpolations
+-   property binding
+-   event binding
+-   two-way binding
+
+#### Binding parts:
+-   a *target* which will receive the bound value
+-   a *template expression* which produces a value from the model, the context of the template expression is the component instance
+
+---------------
+
+### property binding
+
+
+
+
+
+
+#### To do 
+template variables
+https://angular.io/guide/template-reference-variables
+
+template expression operators
