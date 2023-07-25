@@ -123,7 +123,7 @@ In an Angular template, a binding creates a live connection between a part of th
 -   property binding moves the data in one direction, from the component instance to the target element in the template
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/f986df74-a2aa-4677-8b63-c55b61027116)
 
-- A *target property* is the DOM property (HTML tag attribute) to which you want to assign a value.
+- A *target property* is the DOM property to which you want to assign a value.
 - To identify the property as a *target property*, enclose it in square brackets [].
 - The brackets, [], cause Angular to evaluate the right-hand side of the assignment as a dynamic expression.
 
@@ -142,13 +142,19 @@ In an Angular template, a binding creates a live connection between a part of th
    
       ```
 
-2.   In the template file, add an image tag with a target property *[src]* that refer to the component property *imageURL*
+2.   In the template file, add an image tag with a target property *[src]* that refers to the component property *imageURL*
 
       ```
          <img [src]="imageURL"  style="max-width: 300px;max-height: 300px;">
       ```     
 
-3. The output should be as the GIF image below
+3.   Add input Element to allow the user to add value for the imageURL and bind it to the component property as follows:
+   
+      ```
+         <input type="text" [(ngModel)]="imageURL">
+      ``` 
+  
+5. The output should be as in the GIF image below
    
       ![Untitled design (2)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b7e5faa1-fe39-428f-9a2e-a910d7e01458)
 
