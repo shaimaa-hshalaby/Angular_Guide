@@ -158,6 +158,8 @@ In an Angular template, a binding creates a live connection between a part of th
    
       ![Untitled design (2)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b7e5faa1-fe39-428f-9a2e-a910d7e01458)
 
+------------------
+### Event Binding
 
 
 --------------------------
@@ -166,4 +168,5 @@ In an Angular template, a binding creates a live connection between a part of th
 template variables
 https://angular.io/guide/template-reference-variables
 
-template expression operators
+- template expression operators
+- attribute binding, class and style binding
