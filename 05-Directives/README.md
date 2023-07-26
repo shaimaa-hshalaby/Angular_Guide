@@ -1,8 +1,38 @@
 Directives
 ===========
+Directives are classes that add additional behavior to elements in your Angular applications.
+| directive type | description |
+|---|---|
+| compnent | directive that has a template that add a UI fragment with dynamic functionalities. |
+| attribute directives | this type of directives affect the area that they added, either the appearance or the behaviour of the element. [ngClass,ngStyle] are examples of attribute directives.|
+| structural directive | these directives affect the dom by adding or removing elements from the dom [*ngFor,*ngIf] examples of structural directives|
 
--  attribute directives ==> affect the area that they added [ngClass,ngStyle] are examples of attribute directives
--  structural directive ==> affect the dom [*ngFor,*ngIf] examples of structural directives
+---
+## Attribute Directives
+### Built-in Attribute Directives
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -  we cannot have more than one structural directive in the same element'
 -  structural directive starts with *
