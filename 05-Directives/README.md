@@ -11,7 +11,28 @@ Directives are classes that add additional behavior to elements in your Angular 
 ## Attribute Directives
 ### Built-in Attribute Directives
 
+-  *NgClass*:	Adds and removes a set of CSS classes.
+-  *NgStyle*:	Adds and removes a set of HTML styles.
+-  *NgModel*:	Adds two-way data binding to an HTML form element.
 
+
+  Example of NgClass:
+
+  1. Create a component for this exercise, and add 2 style classes special & not-special to its style file:
+     ```
+
+          .special {
+              width: 400px;
+              background-color: aqua;
+          }
+          
+          .not-special {
+              width: 400px;
+              background-color: blue;
+              color: white;
+          }
+    
+    ```
 
 
 
