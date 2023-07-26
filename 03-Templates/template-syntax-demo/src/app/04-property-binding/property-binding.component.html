@@ -1,0 +1,10 @@
+
+<h3>Property Binding Demo</h3>
+
+Insert an Image URL from the internet
+<input type="text" [(ngModel)]="imageURL">
+<br>
+
+<!--[src] is a target property for the property binding-->
+
+<img [src]="imageURL"  style="max-width: 300px;max-height: 300px;">

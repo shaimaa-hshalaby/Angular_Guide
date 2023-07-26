@@ -1,0 +1,8 @@
+<h3>[ngClass] attribute directive demo </h3>
+
+<button class="btn btn-primary m-2" (click)="isSpecial=!isSpecial">Toggle Speciality</button>
+
+<div class="border p-2"   [ngClass]="isSpecial?'special':'not-special'">
+    <h3 *ngIf="isSpecial">I am a special div </h3>
+    <h3 *ngIf="!isSpecial">I am not a special div </h3>
+</div>

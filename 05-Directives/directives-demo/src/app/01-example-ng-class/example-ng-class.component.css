@@ -1,0 +1,10 @@
+.special {
+    width: 400px;
+    background-color: aqua;
+}
+
+.not-special {
+    width: 400px;
+    background-color: blue;
+    color: white;
+}
