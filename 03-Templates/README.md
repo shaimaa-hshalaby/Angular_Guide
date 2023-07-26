@@ -129,7 +129,7 @@ In an Angular template, a binding creates a live connection between a part of th
 
 #### property binding Example:
 
-1.   define a component with a property imageURL with type string.
+1.   create a component with a property imageURL with type string.
 
       ```
          @Component({
@@ -165,9 +165,47 @@ Event binding lets you listen for and respond to user actions such as keystrokes
 
    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3d8e240c-1f5b-4a21-8ec1-cb1678766e7a)
 
-The event binding listens to the event that occurs with this element and executes the template statement.
-template statement may be a method in the component statement or an expression to be executed.
+-   The event binding listens to the event that occurs with this element and executes the template statement.
+-   template statement may be a method in the component statement or an expression to be executed.
 
+#### Event binding example:
+we will create a demo that has a button and paragraph, when clicking the button the counter in the paragraph increases
+
+1. Create a component with a *clickCounter* property with a type number and intial value zero.
+   ```
+     @Component({
+        selector: 'app-event-binding',
+        templateUrl: './event-binding.component.html'
+      })
+      export class EventBindingComponent {
+      
+        clickCounter:number=0;
+      
+      }
+   ```
+
+2. In the component template, add a button with a (click) target event and add a template statement that calls *onClickBtn()* function
+   ```
+      <button class="btn btn-primary" (click)="onBtnClicked()">Click Me!</button>
+   ```
+
+3. Add the declaration of the *onBtnClicked()* funcation in the component class as follows:
+    ```
+    
+        onBtnClicked(){
+            this.clickCounter++;
+        }
+
+   ```
+
+4. In the component template, add a text interpolation to read the *clickCounter* value
+   ```
+      <p>button clicked {{clickCounter}} times</p>
+   ```
+1ز
+5. the output should be as the GIF below
+
+   ![Untitled design (3)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/779eda4b-f42f-4564-9235-f69e67bce0c8)
 
 
 
@@ -179,3 +217,5 @@ https://angular.io/guide/template-reference-variables
 
 - template expression operators
 - attribute binding, class and style binding
+- Binding to passive events
+- Binding to keyboard events
