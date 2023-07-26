@@ -16,7 +16,13 @@ Directives are classes that add additional behavior to elements in your Angular 
 -  *NgModel*:	Adds two-way data binding to an HTML form element.
 
 
-  Example of NgClass:
+#### NgClass:
+you can add CSS classes condititionally depending on an expression by this directive
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b23f8f13-c29b-44bf-a628-26944d7622c2)
+
+
+**Expression returns string**
 
   1. Create a component for this exercise, and add 2 style classes special & not-special to its style file:
      ```
@@ -53,6 +59,7 @@ Directives are classes that add additional behavior to elements in your Angular 
   5. The output should be as the following GIF
      
        ![Untitled (2500 × 1080 px)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3f164e03-4fe7-4392-a1f6-f19c42f405ec)
+
 
 
 
@@ -111,3 +118,8 @@ annotate properties with @Input()
 
 ## ngSwitch
 [ngSwitch]="value"
+
+
+To do lis
+============
+1. ngClass with expression returns array, or an object
