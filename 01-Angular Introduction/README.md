@@ -63,7 +63,7 @@ ng serve
 -  when creating the skeleton project, angular will ask you some questions to configure the application, and you can choose the default answers for now.
 -  when you use the **ng serve** command to build an application and serve it locally, the server automatically rebuilds the application and reloads the page when you change any of the source files.
 -  now your first application is up and running on http://localhost:4200/ with a default landing page.
-
+- for more details about the ng new command, check the documentation https://angular.io/cli/new
 # Angular project hierarchy
 the following screenshot gives us a deep dive inside the hierarchy of the angular skeleton project to understand the structure:
 
