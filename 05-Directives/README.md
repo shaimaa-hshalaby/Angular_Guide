@@ -51,7 +51,8 @@ Directives are classes that add additional behavior to elements in your Angular 
      ```
 
   5. The output should be as the following GIF
-     ![Untitled (2500 × 1080 px)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3f164e03-4fe7-4392-a1f6-f19c42f405ec)
+     
+       ![Untitled (2500 × 1080 px)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3f164e03-4fe7-4392-a1f6-f19c42f405ec)
 
 
 
