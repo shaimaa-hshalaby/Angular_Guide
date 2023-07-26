@@ -202,7 +202,7 @@ we will create a demo that has a button and paragraph, when clicking the button 
    ```
       <p>button clicked {{clickCounter}} times</p>
    ```
-1ز
+
 5. the output should be as the GIF below
 
    ![Untitled design (3)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/779eda4b-f42f-4564-9235-f69e67bce0c8)
