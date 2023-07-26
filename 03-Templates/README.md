@@ -207,6 +207,16 @@ we will create a demo that has a button and paragraph, when clicking the button 
 
    ![Untitled design (3)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/779eda4b-f42f-4564-9235-f69e67bce0c8)
 
+-------
+
+### Two-way binding
+Two-way binding combines property binding with event binding
+   property binding: Sets a specific element property.
+   event binding: Listens for an element change event.
+
+Angular's two-way binding syntax is a combination of square brackets and parentheses, [()] to combine the brackets of property binding, [], with the parentheses of event binding, ()
+
+
 
 
 --------------------------
