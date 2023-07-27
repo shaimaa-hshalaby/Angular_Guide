@@ -36,3 +36,14 @@
           {path:"second",component:SecondComponent}
        ];
     ```
+
+4. To add links to the components, use a directive attribute *routerLink* with an anchor element as follows:
+   
+   ```
+      <ul>
+         <li><a routerLink="/first">First Component</a></li>
+         <li><a routerLink="/second">Second Component</a></li>
+      </ul>
+   ```
+6. update the application template, and add the *<router-outlet></router-outlet>* where you want to display the content of the components
+
