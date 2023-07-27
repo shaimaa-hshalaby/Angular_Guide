@@ -11,6 +11,12 @@ Components shouldn't fetch or save data directly, and they certainly shouldn't k
 -  modularity
 -  reusability
 
+### Create Service using Angular CLI
+Run ng generate to create a service as follows 
+```
+  ng generate service <SERVICE_NAME>
+```
+
 
 ### Dependency injection (DI)
 DI is the part of the Angular framework that provides components with access to services and other resources.
