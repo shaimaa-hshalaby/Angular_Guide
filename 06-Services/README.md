@@ -159,6 +159,8 @@ adding the service that you need to inject as a parameter to the constructor and
     ```
 
  6. build the application and test the behaviour of the three buttons in the console
+      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/14c1766d-9e73-4e1c-bd27-7157ce3c5a1d)
+
 
 --------------------------------
 
