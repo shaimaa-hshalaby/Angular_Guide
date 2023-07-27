@@ -67,6 +67,8 @@
       ```
     
      b. adding the service class name at the *providers:[]* array in the @NgModule() decorator of the AppModule (the bootstrap module)
+
+    > Using the first method *@Injectable* allows services to be loaded lazily by Angular when needed, So it is more performance effiecient.
   
   -  **Module Scope**:
     To specify that a service should be provided in a particular @NgModule, so the service can be provided only through the components of this module and all components should share the same instance in this case. To add the service to the module injector scope, you should follow one of the following methods:
@@ -108,7 +110,11 @@ adding the service that you need to inject as a parameter to the constructor and
   ```
     constructor(private studentService:StudentService){}
   ```
+------------------------
 
+## Logging Service Exercise
+
+1. 
 
 --------------------------------
 
