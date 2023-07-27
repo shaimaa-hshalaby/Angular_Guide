@@ -21,10 +21,10 @@
  - If you are going to manually enable the routing, you should do the previous steps on your own.
 
 2. Create 2 components to navigate from one to another, use the Angular CLI to generate them
-  ```
-    ng g c first
-    ng g c second
-  ```
+    ```
+      ng g c first
+      ng g c second
+    ```
 
 3. In the *AppRoutingModule*, we need to add routes that correspond to the 2 components that we have created, each route is an object that has 2 properties
     - path: path to the component
