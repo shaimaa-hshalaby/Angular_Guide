@@ -45,5 +45,8 @@
          <li><a routerLink="/second">Second Component</a></li>
       </ul>
    ```
-6. update the application template, and add the *<router-outlet></router-outlet>* where you want to display the content of the components
+6. update the application template, and add the *router-outlet* directive where you want to display the content of the components
+   ```
+     <router-outlet></router-outlet>
+   ```
 
