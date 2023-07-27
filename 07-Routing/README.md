@@ -9,6 +9,30 @@
   ```
   ng new routing-app --routing --defaults
   ```
-2. This command will generate AppRoutingModule as shown in the screenshot below:
+
+ - This command created AppRoutingModule, Route[] array and registered the routes to the RoutingModule as shown in the screenshot below:
    
-     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0b03f1bd-da5b-4c70-9b83-362288c33e46)
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/54680b33-ab14-46d8-a51b-a17e33a9c331)
+
+ - The angular CLI imported the AppRoutingModule for you in the AppModule
+
+     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/78f043ca-051c-4774-a3c9-7a7d31fd8a97)
+
+ - If you are going to manually enable the routing, you should do the previous steps on your own.
+
+2. Create 2 components to navigate from one to another, use the Angular CLI to generate them
+  ```
+    ng g c first
+    ng g c second
+  ```
+
+3. In the *AppRoutingModule*, we need to add routes that correspond to the 2 components that we have created, each route is an object that has 2 properties
+    - path: path to the component
+    - component: the component name
+      
+    ```
+       const routes: Routes = [
+          {path:"first",component:FirstComponent},
+          {path:"second",component:SecondComponent}
+       ];
+    ```
