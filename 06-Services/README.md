@@ -5,7 +5,7 @@ A service is typically a class with a narrow, well-defined purpose. It should do
 -  Services can depend on other services. 
 
 ### Why services
-Components shouldn't fetch or save data directly, and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegating data access to a service.
+Components shouldn't fetch or save data directly and shouldn't knowingly present fake data. They should focus on presenting data and delegating data access to a service.
 
 ### benefits of services:
 -  modularity
@@ -14,6 +14,9 @@ Components shouldn't fetch or save data directly, and they certainly shouldn't k
 ### Injector and Providers
 -    The **provider** is something that can create or deliver a service.
 -    The **injector** is the object that chooses and injects the provider where the application requires it.
+
+### Singleton service
+-  By adding the following meta-data to the @injectable() decorator, Angular creates a single, shared instance of the Service and injects it into any class that asks for it.
 
 ### How to register the providers to the injector
 There are several ways to register the providers to the injector
@@ -40,6 +43,7 @@ There are several ways to register the providers to the injector
       }
    ```
 -   *@Injectable()* decorator marks the class as one that participates in the **dependency injection system**.
+-   This decorator allows the service to be injected into other components or services.
 -   *@Injectable()* decorator accepts a metadata object for the service
 
 ### Dependency injection (DI)
