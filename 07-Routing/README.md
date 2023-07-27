@@ -45,6 +45,8 @@
          <li><a routerLink="/second">Second Component</a></li>
       </ul>
    ```
+   > routerLink accepts either absolute or relative paths, with relative paths, angular will append the value to the current path.
+   
 6. update the application template, and add the *router-outlet* directive where you want to display the content of the components
    ```
      <router-outlet></router-outlet>
