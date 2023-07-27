@@ -19,22 +19,26 @@ Components shouldn't fetch or save data directly and shouldn't knowingly present
 - **Root Scope**:
   When you add a service provider to the root application injector, the same instance is available throughout the application. this can be achieved by 2 methods:
       a. adding meta-data to the *@Injectable()* decorator to define the providedIn property to root as follows:
+  
           ```
               @Injectable({
                 providedIn: 'root'
               })
           ```
+  
       b. adding the service class name at the *providers:[]* array in the @NgModule() decorator of AppModule (the bootstrap module)
 
 -  **Module Scope**
   To specify that a service should be provided in a particular @NgModule, so the service can be provided only through the components of this module and all components should share the same instance in this case. To add the service to the module injector scope, you should follow one of the following methods:
 
      a. adding meta-data to the *@Injectable()* decorator to define the providedIn property to the module as follows:
+   
           ```
               @Injectable({
                 providedIn: UserModule
               })
           ```
+   
       b. adding the service class name at the *providers:[]* array in the @NgModule() decorator of the module that you want to add the service provider to it.
     
 
