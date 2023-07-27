@@ -116,30 +116,32 @@ adding the service that you need to inject as a parameter to the constructor and
 
 
 1. Use Angular CLI to create a new logging service with the following command:
-   ```
+     ```
        ng generate service logging
+     ```
+
+2. add 3 functions in the logging service to log 3 levels of logging messages info, warning and error.
+   ```
+      log(info:string){console.log(info)}
+      warn(warn:string){console.warn(warn)}
+      error(error:string){console.error(error)}
    ```
 
-3. add 3 functions in the logging service to log 3 levels of logging messages info, warning and error.
-   ```
-    log(info:string){console.log(info)}
-    warn(warn:string){console.warn(warn)}
-    error(error:string){console.error(error)}
-  ```
+3. Inject the logging service to the constructor of the AppComponent
+    ```
+      constructor(private loggingService:LoggingService){}
+    ```
 
-4. Inject the logging service to the constructor of the AppComponent
-  ```
-   constructor(private loggingService:LoggingService){}
-  ```
+4. In the appComponent template, add 3 buttons to test the 3 levels of logging 
+    ```
+      <button (click)="onInfoBtnClicked()">Log Info</button>
+      <button (click)="onWarningBtnClicked()" >Log Warning</button>
+      <button (click)="onErrorBtnClicked()" >Log Error</button>
+    ```
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/1e721641-ed1b-4750-ad5a-c78b352e7b29)
 
-5. In the appComponent template, add 3 buttons to test the 3 levels of logging 
-  ```
-    <button (click)="onInfoBtnClicked()">Log Info</button>
-    <button (click)="onWarningBtnClicked()" >Log Warning</button>
-    <button (click)="onErrorBtnClicked()" >Log Error</button>
-  ```
 
-6. Add 3 event handlers for the 3 buttons inside the AppComponent ts class as follows:
+5. Add 3 event handlers for the 3 buttons inside the AppComponent ts class as follows:
 
   ```
     onInfoBtnClicked(){
