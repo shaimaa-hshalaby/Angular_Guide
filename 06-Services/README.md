@@ -166,6 +166,9 @@ adding the service that you need to inject as a parameter to the constructor and
 
 To do list
 ===========
+cross communicating between component via emitting event from service
+studentservice demo
+
 observable services (asynchronous calls)
 https://angular.io/tutorial/tour-of-heroes/toh-pt4#observable-heroservice
 
