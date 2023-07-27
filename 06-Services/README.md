@@ -12,10 +12,22 @@ Components shouldn't fetch or save data directly, and they certainly shouldn't k
 -  reusability
 
 ### Create Service using Angular CLI
-Run ng generate to create a service as follows 
-```
-  ng generate service <SERVICE_NAME>
-```
+-  Run ng generate to create a service as follows 
+    ```
+      ng generate service <SERVICE_NAME>
+    ```
+-  You will find that the angular CLI created a file named *<SERVICE_NAME>.service.ts* that has a code similar to the following:
+   ```
+      import { Injectable } from '@angular/core';
+  
+      @Injectable({
+        providedIn: 'root'
+      })
+      export class Service {
+      
+        constructor() { }
+      }
+   ```
 
 
 ### Dependency injection (DI)
