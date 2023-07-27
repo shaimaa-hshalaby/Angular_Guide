@@ -4,6 +4,9 @@ A service is typically a class with a narrow, well-defined purpose. It should do
 -  Services are good for tasks such as fetching data from the server, validating user input, or logging directly to the console.
 -  Services can depend on other services. 
 
+### Why services
+Components shouldn't fetch or save data directly, and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegating data access to a service.
+
 ### benefits of services:
 -  modularity
 -  reusability
