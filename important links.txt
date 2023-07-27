@@ -16,3 +16,7 @@ https://www.freecodecamp.org/news/angular-ngclass-example/
 
 ngStyle
 https://codecraft.tv/courses/angular/built-in-directives/ngstyle-and-ngclass/
+
+
+services
+https://dev.to/ussdlover/service-instances-in-angular-4aj

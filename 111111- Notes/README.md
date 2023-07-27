@@ -18,3 +18,4 @@ Just go to tsconfig.json and set
     ...
 }
 
+### angular does not call ngOnInit() for services
