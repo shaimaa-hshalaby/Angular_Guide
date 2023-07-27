@@ -11,12 +11,23 @@ Components shouldn't fetch or save data directly, and they certainly shouldn't k
 -  modularity
 -  reusability
 
+### Injector and Providers
+-    The **provider** is something that can create or deliver a service.
+-    The **injector** is the object that chooses and injects the provider where the application requires it.
+
+### How to register the providers to the injector
+There are several ways to register the providers to the injector
+1.    by adding meta-data to the @Injectable() decorator
+2.    by adding the providers to the meta-data of the components or the modules.
+
 ### Create Service using Angular CLI
--  Run ng generate to create a service as follows 
+-  Run ng generate to create a service as follows
+  
     ```
       ng generate service <SERVICE_NAME>
     ```
--  You will find that the angular CLI created a file named *<SERVICE_NAME>.service.ts* that has a code similar to the following:
+-  You will find that the angular CLI created a file named *<SERVICE_NAME>.service.ts* that has a skeleton service class similar to the following:
+  
    ```
       import { Injectable } from '@angular/core';
   
@@ -28,7 +39,8 @@ Components shouldn't fetch or save data directly, and they certainly shouldn't k
         constructor() { }
       }
    ```
-
+-   *@Injectable()* decorator marks the class as one that participates in the **dependency injection system**.
+-   *@Injectable()* decorator accepts a metadata object for the service
 
 ### Dependency injection (DI)
 DI is the part of the Angular framework that provides components with access to services and other resources.
