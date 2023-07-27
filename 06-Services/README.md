@@ -143,20 +143,22 @@ adding the service that you need to inject as a parameter to the constructor and
 
 5. Add 3 event handlers for the 3 buttons inside the AppComponent ts class as follows:
 
-  ```
-    onInfoBtnClicked(){
-      this.loggingService.log("log information")
-    }
-  
-    onWarningBtnClicked(){
-      this.loggingService.warn("log warning")
-    }
-  
-    onErrorBtnClicked(){
-      this.loggingService.error("log Error")
-    }
-  
-  ```
+    ```
+      onInfoBtnClicked(){
+        this.loggingService.log("log information")
+      }
+    
+      onWarningBtnClicked(){
+        this.loggingService.warn("log warning")
+      }
+    
+      onErrorBtnClicked(){
+        this.loggingService.error("log Error")
+      }
+    
+    ```
+
+ 6. build the application and test the behaviour of the three buttons in the console
 
 --------------------------------
 
