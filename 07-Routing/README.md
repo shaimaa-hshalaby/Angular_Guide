@@ -9,5 +9,6 @@
   ```
   ng new routing-app --routing --defaults
   ```
-2. This command will generate AppRoutingModule as shown in the screenshot below
+2. This command will generate AppRoutingModule as shown in the screenshot below:
+   
      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0b03f1bd-da5b-4c70-9b83-362288c33e46)
