@@ -133,11 +133,11 @@ the Router uses a first-match wins strategy when matching routes, so more specif
 - Route parameters are used to pass dynamic values in the URL and retrieve them in a component. They allow you to create dynamic routes and handle different data based on the values in the URL.
 
 - Route parameters are defined in the route configuration and are denoted by a colon followed by the parameter name. For example, consider the following route configuration:
- ```
-  const routes: Routes = [
-    {path:"customer/:id",component:CustomersComponent}
-  ]
- ```
+  ```
+   const routes: Routes = [
+     {path:"customer/:id",component:CustomersComponent}
+   ]
+  ```
 
 - The CustomersComponent will be loaded when the URL matches the pattern users/{id}, where {id} can be any value.
 - To access the route parameter value in the component, you can use the ActivatedRoute service
