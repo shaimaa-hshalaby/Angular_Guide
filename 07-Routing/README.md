@@ -154,6 +154,17 @@ the Router uses a first-match wins strategy when matching routes, so more specif
 
      > you must enclose the routerLink directive inside [] if the corresponding value is dynamically changed. But if the routerLink refer to a fixed value, you can use routerLink directive without brackets.
 
+- We have read the value of the router parameter in the ngOnInit() hook method, but what if the router parameter changed after loading the component template?
+  For this case, ActivatedRoute service created Observable for *paramMap* and you can subscribe to it, This allows you to update the component whenever the parameter value changes.
+
+  ```
+     this.route.params.subscribe(
+       (params:Params)=>{
+           this.id = params['id']
+       }
+     )
+  ```
+
 ### passing query paramaters
 queryparam, fragment from page or programtically
     
