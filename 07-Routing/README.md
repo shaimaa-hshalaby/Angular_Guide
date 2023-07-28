@@ -103,10 +103,16 @@
 4. Add loadFirstPage() to the HomeComponent as follows:
    ```
      loadFirstPage(){
-      this.router.navigate(['/first'])
+      this.router.navigate(['first'])
      }
    ```
+   > path here always is considered as an absolute path, there is needed configuration to add relatvife path 
 
 5. build and load the application and try the button, the behavior will be as following:
    
     ![Untitled design (4)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/2b285c3b-3f91-4cef-8249-542d03282d30)
+
+6. To add a relative path, navigate method need more configuration to be passed as a javascript object, so we need to inject *ActivatedRoute* service and then path the configuration object with the *relativeTo* property as follows:
+   ```
+       constructor( private router:Router , private route:ActivatedRoute ){}
+   ```
