@@ -4,7 +4,8 @@
  To handle the navigation from one view to the next, you use the *Angular Router*
 
 
-#### Generate an application with routing enabled
+### Generate an application with routing enabled
+
 1. use the following command to generate an angular application with routing enabled
   ```
   ng new routing-app --routing --defaults
@@ -52,9 +53,9 @@
      <router-outlet></router-outlet>
    ```
 
-## Styling Router Links
+### Styling Router Links
 
-**routerLinkActive:**
+#### routerLinkActive:
    Allows you to specify one or more CSS classes to add to the element when the linked route is active. The following code specifies that the Css class when the router is active called 'active'
    
    ```
@@ -74,7 +75,7 @@
    ```
 
 
- **routerLinkActiveOptions:**
+ #### routerLinkActiveOptions:
    Angular checks if the path of the link is part of the current path or not, If yes, it will apply the routerLinkActive CSS class.
    so this may lead to wrong behaviour if the link path is substring of the current path, the solution is to add an option {exact: true} that force angular to check the exact 
    path as follows:
@@ -83,5 +84,26 @@
       <li class="nav-item active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a class="nav-link" routerLink="">Home</a>
       </li>
+   ```
+
+### Navigating Programatically
+
+1. To add navigation programatically, we can add a button at the home page template and add click event handler to it as follows :
+   ```
+     <button class="btn btn-primary" (click)="loadFirstPage()">
+         First
+     </button>
+   ```
+
+2. Inject the Router service to the HomeComponent by adding it to the constructor arguments as follows:
+   ```
+     constructor(private router:Router){}
+   ```
+  
+4. Add loadFirstPage() to the HomeComponent as follows:
+   ```
+     loadFirstPage(){
+      this.router.navigate(['/first'])
+     }
    ```
 
