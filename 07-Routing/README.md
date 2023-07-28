@@ -116,3 +116,11 @@
    ```
        constructor( private router:Router , private route:ActivatedRoute ){}
    ```
+
+7. modify the loadFirstPage() to make the path relative path to the current component route
+    ```
+     loadFirstPage(){
+       this.router.navigate(['first'],{relativeTo:this.route})
+     }
+   ```
+    
