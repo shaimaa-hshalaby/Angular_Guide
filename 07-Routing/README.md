@@ -59,16 +59,16 @@
    
    ```
 
-     <ul class="nav nav-tabs">
-      <li class="nav-item active" routerLinkActive="active">
-        <a class="nav-link" routerLink="">Home</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/first">First</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active" >
-        <a class="nav-link" routerLink="/second">Second</a>
-      </li>
+    <ul class="nav nav-tabs">
+       <li class="nav-item active" routerLinkActive="active">
+          <a class="nav-link" routerLink="">Home</a>
+       </li>
+       <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/first">First</a>
+       </li>
+       <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link" routerLink="/second">Second</a>
+       </li>
     </ul>
 
    ```
