@@ -147,6 +147,13 @@ the Router uses a first-match wins strategy when matching routes, so more specif
     }
   ```
 
+- To build a dynamic route link with a route parameter, you can use the routerLink directive as follows:
+     ```
+     <a [routerLink]="['/customer/',customer.id]">{{customer.name}}</a>
+     ```
+
+     > you must enclose the routerLink directive inside [] if the corresponding value is dynamically changed. But if the routerLink refer to a fixed value, you can use routerLink directive without brackets.
+
 ### passing query paramaters
 queryparam, fragment from page or programtically
     
