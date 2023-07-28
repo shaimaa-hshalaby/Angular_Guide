@@ -107,3 +107,6 @@
      }
    ```
 
+5. build and load the application and try the button, the behavior will be as following:
+   
+    ![Untitled design (4)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/2b285c3b-3f91-4cef-8249-542d03282d30)
