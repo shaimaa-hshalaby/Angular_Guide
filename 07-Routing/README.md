@@ -52,7 +52,7 @@
      <router-outlet></router-outlet>
    ```
 
-#### Styling Router Links
+## Styling Router Links
 
 **routerLinkActive:**
    Allows you to specify one or more CSS classes to add to the element when the linked route is active. The following code specifies that the Css class when the router is active called 'active'
