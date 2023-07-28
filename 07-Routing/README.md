@@ -74,7 +74,7 @@
    ```
 
 
- **routerLinkActiveOptions**
+ **routerLinkActiveOptions:**
    Angular checks if the path of the link is part of the current path or not, If yes, it will apply the routerLinkActive CSS class.
    so this may lead to wrong behaviour if the link path is substring of the current path, the solution is to add an option {exact: true} that force angular to check the exact 
    path as follows:
