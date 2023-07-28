@@ -54,7 +54,7 @@
 
 #### Styling Router Links
 
-**routerLinkActive** 
+**routerLinkActive:**
    Allows you to specify one or more CSS classes to add to the element when the linked route is active.
    Angular checks if the path of the link is part of the current path or not, If yes, it will apply the routerLinkActive CSS class.
    so this may lead to wrong behaviour if the link path is substring of the current path, the solution is to add an option that force angular to check the exact 
