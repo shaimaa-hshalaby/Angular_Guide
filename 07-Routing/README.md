@@ -139,6 +139,13 @@ the Router uses a first-match wins strategy when matching routes, so more specif
   ]
  ```
 
+- The CustomersComponent will be loaded when the URL matches the pattern users/{id}, where {id} can be any value.
+- To access the route parameter value in the component, you can use the ActivatedRoute service
+  ```
+    ngOnInit(): void {
+      this.id = this.route.snapshot.params['id']
+    }
+  ```
 
 ### passing query paramaters
 queryparam, fragment from page or programtically
