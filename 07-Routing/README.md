@@ -106,7 +106,7 @@
       this.router.navigate(['first'])
      }
    ```
-   > path here always is considered as an absolute path, there is needed configuration to add relatvife path 
+   > path here always considered as an absolute path, there is needed configuration to add relatvife path 
 
 5. build and load the application and try the button, the behavior will be as following:
    
