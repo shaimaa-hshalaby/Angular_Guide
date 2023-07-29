@@ -169,15 +169,15 @@ the Router uses a first-match wins strategy when matching routes, so more specif
 ### Query parameters
 As we mentioned before that the *ActivatedRoute* service provides access to the current route's information, including query parameters.
 - So we need to import the *ActivatedRoute*
- ```
-  import { ActivatedRoute } from '@angular/router';
- ```
+  ```
+   import { ActivatedRoute } from '@angular/router';
+  ```
 
 - Then inject it into our component constructor 
 
- ```
-  constructor(private route:ActivatedRoute) {}
- ```
+  ```
+   constructor(private route:ActivatedRoute) {}
+  ```
 
 - Access the query parameters using the snapshot property in the *ActivatedRoute* service
   ```
@@ -196,19 +196,17 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
     )
   ```
 
+- The queryParams object will contain all the query parameters present in the current route. You can access individual query parameters using dot notation, like queryParams.paramName.
 
-Access the query parameters using the snapshot or subscribe to changes:
-// Using snapshot
-const queryParams = this.route.snapshot.queryParams;
-console.log(queryParams);
-
-// Subscribing to changes
-this.route.queryParams.subscribe(params => {
-  console.log(params);
-});
-The queryParams object will contain all the query parameters present in the current route. You can access individual query parameters using dot notation, like queryParams.paramName.
-
-Remember to import the necessary modules and inject the ActivatedRoute service in the component where you want to read the query parameters.
+- To send query parameters in an Angular router link, you can use the *[queryParams]* property of the router link directive. This directive accept js object key-value pairs param or you can also bind the query parameters dynamically by using variables in your component. For Example:
+  ```
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let customer of customers">
+            <a routerLink="/test-query-param"
+               [queryParams]="{customerId:customer.id}">{{customer.name}}</a>
+        </li>
+    </ul>
+  ```
 
 ### fragment
     
