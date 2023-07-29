@@ -213,6 +213,16 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
     const queryParams = { param1: 'value1', param2: 'value2' };
     this.router.navigate(['path'], { relativeTo: this.activatedRoute, queryParams: queryParams });
   ```
+### Fragment
+a router fragment is a part of the URL that comes after the hash symbol (#). It is used to navigate to a specific section within a page or component. Fragments are often used for anchor links or for scrolling to a specific section of a page.
+
+1. To add fragment to the router link, you can use fragment directive as follows
+   ```
+    <a routerLink="/test-fragment" [fragment]="sectionName" >Test Fragment</a>
+   ```
+   >  you can use property binding or template statement to add value to the fragment directive
+
+2. you can find 
 
 ### Navigation programatically
 - In Angular, you can navigate programmatically using the Router service.
@@ -295,6 +305,17 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
        this.router.navigate(['path'], { queryParams: { param1: 'value', param2: 'value' } });
      }
     ```
+#### adding route parameters programatically
+the *Router.navigate()* method allows you to navigate to a specific route and pass route parameters along with it as follows:
+  ```
+    import { Router } from '@angular/router';
+    
+    constructor(private router: Router) { }
+    
+    navigateToProduct(productId: number) {
+      this.router.navigate(['/product', productId]);
+    }
+  ```
 
 ### Setting up redirects
 
