@@ -217,12 +217,25 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
 a router fragment is a part of the URL that comes after the hash symbol (#). It is used to navigate to a specific section within a page or component. Fragments are often used for anchor links or for scrolling to a specific section of a page.
 
 1. To add fragment to the router link, you can use fragment directive as follows
-   ```
-    <a routerLink="/test-fragment" [fragment]="sectionName" >Test Fragment</a>
-   ```
-   >  you can use property binding or template statement to add value to the fragment directive
+    ```
+     <a routerLink="/test-fragment" [fragment]="sectionName" >Test Fragment</a>
+    ```
+    >  you can use property binding or template statement to add value to the fragment directive
 
-2. you can find 
+2. you can access the fragment value from the component instance using the *ActivatedRoute* service, so you need to import and inject ActivatedRoute into your constructor before using it.
+   
+4. you can get the fragment from the snapshot property as follows:
+    ```
+      let fragment = this.route.snapshot.fragment;
+    ```
+5. to listen to any change in the fragment value, you can use the observable created on the fragment as follows:
+    ```
+      this.route.fragment.subscribe(
+          value =>{
+            console.log("fragment is: "+value)
+          }
+        )
+   ```
 
 ### Navigation programatically
 - In Angular, you can navigate programmatically using the Router service.
