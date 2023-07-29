@@ -116,6 +116,7 @@
    ```
        constructor( private router:Router , private route:ActivatedRoute ){}
    ```
+   >  The *ActivatedRoute* service provides access to the current route's information
 
 7. modify the loadFirstPage() to make the path relative path to the current component route
     ```
@@ -155,7 +156,7 @@ the Router uses a first-match wins strategy when matching routes, so more specif
      > you must enclose the routerLink directive inside [] if the corresponding value is dynamically changed. But if the routerLink refer to a fixed value, you can use routerLink directive without brackets.
 
 - We have read the value of the router parameter in the ngOnInit() hook method, but what if the router parameter changed after loading the component template?
-  For this case, ActivatedRoute service created Observable for *paramMap* and you can subscribe to it, This allows you to update the component whenever the parameter value changes.
+  For such case, ActivatedRoute service created Observable for *paramMap* and you can subscribe to it, This allows you to update the component whenever the parameter value changes.
 
   ```
      this.route.params.subscribe(
@@ -165,6 +166,31 @@ the Router uses a first-match wins strategy when matching routes, so more specif
      )
   ```
 
-### passing query paramaters
-queryparam, fragment from page or programtically
+### Query parameters
+As we mentioned before that the *ActivatedRoute* service provides access to the current route's information, including query parameters.
+
+
+
+
+
+
+```
+Import the necessary modules and services:
+import { ActivatedRoute } from '@angular/router';
+Inject the ActivatedRoute service in your component's constructor:
+constructor(private route: ActivatedRoute) { }
+Access the query parameters using the snapshot or subscribe to changes:
+// Using snapshot
+const queryParams = this.route.snapshot.queryParams;
+console.log(queryParams);
+
+// Subscribing to changes
+this.route.queryParams.subscribe(params => {
+  console.log(params);
+});
+The queryParams object will contain all the query parameters present in the current route. You can access individual query parameters using dot notation, like queryParams.paramName.
+
+Remember to import the necessary modules and inject the ActivatedRoute service in the component where you want to read the query parameters.
+
+### fragment
     
