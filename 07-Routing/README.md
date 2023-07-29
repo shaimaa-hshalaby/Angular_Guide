@@ -168,17 +168,35 @@ the Router uses a first-match wins strategy when matching routes, so more specif
 
 ### Query parameters
 As we mentioned before that the *ActivatedRoute* service provides access to the current route's information, including query parameters.
+- So we need to import the *ActivatedRoute*
+ ```
+  import { ActivatedRoute } from '@angular/router';
+ ```
+
+- Then inject it into our component constructor 
+
+ ```
+  constructor(private route:ActivatedRoute) {}
+ ```
+
+- Access the query parameters using the snapshot property in the *ActivatedRoute* service
+  ```
+   ngOnInit(): void {
+      let id = this.route.snapshot.queryParams['id']
+      )
+    }
+  ```
+
+- Also you can subscribe on the query parameter observable to listen to any change into their values as following:
+   ```
+   this.route.queryParams.subscribe(
+      (params:Params) => {
+         let id = params['customerId']
+      }
+    )
+  ```
 
 
-
-
-
-
-```
-Import the necessary modules and services:
-import { ActivatedRoute } from '@angular/router';
-Inject the ActivatedRoute service in your component's constructor:
-constructor(private route: ActivatedRoute) { }
 Access the query parameters using the snapshot or subscribe to changes:
 // Using snapshot
 const queryParams = this.route.snapshot.queryParams;
