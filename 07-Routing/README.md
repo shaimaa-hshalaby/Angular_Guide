@@ -331,8 +331,23 @@ the *Router.navigate()* method allows you to navigate to a specific route and pa
   ```
 
 ### Setting up redirects
+The Angular Router allows you to define routes and navigate between different components in your application.
+- you can add route to the routes array in your AppRoutingModule using redirectTo property instead of component property as follows:
+   ```
+     const routes: Routes = [
+        { path: 'specific-path', component: SpecificComponent},
+        { path: 'path', redirectTo: '/specific-path', pathMatch: 'full' },
+        // Other routes...
+      ];
+   ```
 
-### Setting up wildcard routes
+- The **pathMatch** property is optional but it important because it determines how the router matches the URL to the specified route path, there are 3 valid values for it:
+   - *prefix (default value)* : means that the router will match the route if the URL starts with the specified path.
+   - *full*: It means that the entire URL must match the route path for the route to be considered a match.
+   - *exact* : This value is similar to 'full', but it also requires an exact match for any additional trailing slashes in the URL.
+  
+
+### Setting up wildcard routes(Using it with Not found error)
 -  a wildcard route is used to handle routes that do not match any specific route defined in your application.
 -  It is typically used as a catch-all route to display a specific component or handle any other custom logic.
 -  you must place the wildcard route at the end of your route configuration to ensure that it is only used when no other routes match.
