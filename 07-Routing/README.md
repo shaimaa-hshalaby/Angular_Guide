@@ -208,5 +208,26 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
     </ul>
   ```
 
+### Setting up wildcard routes
+-  a wildcard route is used to handle routes that do not match any specific route defined in your application.
+-  It is typically used as a catch-all route to display a specific component or handle any other custom logic.
+-  you must place the wildcard route at the end of your route configuration to ensure that it is only used when no other routes match.
+-  To define a wildcard route in Angular, you can use the ** notation as part of your route configuration as follows:
+  
+    ```
+      const routes: Routes = [
+         // other routes
+         { path: '**', component: NotFoundComponent } // custom component for 404 page
+       ];
+    ```
+- you can use redirection with wildcard as follows:
+    ```
+       const routes: Routes = [
+          // other routes
+          { path: 'not-found', component: NotFoundComponent },
+          { path: '**', redirectTo: '/not-found' }
+        ];
+     ```
+
 ### fragment
     
