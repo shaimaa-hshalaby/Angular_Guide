@@ -353,5 +353,4 @@ the *Router.navigate()* method allows you to navigate to a specific route and pa
         ];
      ```
 
-### fragment
     
