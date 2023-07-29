@@ -218,38 +218,83 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
 - In Angular, you can navigate programmatically using the Router service.
 - Router service provides navigate() method to navigate to different routes in th appliaction.
 - Router.navigate() method documentation is shown below:
-    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0e18e493-4402-4a7a-ad9f-8b3463d656c8)
+
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0e18e493-4402-4a7a-ad9f-8b3463d656c8)
 
 - the second parameter is of type NavigationExtras that is Options that modify the Router navigation strategy. Supply an object containing any of these properties to a Router navigation function to control how the target URL should be constructed or interpreted. a list of the object properties is shown in the following screenshot from the documentation
+
    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6a9950f4-686b-4978-9b1b-4a8b81f392a7)
 
 
+**queryParams**: This property allows you to specify query parameters for the destination route. It should be an object where the property names represent the query parameter names, and the property values represent the corresponding values. For example: { param1: 'value1', param2: 'value2' }.
 
-### Extra parameter
-queryParams: This property allows you to specify query parameters for the destination route. It should be an object where the property names represent the query parameter names, and the property values represent the corresponding values. For example: { param1: 'value1', param2: 'value2' }.
+**queryParamsHandling**: This property determines how to handle the query parameters when navigating. It can have the following values:
 
-queryParamsHandling: This property determines how to handle the query parameters when navigating. It can have the following values:
+ - 'merge' (default): Merges the new query parameters with the existing ones.
+ - 'preserve': Preserves the existing query parameters and discards the new ones.
+ - '' (empty string): Removes all existing query parameters.
 
-'merge' (default): Merges the new query parameters with the existing ones.
-'preserve': Preserves the existing query parameters and discards the new ones.
-'' (empty string): Removes all existing query parameters.
-fragment: This property allows you to specify a fragment identifier (also known as a hash) for the destination route. It should be a string representing the fragment identifier, such as 'section1'.
+**fragment**: This property allows you to specify a fragment identifier (also known as a hash) for the destination route. It should be a string representing the fragment identifier, such as 'section1'.
 
-preserveFragment: This property determines whether to preserve the existing fragment identifier when navigating. It can have the following values:
+**preserveFragment**: This property determines whether to preserve the existing fragment identifier when navigating. It can have the following values:
+ - true: Preserves the existing fragment identifier.
+ - false (default): Discards the existing fragment identifier.
 
-true: Preserves the existing fragment identifier.
-false (default): Discards the existing fragment identifier.
-skipLocationChange: This property determines whether the navigation should update the browser's URL. It can have the following values:
+**skipLocationChange**: This property determines whether the navigation should update the browser's URL. It can have the following values:
+ - true: Does not update the browser's URL.
+ - false (default): Updates the browser's URL.
 
-true: Does not update the browser's URL.
-false (default): Updates the browser's URL.
-replaceUrl: This property determines whether the navigation should replace the current browser history entry. It can have the following values:
+**replaceUrl**: This property determines whether the navigation should replace the current browser history entry. It can have the following values:
+ - true: Replaces the current history entry.
+ - false (default): Adds a new history entry.
 
-true: Replaces the current history entry.
-false (default): Adds a new history entry.
-These are the main properties that can be included in the extras object. You can choose to include any combination of these properties based on your specific navigation requirements.
 
-    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/f4fdfda3-4995-4c77-82b4-8d5cdf320098)
+#### redirect programatically without any options
+1. import the Router service
+    ```
+      import { Router} from '@angular/router';
+    ```
+2. inject the Router service to your component constructor
+    ```
+      constructor(private router: Router) { }
+    ```
+3. navigate as following
+    ```
+      redirectToOtherPage() {
+        this.router.navigate(['path']);
+      }
+    ```
+#### adding relative path progamatically
+1. import the Router and ActivatedRoute services
+    ```
+      import { Router, ActivatedRoute } from '@angular/router';
+    ```
+2. inject the Router service to your component constructor
+    ```
+      constructor(private router: Router, private activatedRoute: ActivatedRoute){}
+    ```
+3. navigate as following
+    ```
+      redirectToOtherPage() {
+        this.router.navigate(['path'], { relativeTo: this.activatedRoute });
+      }
+    ```
+
+#### adding query parameters programatically
+1. import the Router and ActivatedRoute services
+    ```
+      import { Router, ActivatedRoute } from '@angular/router';
+    ```
+2. inject the Router service to your component constructor
+    ```
+      constructor(private router: Router){}
+    ```
+3. navigate as following
+    ```
+     redirectToOtherPage() {
+       this.router.navigate(['path'], { queryParams: { param1: 'value', param2: 'value' } });
+     }
+    ```
 
 ### Setting up redirects
 
