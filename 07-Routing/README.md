@@ -207,6 +207,17 @@ As we mentioned before that the *ActivatedRoute* service provides access to the 
         </li>
     </ul>
   ```
+  
+- you can navigate programatically with query parameters as shown in the code snipet below:
+  ```
+    const queryParams = { param1: 'value1', param2: 'value2' };
+    this.router.navigate(['path'], { relativeTo: this.activatedRoute, queryParams: queryParams });
+  ```
+
+- the second parameter in the navigate() method is an extra object- It is optional not required- it will be explained in details the next section
+
+### Extra parameter
+### Setting up redirects
 
 ### Setting up wildcard routes
 -  a wildcard route is used to handle routes that do not match any specific route defined in your application.
