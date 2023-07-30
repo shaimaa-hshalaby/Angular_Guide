@@ -404,6 +404,7 @@ Nested routes allow you to define child routes within a parent route. This is us
 
 6. Build the application and it should act as follows:
    
-    ![Untitled design (5)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/41cabf4b-75c3-4f72-86a0-a3b9a6e23e2f)
+    ![Untitled design (6)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/9783db10-7d55-496f-ad0d-b23559705a29)
+
 
   
