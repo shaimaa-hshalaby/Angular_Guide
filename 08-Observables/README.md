@@ -1,9 +1,19 @@
 ## Observables
 
-observable is a powerful tool used for handling asynchronous operations.
-It is a part of the RxJS (Reactive Extensions for JavaScript) library, which provides a set of operators to work with streams of data.
-An observable represents a stream of data that can be observed over time.
-It can emit multiple values asynchronously and can be subscribed to by multiple observers.
+-  An observable is a powerful tool used for handling asynchronous operations.
+-  It is a part of the RxJS (Reactive Extensions for JavaScript) library, which provides a set of operators to work with streams of data.
+-  An observable represents a stream of data that can be observed over time.
+-  It can emit multiple values asynchronously and can be subscribed to by multiple observers.
+-  An observable can deliver multiple values of any type —literals, messages, or events, depending on the context.
+
+To understand Angular Observables, we need to understand the observer *design pattern*
+
+### Observer Design pattern
+The observer pattern is a software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+The observers can subscribe or unsubscribe from the subject-object by calling its methods 
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6f3428ab-dc95-4297-947e-87c7b1005a2e)
+
 
 ### Observable Creation: 
 Observables can be created using various methods, such as of(), from(), interval(), or by creating custom observables using the Observable class.
@@ -24,3 +34,32 @@ returned by the subscribe() method.
 ### Error Handling: 
 Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error handling operators
 like catchError() or retry().
+
+### Observer Structure
+The next(), error(), and complete() methods in the observer have specific signatures
+
+  #### next(value: any): void 
+  The next() method is used to emit a value to the observer. It takes a single parameter value of type any, which represents the value being emitted. The method does not return anything (void).
+  
+  #### error(error: any): void: 
+  The error() method is used to emit an error to the observer. It takes a single parameter error of type any, which represents the error being emitted. The method does not return anything (void).
+  
+  #### complete(): void: 
+  The complete() method is used to indicate that the observable has been completed and will no longer emit any values. It does not take any parameters and does not return anything (void).
+
+  Declare Observer Example:
+
+  ```
+    observer = {
+      next: (value: any) => {
+        // Handle the emitted value
+      },
+      error: (error: any) => {
+        // Handle the emitted error
+      },
+      complete: () => {
+        // Handle the completion of the observable
+      }
+    };
+  
+  ```
