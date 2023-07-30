@@ -1,0 +1,17 @@
+
+    <div class="row m-2 ">
+        <div class="col-5">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let customer of customers">
+                  <a [routerLink]="['/customer/',customer.id]">{{customer.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col" *ngIf="activeCustomer != null">
+            <p>{{activeCustomer.name+" ( "+activeCustomer.id+" ) "}}</p>
+
+        </div>
+    </div>
+
+
+
