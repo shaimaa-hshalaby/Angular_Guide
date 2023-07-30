@@ -368,4 +368,41 @@ The Angular Router allows you to define routes and navigate between different co
         ];
      ```
 
-    
+### Nesting routes
+
+Nested routes allow you to define child routes within a parent route. This is useful when you have a complex application with multiple levels of navigation and you want to organize your routes in a hierarchical manner.
+
+1. use Angular CLI to create 3 components, ParentComponent, ChildOneComponent and ChildTwoComponent.
+2. add the following configuration to the routes array in the *AppRoutingModule*
+     ```
+       const routes: Routes = [
+          {path:"parent",component:ParentComponentComponent,children:[
+              {path:"child1",component:ChildOneComponentComponent},
+              {path:"child2",component:ChildTwoComponentComponent}
+          ]}
+        ];
+     ```
+
+3. in the parentComponent HTML template, add 2 anchors with routerLinks to the childern components
+  ```
+     <ul class="list-group">
+            <li class="list-group-item">
+                <a routerLink="child1" >Child One</a>
+            </li>
+            <li class="list-group-item">
+                <a routerLink="child2" >Child Two</a>
+            </li>
+        </ul>
+  ```
+
+4. you can add <router-outlet> directive in the parent template where the child components will be rendered based on the current route.
+5. In the AppComponent template, add link to the parent component and the router-outlet directive where the parent component will be rendered
+   ```
+     <p><a routerLink="parent">Parent</a></p>
+     <router-outlet></router-outlet>
+   ```
+
+6. Build the application and it should act as follows:
+    ![Untitled design (5)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/41cabf4b-75c3-4f72-86a0-a3b9a6e23e2f)
+
+  
