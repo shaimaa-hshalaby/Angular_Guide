@@ -153,14 +153,20 @@ An Example of error handling by using the error callback in the observer object
    ```
 
 2. To receive data from the observable, you need to subscribe and provide an observer object that implements the next() and error() functions to handle the received data in every scenario.
-  ```
-      this.subscription = this.myObservable.subscribe(
-        {
-          next: value => this.logs.push(value),
-          error: err => this.logs.push(err)
-        }
-      )
-  ```
+    ```
+        this.subscription = this.myObservable.subscribe(
+          {
+            next: value => this.logs.push(value),
+            error: err => this.logs.push(err)
+          }
+        )
+    ```
+
+3. After an error is emitted, the observable stops emitting any further values.
+4. When an error occurs in an observable, the complete function of the observer is not called.
+5. The following GIF demonstrates the behaviour of the previous code.
+   
+    ![Untitled design (8)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0604d558-a1ac-4fc8-ba18-6a45bb95d697)
 
 
 ### Operators: 
@@ -172,4 +178,8 @@ It's important to unsubscribe from an observable when you no longer need to rece
 This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
 returned by the subscribe() method.
 
+
+## To do 
+- catchError()
+- retry()
 
