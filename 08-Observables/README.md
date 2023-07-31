@@ -7,7 +7,7 @@
 -  An observable can deliver multiple values of any type —literals, messages, or events, depending on the context.
 -  Observable is a generic class and you can specify the type of the values that it will emit during the declaration of the Observale object as follows:
   ```
-    observable:Observable<number> 
+    myObservable:Observable<number> 
   ```
 
 To understand Angular Observables, we need to understand the observer *design pattern*
