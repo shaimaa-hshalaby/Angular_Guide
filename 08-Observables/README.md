@@ -79,7 +79,7 @@ The next(), error(), and complete() methods in the observer have specific signat
   The error() method is used to emit an error to the observer. It takes a single parameter error of type any, which represents the error being emitted. The method does not return anything (void).
   
   #### complete(): void: 
-  The complete() method is used to indicate that the observable has been completed and will no longer emit any values. It does not take any parameters and does not return anything (void).
+  The complete() method is used to indicate that the observable has been completed and will no longer emit any values. It does not take any parameters and does not return anything (void).If the observable calls the complete() method of the observer, the next() method will no longer be called by the observable.
 
   ### Observer Declaration Example:
 
