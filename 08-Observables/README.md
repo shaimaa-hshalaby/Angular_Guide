@@ -99,14 +99,11 @@ The next(), error(), and complete() methods in the observer have specific signat
   ```
 
 ### Subscribing to Observables:
-When you subscribe to an Observable, you provide an object that implements the Observer interface. This object will receive the emitted values, handle errors, and be notified when the Observable completes.
+-  When you subscribe to an Observable, you provide an object that implements the Observer interface. This object will receive the emitted values, handle errors, and be notified when the Observable completes.
 -  To receive values emitted by an observable, you need to subscribe to it. 
 -  An Observable instance begins publishing values only when someone subscribes to it.
 -  the subscribe() method of the instance, passing an observer object to receive the notifications.
--  
-
-
-
+-  the subscribe() method returns an object of type **Subscription** that can be used to unsubscribe the observable when needed
 
 
 ### Operators: 
