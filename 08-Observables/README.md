@@ -28,7 +28,7 @@ Observables can be created using various methods, such as of(), from(), interval
    The of() operator creates an Observable that emits a sequence of values that you provide as arguments. It emits the values synchronously and completes immediately after emitting all the values.
   
       ```
-          observable:Observable<number> = of(1,2,3,4)
+        observable:Observable<number> = of(1,2,3,4)
       ```
 
   -  **from():**
@@ -38,7 +38,7 @@ Observables can be created using various methods, such as of(), from(), interval
       from_observable:Observable<string> = from(this.strs)
      ```
 
-  -  interval(): The interval() operator returns an Observable that emits an infinite sequence of ascending integers, with a constant interval of time of your choosing between those emissions. The first emission is not sent immediately, but only after the first period has passed.
+  -  **interval():** The interval() operator returns an Observable that emits an infinite sequence of ascending integers, with a constant interval of time of your choosing between those emissions. The first emission is not sent immediately, but only after the first period has passed.
      ```
        interval_observable:Observable<number> = interval(1000)
      ```
