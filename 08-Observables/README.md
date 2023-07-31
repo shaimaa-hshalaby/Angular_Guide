@@ -255,6 +255,7 @@ Using the share() operator is a simple and efficient method to multicast an Obse
 - For more control over multicasting, check also the publish() and replay() operators.
   
 ## To do 
+- more details about operators
 - catchError()
 - retry()
 
