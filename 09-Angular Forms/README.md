@@ -40,6 +40,8 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
    ```
    > It would not work if you did not set the name attribute for the form control
 
+4. Add validation to your form controls using Angular's built-in validators or by creating custom validators. You can use directives such as required, minLength, and pattern to enforce validation rules.
+
 Use the ngModel directive to bind form controls to properties in your component class. This allows you to access the form control's value and perform validation.
 
 Add validation to your form controls using Angular's built-in validators or by creating custom validators. You can use directives such as required, minLength, and pattern to enforce validation rules.
@@ -98,6 +100,9 @@ I hope this clarifies what ngForm is in Angular. Let me know if you have any fur
 |  **setValue(value: any)** |  This method sets the value of the form.
 
 The NgForm class is typically used in conjunction with the ngForm directive in the template to create and manage forms in Angular applications. It provides a powerful and flexible way to handle form validation and submission.
+
+
+### Built-in Validators
 
 
 
