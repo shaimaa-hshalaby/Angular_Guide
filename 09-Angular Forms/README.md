@@ -34,10 +34,11 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
     > - It is commonly used in Angular forms to handle form submissions and perform actions based on the form data.
 
 
-3. Use the ngModel directive to bind form controls to properties in your component class. This allows you to access the form control's value and perform validation.
+3. In Angular, to connect the form controls to the ngForm object, you must use the ngModel directive in conjunction with the name attribute. This enables you to access the form controls and their properties through the ngForm object.
    ```
      <input name="name" type="text" ngModel/><br>
    ```
+   > It would not work if you did not set the name attribute for the form control
 
 Use the ngModel directive to bind form controls to properties in your component class. This allows you to access the form control's value and perform validation.
 
