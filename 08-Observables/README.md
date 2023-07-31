@@ -129,6 +129,13 @@ The behaviour should be as shown in the GIF below:
   ![Untitled design (7)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/2821352a-e41d-41cf-bccd-9e298f702d0f)
 
 
+### Unsubscribing: 
+-  It's important to unsubscribe from an observable when you no longer need to receive its values.
+-  This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
+returned by the subscribe() method.
+-  You can clean up all subscriptions in onDestroy() method of the component instance.
+
+
 ### Error Handling: 
 Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error-handling operators
 like catchError() or retry().
@@ -174,10 +181,6 @@ An Example of error handling by using the error callback in the observer object
 RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
 Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
 
-### Unsubscribing: 
-It's important to unsubscribe from an observable when you no longer need to receive its values.
-This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
-returned by the subscribe() method.
 
 
 ## To do 
