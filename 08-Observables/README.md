@@ -106,6 +106,7 @@ The next(), error(), and complete() methods in the observer have specific signat
 -  the subscribe() method returns an object of type **Subscription** that can be used to unsubscribe the observable when needed
 
   The following is an example of subscribing on an observable object and passing an observer object that implements the Observer Interface and passes the implementation of the 2 methods next(), and complete()
+onSubscribe() function is a click event handler of a button created in the template
 
   ```
       logs:any[]=[]
@@ -123,6 +124,9 @@ The next(), error(), and complete() methods in the observer have specific signat
         )
       }
   ```
+
+The behaviour should be as shown in the GIF below:
+  ![Untitled design (7)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/2821352a-e41d-41cf-bccd-9e298f702d0f)
 
 
 ### Operators: 
