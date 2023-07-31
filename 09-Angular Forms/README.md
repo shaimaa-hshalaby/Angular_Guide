@@ -56,15 +56,13 @@ Handle form submission by adding an event handler to the form's ngSubmit event. 
 
 -  The ngForm directive provides several important features:
 
-      -  **Form State Tracking**: The NgForm instance tracks the state of the form, such as whether it is valid or invalid, pristine or dirty, and touched or untouched. You can access these states and use them to control the behavior of your form.
+  -  **Form State Tracking**: The NgForm instance tracks the state of the form, such as whether it is valid or invalid, pristine or dirty, and touched or untouched. You can access these states and use them to control the behavior of your form.
 
-Form Submission Handling: The ngForm directive allows you to handle form submission using the (ngSubmit) event binding. When the form is submitted, the associated method in your component is called, allowing you to perform actions such as sending data to a server or updating the application state.
+  -  **Form Submission Handling:** The ngForm directive allows you to handle form submission using the (ngSubmit) event binding. When the form is submitted, the associated method in your component is called, allowing you to perform actions such as sending data to a server or updating the application state.
 
-Form Validation: Angular provides powerful form validation capabilities, and the ngForm directive plays a role in this. You can add validation rules to form inputs using attributes such as required, minlength, maxlength, etc. The NgForm instance tracks the validity of the form and its inputs, allowing you to display error messages and control the behavior of your form based on its validity.
+  -  **Form Validation:** Angular provides powerful form validation capabilities, and the ngForm directive plays a role in this. You can add validation rules to form inputs using attributes such as required, minlength, maxlength, etc. The NgForm instance tracks the validity of the form and its inputs, allowing you to display error messages and control the behaviour of your form based on its validity. To learn more about the built-in validator, check [here](#built-in-validators)
 
-By using the ngForm directive, you can easily create and manage forms in your Angular application, track their state, handle submission, and perform validation.
-
-I hope this clarifies what ngForm is in Angular. Let me know if you have any further questions!
+---------------------
 
 ### NgForm class structure:
 
