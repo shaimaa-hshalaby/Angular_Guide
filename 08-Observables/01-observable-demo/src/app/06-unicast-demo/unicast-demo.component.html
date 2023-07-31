@@ -1,0 +1,19 @@
+
+<div class="row"><h3>UniCast Behaviour demo</h3></div>
+<div class="row">
+    <div class="col-3">
+       <button class="btn btn-primary" (click)="onFirstSubscription()">First Subscription</button>
+    </div>
+    <div class="col">
+        <button class="btn btn-primary" (click)="onSecondSubscription()">Second Subscription</button>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-3">
+        <p *ngFor="let log of firstSubscriptionLogs">{{log}}</p>
+    </div>
+    <div class="col">
+        <p *ngFor="let log of secondSubscriptionLogs">{{log}}</p>
+    </div>
+</div>
