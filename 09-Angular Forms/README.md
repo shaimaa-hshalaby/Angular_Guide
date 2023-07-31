@@ -104,6 +104,19 @@ The NgForm class is typically used in conjunction with the ngForm directive in t
 
 ### Built-in Validators
 
+| VALIDATOR DIRECTIVE | DESCRIPTION |
+|---|---|
+|  required | Validates that a form control has a value.
+|  requiredTrue | Validates that a form control has a value of true.
+|  email | Validates that a form control has a valid email address.
+|  minLength | Validates that a form control has a minimum length of characters.
+|  maxLength | Validates that a form control has a maximum length of characters.
+|  pattern | Validates that a form control matches a specified regular expression pattern.
+|  nullValidator | A validator that always returns null, used to disable validation.
+|  min  | Validates that a form control has a numeric value greater than or equal to a specified minimum value.
+|  max  | Validates that a form control has a numeric value less than or equal to a specified maximum value.
+|  pattern  | Validates that a form control matches a specified regular expression pattern.
+|  compose  | Combines multiple validators into a single validator function.
 
 
 ----------------
