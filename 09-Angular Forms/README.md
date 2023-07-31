@@ -130,11 +130,9 @@ The NgForm class is typically used in conjunction with the ngForm directive in t
 
 
 ----------
+
 Built-in Validators documentation (https://angular.io/api/forms/Validators)
 directives documentation (https://angular.io/api?type=directive)
-
-
-
 
 ### Reactive Forms:
 
