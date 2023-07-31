@@ -178,8 +178,13 @@ An Example of error handling by using the error callback in the observer object
 
 
 ### Operators: 
-RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
-Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
+-  RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
+Operators like map(), filter(), mergeMap(), and switchMap() is commonly used in Angular applications.
+-  the operators are functions that can be applied to an Observable stream to transform, filter, or combine the emitted values.
+-  These operators allow you to manipulate the data flowing through the Observable stream and perform various operations on it.
+
+The official documentation of the RxJS operator is in this link: https://rxjs.dev/guide/operators
+
 
 ### Unicasting 
  When an Observable emits data, each subscriber receives its own independent stream of values. This behaviour is known as unicast, where each subscriber has its own separate execution of the Observable.
