@@ -75,15 +75,17 @@ I hope this clarifies what ngForm is in Angular. Let me know if you have any fur
   
 #### Methods:
 
--  **addControl(control: AbstractControl):** This method adds a control to the form.
--  **addFormGroup(dir: FormGroupDirective):** This method adds a FormGroupDirective to the form.
--  **getControl(name: string):** This method returns the form control with the specified name.
--  **getFormGroup(dir: FormGroupDirective):** This method returns the FormGroupDirective associated with the specified form group.
--  **removeControl(control: AbstractControl):** This method removes a control from the form.
-removeFormGroup(dir: FormGroupDirective): This method removes a FormGroupDirective from the form.
-resetForm(value?: any): This method resets the form to its initial state.
-setErrors(errors: ValidationErrors | null): This method sets the validation errors for the form.
-setValue(value: any): This method sets the value of the form.
+| METHOD | DESCRIPTION |
+|---|---|
+|   **addControl(control: AbstractControl)** |  This method adds a control to the form.
+|   **addFormGroup(dir: FormGroupDirective)**|  This method adds a FormGroupDirective to the form.
+|   **getControl(name: string)**|  This method returns the form control with the specified name.
+|   **getFormGroup(dir: FormGroupDirective)**|  This method returns the FormGroupDirective associated with the specified form group.
+|   **removeControl(control: AbstractControl)**|  This method removes a control from the form.
+|  **removeFormGroup(dir: FormGroupDirective)** |  This method removes a FormGroupDirective from the form.
+|  **resetForm(value?: any)** |  This method resets the form to its initial state.
+|  **setErrors(errors: ValidationErrors \| null)** |  This method sets the validation errors for the form.
+|  **setValue(value: any)** |  This method sets the value of the form.
 
 The NgForm class is typically used in conjunction with the ngForm directive in the template to create and manage forms in Angular applications. It provides a powerful and flexible way to handle form validation and submission.
 
