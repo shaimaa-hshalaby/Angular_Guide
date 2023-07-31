@@ -26,19 +26,30 @@ The observers can subscribe or unsubscribe from the subject-object by calling it
 Observables can be created using various methods, such as of(), from(), interval(), or by creating custom observables using the Observable class.
   -  **of():**
    The of() operator creates an Observable that emits a sequence of values that you provide as arguments. It emits the values synchronously and completes immediately after emitting all the values.
-  
-      ```
-        observable:Observable<number> = of(1,2,3,4)
-      ```
+     ```
+       import { Observable, of} from 'rxjs';
+     ```
+   
+    ```
+      observable:Observable<number> = of(1,2,3,4)
+    ```
 
   -  **from():**
    The from() operator creates an Observable from an array, an iterable, a Promise, or an Observable-like object. It emits each item from the source one by one and completes when all items have been emitted.
+     ```
+       import { Observable, from} from 'rxjs';
+     ```
+     
      ```
       strs:string[] =['hello','world','from','observable']
       from_observable:Observable<string> = from(this.strs)
      ```
 
   -  **interval():** The interval() operator returns an Observable that emits an infinite sequence of ascending integers, with a constant interval of time of your choosing between those emissions. The first emission is not sent immediately, but only after the first period has passed.
+     ```
+       import { Observable, interval} from 'rxjs';
+     ```
+
      ```
        interval_observable:Observable<number> = interval(1000)
      ```
