@@ -129,6 +129,40 @@ The behaviour should be as shown in the GIF below:
   ![Untitled design (7)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/2821352a-e41d-41cf-bccd-9e298f702d0f)
 
 
+### Error Handling: 
+Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error-handling operators
+like catchError() or retry().
+
+An Example of error handling by using the error callback in the observer object
+
+1. Create an observable that emits an incremented number at specific intervals. Check if the number has reached more than 5, and if so, send an error message to the observer object.
+    
+   ```
+      myObservable = new Observable<number>(observer =>{
+        let counter = 0;
+        setInterval(()=>{
+          if(counter >5){
+            observer.error("value could not be more than 10")
+          }else{
+            observer.next(counter++)
+          }
+          
+        },1000)
+      //    
+      })
+   ```
+
+2. To receive data from the observable, you need to subscribe and provide an observer object that implements the next() and error() functions to handle the received data in every scenario.
+  ```
+      this.subscription = this.myObservable.subscribe(
+        {
+          next: value => this.logs.push(value),
+          error: err => this.logs.push(err)
+        }
+      )
+  ```
+
+
 ### Operators: 
 RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
 Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
@@ -138,6 +172,4 @@ It's important to unsubscribe from an observable when you no longer need to rece
 This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
 returned by the subscribe() method.
 
-### Error Handling: 
-Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error handling operators
-like catchError() or retry().
+
