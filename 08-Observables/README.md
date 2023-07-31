@@ -227,8 +227,26 @@ the following example demonstrates the unicasting behaviour:
 ### Multicasting
 multicasting refers to the ability to send a single stream of data to multiple subscribers.
 It allows you to share the same data stream among multiple components or services, ensuring that each subscriber receives the same values emitted by the source.
--   multicasting is often achieved using the Subject class from the RxJS library.
--   
+
+#### share() operator
+Using the share() operator is a simple and efficient method to multicast an Observable. It takes care of maintaining the connection to the source Observable and tracks the active subscribers. Upon the first subscription, the share() operator automatically subscribes to the source Observable. If additional subscribers join while the source Observable is still active, they are automatically included in the multicast.
+
+- modify the unicast example to work with multicast by calling pipe(share()) operator when creating the observable as follows:
+  
+  ```
+    this.myObservable = new Observable<number>(observer =>{
+      let counter = 0;
+      setInterval(()=>{
+        observer.next(counter++)
+      },1000)
+    //    
+    }).pipe(share())
+  ```
+
+- This GIF showcases how the share() operator impacts behavior.
+  
+    ![Untitled design (9)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/8fc51363-c677-4ad4-a213-07fba18386c8)
+
 ## To do 
 - catchError()
 - retry()
