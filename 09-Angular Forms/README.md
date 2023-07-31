@@ -24,11 +24,20 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
        ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/d1ca07ef-d87d-4d20-b7f7-6e69b9da890a)
 
 
-2. In your component's HTML template, use the ngForm directive to create a form element. Inside the form, you can add form controls such as input fields, checkboxes, and select dropdowns.
-     -  ngForm is a directive that is used to create and manage forms in your application.
-     -  It is part of the FormsModule module and provides a way to track the state of the form, handle form submission, and perform form validation.
+2. In your component's HTML template, use the ngForm directive to create a form element to force Angular to generate an instance of the NgForm class and link it with the form element. This enables you to access the form's properties and methods in your component.
+    ```
+      <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      
+      </form>
+    ```
+    > - The ngSubmit event is a built-in Angular event that is triggered when a form is submitted.
+    > - It is commonly used in Angular forms to handle form submissions and perform actions based on the form data.
 
-When you apply the ngForm directive to a <form> element, Angular automatically creates an instance of the NgForm class and associates it with the form element. This allows you to access the form's properties and methods in your component.
+
+3. Use the ngModel directive to bind form controls to properties in your component class. This allows you to access the form control's value and perform validation.
+   ```
+     <input name="name" type="text" ngModel/><br>
+   ```
 
 Use the ngModel directive to bind form controls to properties in your component class. This allows you to access the form control's value and perform validation.
 
@@ -39,7 +48,7 @@ Handle form submission by adding an event handler to the form's ngSubmit event. 
 ### ngForm
 
 -  The ngForm directive helps create and manage forms in your application. It's included in the FormsModule module and allows you to track the form's state, handle submissions, and validate form entries.
--  If you use the ngForm directive on a <form> element, Angular will generate an instance of the NgForm class and link it with the form element. This enables you to access the form's properties and methods in your component.
+-  If you use the ngForm directive on a \<form\> element, Angular will generate an instance of the NgForm class and link it with the form element. This enables you to access the form's properties and methods in your component.
 
 -  The ngForm directive provides several important features:
 
