@@ -58,20 +58,20 @@ I hope this clarifies what ngForm is in Angular. Let me know if you have any fur
 #### Properties:
 | PROPERTY | DESCRIPTION |
 |---|---|
-| **controls:** | This property holds a collection of form controls within the form. Each control is identified by its name.|
-|  **dirty:** | This property indicates whether any of the form controls have been modified.|
-|  **errors:** | This property holds the validation errors for the form controls.|
-|  **formDirective:** | This property provides access to the parent FormGroupDirective instance.|
-|  **invalid:** | This property indicates whether the form is invalid.|
-|  **pending:** | This property indicates whether any of the form controls are pending asynchronous validation.|
-|  **pristine:** | This property indicates whether none of the form controls have been modified.|
-|  **status:** | This property holds the overall status of the form, which can be 'VALID', 'INVALID', 'PENDING', or 'DISABLED'.|
-|  **statusChanges:** | This property is an Observable that emits the form's status whenever it changes.|
-|  **submitted:** | This property indicates whether the form has been submitted.|
-|  **touched:** | This property indicates whether any of the form controls have been blurred.|
-|  **untouched:** | This property indicates whether none of the form controls have been blurred.|
-|  **valid:** | This property indicates whether the form is valid.|
-|  **value:** | This property holds the current value of the form.|
+| **controls** | This property holds a collection of form controls within the form. Each control is identified by its name.|
+|  **dirty** | This property indicates whether any of the form controls have been modified.|
+|  **errors** | This property holds the validation errors for the form controls.|
+|  **formDirective** | This property provides access to the parent FormGroupDirective instance.|
+|  **invalid** | This property indicates whether the form is invalid.|
+|  **pending** | This property indicates whether any of the form controls are pending asynchronous validation.|
+|  **pristine** | This property indicates whether none of the form controls have been modified.|
+|  **status** | This property holds the overall status of the form, which can be 'VALID', 'INVALID', 'PENDING', or 'DISABLED'.|
+|  **statusChanges** | This property is an Observable that emits the form's status whenever it changes.|
+|  **submitted** | This property indicates whether the form has been submitted.|
+|  **touched** | This property indicates whether any of the form controls have been blurred.|
+|  **untouched** | This property indicates whether none of the form controls have been blurred.|
+|  **valid** | This property indicates whether the form is valid.|
+|  **value** | This property holds the current value of the form.|
   
 #### Methods:
 
