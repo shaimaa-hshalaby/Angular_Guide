@@ -79,7 +79,7 @@ The next(), error(), and complete() methods in the observer have specific signat
   The error() method is used to emit an error to the observer. It takes a single parameter error of type any, which represents the error being emitted. The method does not return anything (void).
   
   #### complete(): void: 
-  The complete() method is used to indicate that the observable has been completed and will no longer emit any values. It does not take any parameters and does not return anything (void).If the observable calls the complete() method of the observer, the next() method will no longer be called by the observable.
+  The complete() method is used to indicate that the observable has been completed and will no longer emit any values. It does not take any parameters and does not return anything (void). If the observable calls the complete() method of the observer, the next() method will no longer be called by the observable.
 
   ### Observer Declaration Example:
 
@@ -217,6 +217,11 @@ the following example demonstrates the unicasting behaviour:
             })
           }
      ```
+
+3. The following GIF demonstrates that the unicasting behaviour assigns a separate data source for each subscriber
+   
+    ![the count strats from zero](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/32e6ebfa-9982-40b2-8856-b5255040b3e3)
+
 
 
 ### Multicasting
