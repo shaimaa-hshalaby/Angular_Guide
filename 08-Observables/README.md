@@ -68,7 +68,7 @@ Observables can be created using various methods, such as of(), from(), interval
 ### Observer Structure
 In RxJS, the Observer class is an interface that defines the structure of an object that can receive notifications from an Observable. It provides three methods: next, error, and complete.
 
-  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/dfe2d6fe-c614-46dc-a26c-daef20a3c43c)
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/dfe2d6fe-c614-46dc-a26c-daef20a3c43c)
 
 The next(), error(), and complete() methods in the observer have specific signatures
 
@@ -166,7 +166,8 @@ An Example of error handling by using the error callback in the observer object
 4. When an error occurs in an observable, the complete function of the observer is not called.
 5. The following GIF demonstrates the behaviour of the previous code.
    
-    ![Untitled design (8)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/0604d558-a1ac-4fc8-ba18-6a45bb95d697)
+    ![Untitled design (8)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/65644032-9a30-476a-ad42-6ee6caa21bfd)
+
 
 
 ### Operators: 
