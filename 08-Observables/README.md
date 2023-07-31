@@ -23,7 +23,7 @@ The observers can subscribe or unsubscribe from the subject-object by calling it
 
 
 ### Observable Creation: 
-Observables can be created using various methods, such as of(), from(), interval(), or by creating custom observables using the Observable class.
+Observables can be created using various methods, such as of(), from(), interval(), or by creating custom observables using the Observable class constructor.
   -  **of():**
    The of() operator creates an Observable that emits a sequence of values that you provide as arguments. It emits the values synchronously and completes immediately after emitting all the values. you should import the operator and then use it as follows:
      ```
@@ -53,6 +53,19 @@ Observables can be created using various methods, such as of(), from(), interval
        interval_observable:Observable<number> = interval(1000)
      ```
 
+- **Observable constructor**
+  you can create a custom observable using the Observable constructor which accepts the observer as a parameter as follows:
+    ```
+       myObservable = new Observable<number>(observer =>{
+          let counter = 0;
+          setInterval(()=>{
+            observer.next(counter++)
+          },1000)
+        //    
+        })
+     ```
+
+   
 ### Operators: 
 RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
 Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
