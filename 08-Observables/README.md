@@ -64,22 +64,12 @@ Observables can be created using various methods, such as of(), from(), interval
         //    
         })
      ```
-
    
-### Operators: 
-RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
-Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
-
-### Unsubscribing: 
-It's important to unsubscribe from an observable when you no longer need to receive its values.
-This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
-returned by the subscribe() method.
-
-### Error Handling: 
-Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error handling operators
-like catchError() or retry().
-
 ### Observer Structure
+In RxJS, the Observer class is an interface that defines the structure of an object that can receive notifications from an Observable. It provides three methods: next, error, and complete.
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/dfe2d6fe-c614-46dc-a26c-daef20a3c43c)
+
 The next(), error(), and complete() methods in the observer have specific signatures
 
   #### next(value: any): void 
@@ -109,7 +99,25 @@ The next(), error(), and complete() methods in the observer have specific signat
   ```
 
 ### Subscribing to Observables:
+When you subscribe to an Observable, you provide an object that implements the Observer interface. This object will receive the emitted values, handle errors, and be notified when the Observable completes.
 -  To receive values emitted by an observable, you need to subscribe to it. 
 -  An Observable instance begins publishing values only when someone subscribes to it.
 -  the subscribe() method of the instance, passing an observer object to receive the notifications.
 -  
+
+
+
+
+
+### Operators: 
+RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
+Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
+
+### Unsubscribing: 
+It's important to unsubscribe from an observable when you no longer need to receive its values.
+This prevents memory leaks and unnecessary processing. You can unsubscribe by calling the unsubscribe() method on the subscription object
+returned by the subscribe() method.
+
+### Error Handling: 
+Observables can emit errors, and you can handle them using the error callback in the subscribe() method or by using error handling operators
+like catchError() or retry().
