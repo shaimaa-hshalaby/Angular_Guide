@@ -105,6 +105,25 @@ The next(), error(), and complete() methods in the observer have specific signat
 -  the subscribe() method of the instance, passing an observer object to receive the notifications.
 -  the subscribe() method returns an object of type **Subscription** that can be used to unsubscribe the observable when needed
 
+  The following is an example of subscribing on an observable object and passing an observer object that implements the Observer Interface and passes the implementation of the 2 methods next(), and complete()
+
+  ```
+      logs:any[]=[]
+      subscription:Subscription
+    
+      // create observable using of() fucntion imported from rxjs
+      observable:Observable<number> = of(1,2,3,4)
+    
+      onSubscribe(){
+        this.subscription = this.observable.subscribe(
+          {
+            next: value => this.logs.push(value),
+            complete: ()=> this.logs.push("of observable completed")
+          }
+        )
+      }
+  ```
+
 
 ### Operators: 
 RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
