@@ -33,6 +33,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
     > - The ngSubmit event is a built-in Angular event that is triggered when a form is submitted.
     > - It is commonly used in Angular forms to handle form submissions and perform actions based on the form data.
     > - Learn more about ngForm [here](#ngform).
+    > - Learn more about NgForm [here](#NgForm)
 
 
 3. In Angular, to connect the form controls to the ngForm object, you must use the ngModel directive in conjunction with the name attribute. This enables you to access the form controls and their properties through the ngForm object.
