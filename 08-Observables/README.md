@@ -181,8 +181,14 @@ An Example of error handling by using the error callback in the observer object
 RxJS provides a wide range of operators that can be used to transform, filter, combine, or manipulate the data emitted by an observable.
 Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in Angular applications.
 
+### Unicasting 
+ When an Observable emits data, each subscriber receives its own independent stream of values. This behaviour is known as unicast, where each subscriber has its own separate execution of the Observable.
 
-
+### Multicasting
+multicasting refers to the ability to send a single stream of data to multiple subscribers.
+It allows you to share the same data stream among multiple components or services, ensuring that each subscriber receives the same values emitted by the source.
+-   multicasting is often achieved using the Subject class from the RxJS library.
+-   
 ## To do 
 - catchError()
 - retry()
