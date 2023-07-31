@@ -1,5 +1,8 @@
 ## Angular Forms
-Angular forms is a powerful feature of the Angular framework that allows you to create and manage forms in your web applications.
+-  Angular form is a powerful feature of the Angular framework that allows you to create and manage forms in your web applications.
+-  Angular is a platform for single-page applications. Therefore, form submission is handled in a way that prevents the loss of application state during the default HTML form submission behavior.
+-  Instead of including the action attribute in the form tag, we utilize the built-in event (ngSubmit).
+
 It provides two approaches for building forms: 
   -  Template-driven forms
   -  Reactive forms.
@@ -9,6 +12,7 @@ It supports features like:
   -  Form submission
   -  Error handling
   -  Form control manipulation
+
 
 ### Template-driven Forms:
 
