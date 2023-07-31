@@ -184,7 +184,7 @@ Operators like map(), filter(), mergeMap(), and switchMap() are commonly used in
 ### Unicasting 
  When an Observable emits data, each subscriber receives its own independent stream of values. This behaviour is known as unicast, where each subscriber has its own separate execution of the Observable.
 the following example demonstrates the unicasting behaviour:
-1. create an observable that emits incremented number each 1 second as follows:
+1. Create an observable that emits an incremented number every second as follows:
      ```
        this.myObservable = new Observable<number>(observer =>{
           let counter = 0;
@@ -194,6 +194,7 @@ the following example demonstrates the unicasting behaviour:
         //    
         })
      ```
+    
 2. Add two buttons to the template and create handlers for both. Each button should create a new subscription to the observable.
      ```
       <button (click)="onFirstSubscription()">First Subscription</button>
