@@ -1,7 +1,10 @@
 ## Observables
 
 -  An observable is a powerful tool used for handling asynchronous operations.
--  It is a part of the RxJS (Reactive Extensions for JavaScript) library which is imported by default in Angular, which provides a set of operators to work with streams of data.
+-  It is a part of the RxJS (Reactive Extensions for JavaScript) library which is imported by default in Angular, which provides a set of operators to work with streams of data. So you need to import it from rxjs to be able to work with it.
+```
+  import { of, Observable, Subscription } from 'rxjs';
+```
 -  An observable represents a stream of data that can be observed over time.
 -  It can emit multiple values asynchronously and can be subscribed to by multiple observers.
 -  An observable can deliver multiple values of any type —literals, messages, or events, depending on the context.
