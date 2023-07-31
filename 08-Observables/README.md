@@ -247,6 +247,8 @@ Using the share() operator is a simple and efficient method to multicast an Obse
   
     ![Untitled design (9)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/8fc51363-c677-4ad4-a213-07fba18386c8)
 
+- For more control over multicasting, check also the publish() and replay() operators.
+  
 ## To do 
 - catchError()
 - retry()
