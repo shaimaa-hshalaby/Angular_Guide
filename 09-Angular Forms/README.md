@@ -27,7 +27,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 2. In your component's HTML template, use the ngForm directive to create a form element to force Angular to generate an instance of the NgForm class and link it with the form element. This enables you to access the form's properties and methods in your component.
     ```
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-      
+        <button type="submit">submit</button>
       </form>
     ```
     > - The ngSubmit event is a built-in Angular event that is triggered when a form is submitted.
