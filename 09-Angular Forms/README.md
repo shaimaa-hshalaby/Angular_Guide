@@ -70,7 +70,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 ----------------
 ### Form style
 
-In AngularJS, there are several CSS classes that are automatically added to form controls based on their states. Here are some of the commonly used classes:
+In Angular, there are several CSS classes that are automatically added to form controls based on their states. Here are some of the commonly used classes:
 | CSS CLASS | DESCRIPTION |
 |---|---|
 | ng-pristine | This class is added to a form control when it has not been interacted with by the user yet. It indicates that the control is in its initial state.  |
