@@ -67,6 +67,23 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 
 7.  **Form Data Access:** Using the local reference syntax (#form="ngForm"), you can access the form and its controls in your component. This allows you to retrieve the values entered by the user, validate the form, and perform any additional processing.
 
+----------------
+### Form style
+
+In AngularJS, there are several CSS classes that are automatically added to form controls based on their states. Here are some of the commonly used classes:
+| CSS CLASS | DESCRIPTION |
+|---|---|
+| ng-pristine | This class is added to a form control when it has not been interacted with by the user yet. It indicates that the control is in its initial state.  |
+
+| ng-dirty  |  This class is added to a form control when its value has been changed by the user. It indicates that the control has been modified.  | 
+
+| ng-valid  |  This class is added to a form control when its value is considered valid according to the validation rules defined for that control.  | 
+
+| ng-invalid  |  This class is added to a form control when its value is considered invalid according to the validation rules defined for that control.  | 
+
+| ng-touched   This class is added to a form control when it has been blurred or focused out by the user. It indicates that the control has been touched.  | 
+
+| ng-untouched  |  This class is added to a form control when it has not been blurred or focused out by the user. It indicates that the control has not been touched.  | 
 
 ----------------
 
