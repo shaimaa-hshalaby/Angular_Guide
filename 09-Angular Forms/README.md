@@ -53,7 +53,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 
 ### What Angular does with Forms
 
-1-  **Component Creation:** When you create an Angular component that contains a form, Angular creates an instance of that component. This component acts as the controller for the form and handles its behaviour and data.
+1.  **Component Creation:** When you create an Angular component that contains a form, Angular creates an instance of that component. This component acts as the controller for the form and handles its behaviour and data.
 
 2.  **Form Initialization:** Angular initializes the form by creating an instance of the NgForm class (ngForm). This class represents the form and provides various properties and methods to interact with the form.
 
