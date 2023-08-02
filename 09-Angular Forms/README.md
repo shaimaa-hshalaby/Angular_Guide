@@ -70,7 +70,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server. for more form controls check this [section](#methods)
 10. you can reset the form by calling the form.reset() method as a handler of the reset button as follows:
     ```
-        <button (click)="form.reset()" >Reset Form</button>
+      <button (click)="form.reset()" >Reset Form</button>
     ```
 ----------------
 
