@@ -263,14 +263,6 @@ The NgForm class is typically used in conjunction with the ngForm directive in t
 4. use states built-in CSS classes to change appearance according to the state 
 
 
-
-
-
-
-
-
-
-
 ----------
 
 Built-in Validators documentation (https://angular.io/api/forms/Validators)
