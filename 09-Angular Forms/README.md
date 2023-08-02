@@ -50,10 +50,21 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 6. Add validation to your form controls using Angular's built-in validators or by creating custom validators. You can use directives such as required, minLength, and pattern to enforce validation rules. check the built-in validator list from [here](#built-in-validators)
     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/61d17f05-1662-436a-895f-f84b579581b6)
 
-7. you can force angular to create an object with Type NgModel and assign it to local reference to hold all states of specific form control as follows:
+7. you can force angular to create an object with Type NgModel and assign it to a local reference to hold all states of specific form control as follows:
    ```
      #lName="ngModel" 
    ```
+
+8. To set default values for some form controls, you can use ngModel directive with a property binding as follows:
+   ```
+     [ngModel]="defaultCountry"
+   ```
+   and set the default value in the component instance as follows:
+   ```
+     defaultCountry:string = 'egypt'
+   ```
+
+8. you can use property binding to assign default values to the form controls
 9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
 ----------------
 
