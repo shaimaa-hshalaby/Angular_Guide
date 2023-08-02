@@ -153,7 +153,14 @@ The NgForm class is typically used in conjunction with the ngForm directive in t
 
 
 
+-----------
 
+### Exercises
+
+1. disable submit button with form.valid
+2. change the css syle of the field if it is not valid
+3. use different validators
+4. use states built-in CSS classes to change appearance according to the state 
 
 
 
