@@ -63,7 +63,10 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
    ```
      defaultCountry:string = 'egypt'
    ```
-
+9. To instantly feel the change in the form-control value, you can use 2 way binding to assign the form-control value to one of the instance properties
+    ```
+      [(ngModel)]="bio"
+    ```
 9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
 ----------------
 
