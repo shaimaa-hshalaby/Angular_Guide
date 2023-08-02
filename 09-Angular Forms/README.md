@@ -334,30 +334,40 @@ directives documentation (https://angular.io/api?type=directive)
 ### Adding validation to the Reactive form
 To add validation to a reactive form in Angular, you can use the built-in validators provided by Angular or create custom validators. 
 
-  ##### Adding built-in validation to the Reactive Form
-  Apply validators to form controls:
-    - Import the required Classes
-        ```
-          import { FormGroup, FormControl, Validators } from '@angular/forms'
-        ```
-    - Use the Validators class to apply built-in validators such as required, email, minLength, maxLength, pattern, etc.
-        ```
-         this.signupForm = new FormGroup({
-            username: new FormControl(null,Validators.required),
-            email: new FormControl(null,[Validators.email,Validators.required]),
-            gender: new FormControl('female')
-      
-          })
-        ```
-        - you can apply one validator by passing a reference to on built-in validator such as username field control 
-            ```
-              username: new FormControl(null,Validators.required)
-            ```
+##### Adding built-in validation to the Reactive Form
 
-        - or you can apply more than one validator by passing an array of built-in validators such as email field control
-            ```
-              email: new FormControl(null,[Validators.email,Validators.required])
-            ```
+to apply validators to the form controls:
+
+- Import the required Classes
+    ```
+      import { FormGroup, FormControl, Validators } from '@angular/forms'
+    ```
+    
+- Use the Validators class to apply built-in validators such as required, email, minLength, maxLength, pattern, etc.
+    ```
+     this.signupForm = new FormGroup({
+        username: new FormControl(null,Validators.required),
+        email: new FormControl(null,[Validators.email,Validators.required]),
+        gender: new FormControl('female')
+  
+      })
+    ```
+    
+- you can apply one validator by passing a reference of the desired validator to the constructor of the FormControl such as username form control 
+    ```
+      username: new FormControl(null,Validators.required)
+    ```
+
+- or you can apply multiple validators by passing an array of built-in validators such as email form control:
+    ```
+      email: new FormControl(null,[Validators.email,Validators.required])
+    ```
+    
+- or you can use the setValidators() function by getting the FormControl object from the FormGroup object using the get() method provided by FormGroup class
+   ```
+       this.signupForm.get('email')?.setValidators([Validators.email,Validators.required])
+   ```
+    
 You can apply validators when creating the form control or later using the setValidators() method.
 Display validation errors in the template:
 
