@@ -55,7 +55,7 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
      #lName="ngModel" 
    ```
 
-8. To set default values for some form controls, you can use ngModel directive with a property binding as follows:
+8. To set default values for some form controls, you can use ngModel directive with a one-way binding as follows:
    ```
      [ngModel]="defaultCountry"
    ```
@@ -64,7 +64,6 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
      defaultCountry:string = 'egypt'
    ```
 
-8. you can use property binding to assign default values to the form controls
 9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
 ----------------
 
