@@ -48,7 +48,10 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
    > It would not work if you did not set the name attribute for the form control
 
 6. Add validation to your form controls using Angular's built-in validators or by creating custom validators. You can use directives such as required, minLength, and pattern to enforce validation rules. check the built-in validator list from [here](#built-in-validators)
-7. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
+   ```
+    <input class="form-control" name="fName" type="text" ngModel minlength="4" required/>
+   ```
+8. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
 ----------------
 
 ### What Angular does with Forms
