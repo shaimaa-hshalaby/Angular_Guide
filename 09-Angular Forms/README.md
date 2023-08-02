@@ -88,26 +88,35 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 ### difference between setValue() and patchValue()
 both setValue() and patchValue() are methods provided by the FormGroup and FormControl classes to update the values of form controls. However, there are some differences between the two methods.
 The **setValue()** method is used to set the value of all form controls within a form group. It requires you to pass an object that matches the structure of the form group. This means that you need to provide values for all form controls, even if you only want to update a single control. If you don't provide a value for a control, it will throw an error. Here's an example:
-    ```
-     setForm(form:NgForm){
-        form.setValue({
-          fName: 'Shaimaa',
-          lName: 'Shalaby',
-          email: 'shaimaa@gmail.com',
-          bio:'Java, Spring and Angular instructor'
-        })
-      }
-    ```
+  ```
+   setForm(form:NgForm){
+      form.setValue({
+        fName: 'Shaimaa',
+        lName: 'Shalaby',
+        email: 'shaimaa@gmail.com',
+        bio:'Java, Spring and Angular instructor'
+      })
+    }
+  ```
 
 The **patchValue()** method is used to update the values of one or more form controls within a form group. It allows you to pass an object with key-value pairs, where the keys represent the form control names and the values represent the new values you want to set. If a control is not included in the object, its value will remain unchanged. Here's an example:
 
-    ```
-      patchValueToForm(submittedForm:NgForm){
-        submittedForm.form.patchValue({
-          bio:'Java, JSF, J2EE, Spring, Springboot, Microservices and Angular Instructor'
-        })
-      }
-    ```
+  ```
+    patchValueToForm(submittedForm:NgForm){
+      submittedForm.form.patchValue({
+        bio:'Java, JSF, J2EE, Spring, Springboot, Microservices and Angular Instructor'
+      })
+    }
+  ```
+----------------
+### Reset the Form
+
+the reset() method in Angular is used to reset the form back to its initial state. It clears all the form controls and resets their values to their initial values. Here is an example
+
+```
+  (click)="form.reset()"
+```
+
 ----------------
 
 ### ngModelGroup directive
