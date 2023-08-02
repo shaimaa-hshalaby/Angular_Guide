@@ -73,6 +73,18 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
       <button (click)="form.reset()" >Reset Form</button>
     ```
 ----------------
+### working with radio buttons
+1. you can set an array in the component instances to hold the available values for the radio buttons, or you can set them as static values in the template
+2. to create radio buttons in the template which refers to the genders array in the instance, follow the provided code below:
+    ```
+     <div class="radio" *ngFor="let gender of genders">
+            <label>
+                <input type="radio" name="gender" [value]="gender" ngModel>{{gender}}
+            </label>
+        </div>
+    ```
+
+----------------
 
 ### ngModelGroup directive
 
@@ -94,6 +106,16 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
       (click)="form.controls['user'].reset()"
     ```
 - angular add CSS classes mapped to the group states to the div containing the ngModelGroup, for more info about Form CSS class from [here](#form-style)
+- To access the JSON object mapped to the form group, use the code provided below:
+  ```
+    form.controls['user'].value  
+  ```
+- you can create Local Reference to the ngModelGroup as follows:
+  ```
+   <div ngModelGroup="userInfo" #userInfoLocalRef="ngModelGroup">
+
+   </div>
+  ```
 ----------------
 
 ### What Angular does with Forms
