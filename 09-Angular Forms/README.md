@@ -67,7 +67,18 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
     ```
       [(ngModel)]="bio"
     ```
-9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server.
+9. Handle form submission by adding an event handler to the form's ngSubmit event. Inside the event handler, you can access the form's values and perform any necessary actions, such as sending data to a server. for more form controls check this [section](#methods)
+10. you can reset the form by calling the form.reset() method as a handler of the reset button as follows:
+    ```
+        <button (click)="form.reset()" >Reset Form</button>
+    ```
+----------------
+
+### ngModelGroup directive
+
+-  *ngModelGroup* is a directive in Angular that allows you to group multiple form controls together. It is useful when you want to perform operations on a group of form controls, such as validation or resetting their values.
+-  By using *ngModelGroup*, you can create a logical grouping of form controls within a form. This grouping can be used to apply form-level validation or to reset the values of all the controls in the group at once.
+
 ----------------
 
 ### What Angular does with Forms
