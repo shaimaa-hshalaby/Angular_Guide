@@ -367,6 +367,9 @@ to apply validators to the form controls:
    ```
        this.signupForm.get('email')?.setValidators([Validators.email,Validators.required])
    ```
+
+   > The syntax ?. is called the "safe navigation operator" or "optional chaining operator" in TypeScript and JavaScript.
+   > It is used to access properties or call methods on an object that may be null or undefined without causing an error.
     
 You can apply validators when creating the form control or later using the setValidators() method.
 Display validation errors in the template:
