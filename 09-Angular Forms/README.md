@@ -78,7 +78,22 @@ To create a template-driven form in Angular, you'll need to follow a few steps:
 
 -  *ngModelGroup* is a directive in Angular that allows you to group multiple form controls together. It is useful when you want to perform operations on a group of form controls, such as validation or resetting their values.
 -  By using *ngModelGroup*, you can create a logical grouping of form controls within a form. This grouping can be used to apply form-level validation or to reset the values of all the controls in the group at once.
+-  To create an ngModelGroup, use the code provided below.
+  
+      ```
+        <form>
+          <div ngModelGroup="user">
+            <input type="text" name="firstName" [(ngModel)]="firstName">
+            <input type="text" name="lastName" [(ngModel)]="lastName">
+          </div>
+        </form>
+      ```
 
+- To access the form-group in the template statement for resetting or performing any other actions, please refer to the code provided below:
+    ```
+      (click)="form.controls['user'].reset()"
+    ```
+- angular add CSS classes mapped to the group states to the div containing the ngModelGroup, for more info about Form CSS class from [here](#form-style)
 ----------------
 
 ### What Angular does with Forms
