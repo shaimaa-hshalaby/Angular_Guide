@@ -323,10 +323,43 @@ directives documentation (https://angular.io/api?type=directive)
           </form>
        ```
 
-    - To bind the form controls, use *formControlName* directive and bind it to form control name inside the formGroup object, Here's an example:
+    - To bind the form controls, use *formControlName* directive and bind it to the form control name inside the formGroup object, Here's an example:
       
       ```
         <input class="form-control" name="userName" type="text" formControlName="username" />
       ```
 
-   4. Submit the form using (ngSubmit) event, you don't need to pass the form as a parameter because it actually created inside the component and binded to the template.
+4. Submit the form using (ngSubmit) event, you don't need to pass the form as a parameter because it is actually created inside the component and bound to the template.
+
+### Adding validation to the Reactive form
+To add validation to a reactive form in Angular, you can use the built-in validators provided by Angular or create custom validators. 
+
+  ##### Adding built-in validation to the Reactive Form
+  Apply validators to form controls:
+    - Import the required Classes
+        ```
+          import { FormGroup, FormControl, Validators } from '@angular/forms'
+        ```
+    - Use the Validators class to apply built-in validators such as required, email, minLength, maxLength, pattern, etc.
+        ```
+         this.signupForm = new FormGroup({
+            username: new FormControl(null,Validators.required),
+            email: new FormControl(null,[Validators.email,Validators.required]),
+            gender: new FormControl('female')
+      
+          })
+        ```
+        - you can apply one validator by passing a reference to on built-in validator such as username field control 
+            ```
+              username: new FormControl(null,Validators.required)
+            ```
+
+        - or you can apply more than one validator by passing an array of built-in validators such as email field control
+            ```
+              email: new FormControl(null,[Validators.email,Validators.required])
+            ```
+You can apply validators when creating the form control or later using the setValidators() method.
+Display validation errors in the template:
+
+Angular provides various ways to display validation errors. You can use the formControlName directive to bind the form control to an input field in your template.
+Use the ngIf directive to conditionally display error messages based on the form control's validity state.
