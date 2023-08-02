@@ -328,4 +328,5 @@ directives documentation (https://angular.io/api?type=directive)
       ```
         <input class="form-control" name="userName" type="text" formControlName="username" />
       ```
-      
+
+   4. Submit the form using (ngSubmit) event, you don't need to pass the form as a parameter because it actually created inside the component and binded to the template.
