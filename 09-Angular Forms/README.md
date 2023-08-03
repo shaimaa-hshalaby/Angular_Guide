@@ -268,7 +268,7 @@ The NgForm class is typically used in conjunction with the ngForm directive in t
 Built-in Validators documentation (https://angular.io/api/forms/Validators)
 directives documentation (https://angular.io/api?type=directive)
 
-### Reactive Forms:
+## Reactive Forms:
 
 -  This approach is based on creating form controls programmatically in the component using TypeScript.
 -  It provides more flexibility and control over form validation and handling of form data.
@@ -363,8 +363,8 @@ to apply validators to the form controls:
    > The syntax ?. is called the "safe navigation operator" or "optional chaining operator" in TypeScript and JavaScript.
    > It is used to access properties or call methods on an object that may be null or undefined without causing an error.
     
-You can apply validators when creating the form control or later using the setValidators() method.
-Display validation errors in the template:
+- To access the FormControl states, you can use the get() method of the FormGroup as follows
+- 
 
 Angular provides various ways to display validation errors. You can use the formControlName directive to bind the form control to an input field in your template.
 Use the ngIf directive to conditionally display error messages based on the form control's validity state.
