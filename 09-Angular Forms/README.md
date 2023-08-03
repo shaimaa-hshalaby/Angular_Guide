@@ -370,3 +370,39 @@ to apply validators to the form controls:
               Please use a valid username
      </small>
   ```
+
+
+### Adding Nested Form Groups
+
+You can create nested form groups to organize your form controls hierarchically. This is useful when you have complex forms with sections or sub-sections that must be managed separately.
+
+1. import the necessary Classes into your component
+   ```
+    import { FormGroup, FormControl, Validators } from '@angular/forms'
+   ```
+   
+2. create the parent FormGroup which represents the whole form and create nested FormGroups using FormGroup class, Here's an example of a form that contains 2 from the group, personalInfo and Address. then assign form controls to the group using the FormControl class.
+   
+   ```
+    form:FormGroup
+
+    ngOnInit(): void {
+  
+      this.form = new FormGroup({
+        personalInfo : new FormGroup({
+            firstName: new FormControl(null,[Validators.required,Validators.minLength(2)]),
+            lastName: new FormControl(null,[Validators.minLength(2)]),
+            email: new FormControl(null,[Validators.required,Validators.email])
+        }),
+        address: new FormGroup({
+            country: new FormControl(null),
+            city: new FormControl(null),
+            street: new FormControl(null)
+        })
+      })
+   ```
+
+3. In the template, create the HTML code of your form and then bind the nested form groups to it using [formGroup] & [formControlName]  directives as follows:
+   ```
+
+   ```
