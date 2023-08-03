@@ -10,7 +10,7 @@ import { CreateObservableWithConstructorDemoComponent } from './04-create-observ
 import { ErrorHandlingDemoComponent } from './05-error-handling-demo/error-handling-demo.component';
 import { UnicastingDemoComponent } from './06-unicast-demo/unicast-demo.component';
 import { MulticastDemoComponent } from './07-multicast-demo/multicast-demo.component';
-import { PipeOperatorsDemoComponent } from './pipe-operators-demo/pipe-operators-demo.component';
+import { PipeOperatorsDemoComponent } from './08-pipe-operators-demo/pipe-operators-demo.component';
 
 @NgModule({
   declarations: [

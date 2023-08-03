@@ -1,0 +1,49 @@
+<form [formGroup]="form">
+    <div formGroupName="personalInfo" >
+        <fieldset class="rounded border m-5 p-3">
+            <legend  class="w-auto">Personal Information</legend>
+            <div class="form-group">
+                <label for="fName">First Name</label>
+                <input class="form-control" name="fName" type="text" formControlName="firstName"/><br>
+                <small class="form-text text-muted"
+                *ngIf="form.get('personalInfo.firstName')?.invalid && form.get('personalInfo.firstName')?.touched" >
+                      Please use a valid name
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name</label>
+                <input class="form-control"  name="lName" type="text" formControlName="lastName" /><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" type="text" formControlName="email" /><br>
+                <small class="form-text text-muted"
+                *ngIf="form.get('personalInfo.email')?.invalid && form.get('personalInfo.email')?.touched" >
+                      Please use a valid email
+                </small>
+            </div>
+        </fieldset>
+    </div>
+    <div formGroupName="address">
+        <fieldset class="rounded border m-5 p-3">
+            <legend  class="w-auto">Address Information</legend>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input class="form-control" name="country" type="text" formControlName="country" /><br>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input class="form-control"  name="city" type="text" formControlName="city" /><br>
+            </div>
+            <div class="form-group">
+                <label for="street">Street</label>
+                <input class="form-control" name="street" type="text" formControlName="street" /><br>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="form-group m-5 p-3">
+        <button class="btn btn-success" type="submit" >submit</button>
+    </div>
+  
+</form>

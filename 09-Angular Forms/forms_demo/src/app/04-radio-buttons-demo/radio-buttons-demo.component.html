@@ -1,0 +1,39 @@
+<div class="row">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="form-group">
+            <label for="fName">First Name</label>
+            <input class="form-control" name="fName" type="text" ngModel minlength="4" #firstName="ngModel" required/><br>
+        </div>
+        <div class="form-group">
+            <label for="lName">Last Name</label>
+            <input class="form-control"  name="lName" type="text" ngModel minlength="4"/><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" name="email" type="text" ngModel email /><br>
+        </div>
+        <div class="form-group">
+            <label for="bio">Biography</label>
+            <textarea class="form-control" name="bio"  rows="5" ngModel ></textarea>
+        </div>
+        <div class="radio mt-2" *ngFor="let gender of genders">
+            <label>
+                <input type="radio" name="gender" [value]="gender" ngModel [(ngModel)]="selectedGender">{{gender}}
+            </label>
+        </div>
+        <p>the selected gender : {{selectedGender}}</p>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select class="form-control" name="country" ngModel >
+                <option value="ksa">Saudi Arabia</option>
+                <option value="egypt">Egypt</option>
+                <option value="uae">United Arab of Emarate</option>
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <button class="btn btn-success" type="submit" [disabled]="!form.valid">submit</button>
+           
+        </div>
+      
+    </form>
+</div>

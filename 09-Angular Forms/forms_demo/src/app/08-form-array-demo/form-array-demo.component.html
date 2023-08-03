@@ -1,0 +1,53 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div formGroupName="personalInfo">
+        <fieldset class="rounded border m-5 p-3">
+            <legend class="w-auto">Personal Information</legend>
+            <div class="form-group">
+                <label for="fName">First Name</label>
+                <input class="form-control" name="fName" type="text" formControlName="firstName" /><br>
+                <small class="form-text text-muted"
+                    *ngIf="form.get('personalInfo.firstName')?.invalid && form.get('personalInfo.firstName')?.touched">
+                    Please use a valid name
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name</label>
+                <input class="form-control" name="lName" type="text" formControlName="lastName" /><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" type="text" formControlName="email" /><br>
+                <small class="form-text text-muted"
+                    *ngIf="form.get('personalInfo.email')?.invalid && form.get('personalInfo.email')?.touched">
+                    Please use a valid email
+                </small>
+            </div>
+        </fieldset>
+    </div>
+    <div formGroupName="additionalInfo">
+        <fieldset class="rounded border m-5 p-3">
+            <legend class="w-auto">ِAdditional Info</legend>
+            <div formArrayName="hobbies">
+       
+                    <label>Hobbies</label>
+                    <div class="input-group mb-3" *ngFor="let hobby of hobbiesArray.controls, let i=index">
+                        <input class="form-control" type="text" [formControlName]="i" />
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" (click)="removeFromHobbies(i)" type="button">X</button>
+                        </div>
+                      </div>
+
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="onAddHobbies()">add hobby</button><br>
+                <span *ngFor="let h of hobbiesArray.controls">{{h.value+' ,'}}</span>
+            </div>
+        </fieldset>
+    </div>
+   
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">submit</button>
+    </div>
+
+</form>
+

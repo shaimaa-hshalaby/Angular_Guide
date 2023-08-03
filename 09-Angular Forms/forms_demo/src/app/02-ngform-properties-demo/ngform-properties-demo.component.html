@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <div class="form-group">
+                <label for="fName">First Name</label>
+                <input class="form-control" name="fName" type="text" ngModel minlength="4"/><br>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name</label>
+                <input class="form-control" name="lName" type="text" ngModel minlength="4" /><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" type="text" ngModel minlength="4" email/><br>
+            </div>
+            <div class="form-group">
+                <label for="bio">Biography</label>
+                <textarea class="form-control" name="bio"  rows="5" ngModel ></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <button class="btn btn-success" type="submit" [disabled]="!form.valid">submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col">
+        <p>dirty : {{form.dirty}}</p>
+        <p>invalid : {{form.invalid}}</p>
+        <p>valid : {{form.valid}}</p>
+        <p>touched : {{form.touched}}</p>
+        <p>untouched : {{form.untouched}}</p>
+        <p>status : {{form.status}}</p>
+        <p>pristine : {{form.pristine}}</p>
+        <p>errors : {{form.errors | json}}</p>
+        <p>value : {{form.value | json}}</p>
+        <p>submitted : {{form.submitted}}</p>
+
+    </div>
+</div>

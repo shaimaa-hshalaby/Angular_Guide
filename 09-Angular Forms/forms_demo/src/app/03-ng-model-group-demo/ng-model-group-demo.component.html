@@ -1,0 +1,52 @@
+<div class="row mt-5">
+    <form #form="ngForm">
+        <div ngModelGroup="user" #userLocalRef="ngModelGroup">
+            <div class="form-group">
+                <label for="fName">First Name</label>
+                <input class="form-control" name="fName" type="text" ngModel minlength="4" #firstName="ngModel"
+                    required /><br>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name</label>
+                <input class="form-control" name="lName" type="text" ngModel minlength="4" /><br>
+            </div>
+        </div>
+        <div ngModelGroup="userInfo" #userInfoLocalRef="ngModelGroup">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" type="text" ngModel email /><br>
+            </div>
+            <div class="form-group">
+                <label for="bio">Biography</label>
+                <textarea class="form-control" name="bio" rows="5" ngModel></textarea>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control" name="country" ngModel>
+                    <option value="ksa">Saudi Arabia</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="uae">United Arab of Emarate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success m-1" type="submit" [disabled]="!form.valid">submit</button>
+                <button class="btn btn-primary m-1" (click)="form.controls['user'].reset()">Reset User group
+                    model</button>
+                <button class="btn btn-primary m-1" (click)="form.controls['userInfo'].reset()">Reset User group
+                    model</button>
+                <button class="btn btn-primary m-1" (click)="form.reset()">Reset Form</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <h4>using form controls array</h4>
+        <p>User Group Value: {{form.controls['user'].value | json}}</p>
+        <p>User Group Value: {{form.controls['userInfo'].value | json}}</p>
+    </div>
+
+    <div class="row">
+        <h4>using local reference</h4>
+        <p>User Group Value: {{userLocalRef.value | json}}</p>
+        <p>User Group Value: {{userInfoLocalRef.value | json}}</p>
+    </div>
+</div>
