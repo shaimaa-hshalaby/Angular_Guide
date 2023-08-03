@@ -447,3 +447,65 @@ You can create nested form groups to organize your form controls hierarchically.
     form.get('personalInfo.firstName').invalid
     form.get('personalInfo.firstName').touched
    ```
+
+### FormArray 
+the FormArray class is a part of the Angular Forms module and is used to manage an array of form controls. It provides a way to dynamically add or remove form controls within a form group. Here's an example of how to create a FormArray and (add/ remove) controls (to/from) it dynamically.
+
+1. Import the necessary classes into your component instance
+    ```
+      import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms'
+    ```
+
+2. When initializing the component, make sure to include a FormArray in the FormGroup. check the code provided below:
+
+   ```
+     form:FormGroup
+   
+     ngOnInit(): void {
+   
+        this.form = new FormGroup({
+          personalInfo : new FormGroup({
+             //
+          }),
+          additionalInfo: new FormGroup({
+              hobbies: new FormArray([])
+          })
+        })
+
+      }
+   ```
+
+3. create a property of type FormArray to hold the hobbies FormArray for easy handling
+   ```
+      this.hobbiesArray = this.form.get('additionalInfo.hobbies') as FormArray
+   ```
+
+4. To add elements to a FormArray on the template, you can use the formArrayName, formControlName directives along with the push(), removeAt() methods. Here's an example:
+   ```
+       <div formGroupName="additionalInfo">
+            <div formArrayName="hobbies">
+                   <div class="input-group mb-3" *ngFor="let hobby of hobbiesArray.controls, let i=index">
+                        <input class="form-control" type="text" [formControlName]="i" />
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" (click)="removeFromHobbies(i)" type="button">X</button>
+                        </div>
+                   </div>
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="onAddHobbies()">add hobby</button>
+            </div>
+    </div>
+
+   ```
+
+5. add onAddHobbies() and removeFromHobbies() handlers to your instance as follows:
+    ```
+       onAddHobbies(){
+          let control = new FormControl(null,Validators.required);
+          this.hobbiesArray.push(control)
+       }
+
+       removeFromHobbies(index:number){
+          this.hobbiesArray.removeAt(index)
+       }
+    ```
