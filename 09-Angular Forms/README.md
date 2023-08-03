@@ -326,7 +326,7 @@ directives documentation (https://angular.io/api?type=directive)
 ### Adding validation to the Reactive form
 To add validation to a reactive form in Angular, you can use the built-in validators provided by Angular or create custom validators. 
 
-##### Adding built-in validation to the Reactive Form
+#### Adding built-in validation to the Reactive Form
 
 to apply validators to the form controls:
 
@@ -371,7 +371,20 @@ to apply validators to the form controls:
      </small>
   ```
 
+### Create Custom Validator
+A custom validator is a function with a specific signature that can be included in the same TypeScript file as the component or in a separate file.
 
+To create a custom validator in Angular, you can follow these steps
+1. To create your own custom validator, make a new typescript file such as "custom.validator.ts". This is where you can define the logic for your custom validator or you can define the validator into your component instance instead.
+
+2. Import the necessary Classes and Interfaces
+   ```
+    import { AbstractControl, ValidationErrors } from '@angular/forms';
+   ```
+
+
+
+-------------------------------------------
 ### Adding Nested Form Groups
 
 You can create nested form groups to organize your form controls hierarchically. This is useful when you have complex forms with sections or sub-sections that must be managed separately.
