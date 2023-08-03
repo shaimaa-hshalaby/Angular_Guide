@@ -392,8 +392,14 @@ let's create a validator that validates that the employee code starts with the '
           return null
       }
    ```
+   
+The structure of ValidationErrors Interface, is key-value paired, so it will accept string keys with any values
 
-
+   ```
+     interface ValidationErrors {
+        [key: string]: any;
+      }
+   ```
 
 -------------------------------------------
 ### Adding Nested Form Groups
