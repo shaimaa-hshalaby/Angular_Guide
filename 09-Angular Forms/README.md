@@ -509,3 +509,7 @@ the FormArray class is a part of the Angular Forms module and is used to manage 
           this.hobbiesArray.removeAt(index)
        }
     ```
+
+6. The following GIF illustrates how the previous code behaves:
+
+     ![Untitled design (10)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/348349d1-6759-4a2a-aa15-f3bc73acabe7)
