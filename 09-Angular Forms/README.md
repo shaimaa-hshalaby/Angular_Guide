@@ -422,8 +422,21 @@ The structure of ValidationErrors Interface, is key-value paired, so it will acc
 
 #### Create Custom validator with parameters
 
-SomeTimes you need to pass parameters to the custom validator, but in the other hand you must define the custom validator function to only recieve AbstractControl parameter so we can create custom validation function that return a reference to ValidatorFn but accept any parameters that we need
+SomeTimes you need to pass parameters to the custom validator, but in the other hand you must define the custom validator function to only recieve AbstractControl parameter so we can create custom validation function that return a reference to ValidatorFn but accept any parameters that we need.
 
+Let's modify the previous example of custom validator and pass the prefix as a parameter, the validator function will be as follows:
+```
+  import { FormControl,ValidationErrors, ValidatorFn, AbstractControl } from '@angular/forms'
+  
+  export function validateEmployeeCodeWithParameter(prefix:string):ValidatorFn{
+      return (control: AbstractControl):ValidationErrors|null => {
+          if(!control.value.startsWith(prefix)){
+              return {notPrefixed:true}
+          }
+          return null
+      }
+  }
+```
 
 -------------------------------------------
 ### Adding Nested Form Groups
