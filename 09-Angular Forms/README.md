@@ -420,6 +420,11 @@ The structure of ValidationErrors Interface, is key-value paired, so it will acc
    
      ![Untitled design (11)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/5c6a7e74-5eeb-439e-a08b-c115048f97e0)
 
+#### Create Custom validator with parameters
+
+SomeTimes you need to pass parameters to the custom validator, but in the other hand you must define the custom validator function to only recieve AbstractControl parameter so we can create custom validation function that return a reference to ValidatorFn but accept any parameters that we need
+
+
 -------------------------------------------
 ### Adding Nested Form Groups
 
