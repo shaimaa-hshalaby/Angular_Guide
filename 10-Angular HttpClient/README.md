@@ -7,7 +7,7 @@
 
 ## Http Request
   
-    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/304408e3-b7f3-4d8a-86fe-295688fe33af)
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/304408e3-b7f3-4d8a-86fe-295688fe33af)
 
 The parts of an HTTP request include:
 
