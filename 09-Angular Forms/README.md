@@ -441,3 +441,9 @@ You can create nested form groups to organize your form controls hierarchically.
       </form>
    ```
    > Note that we have used the directive *formGroupName* to bind the group of form controls with the nested FormGroup inside the form object created in the instance formGroupName="personalInfo", formGroupName="address"
+
+4. To access the form-control states, we use the dot operator to reach the desired form-control, Here is an example:
+   ```
+    form.get('personalInfo.firstName').invalid
+    form.get('personalInfo.firstName').touched
+   ```
