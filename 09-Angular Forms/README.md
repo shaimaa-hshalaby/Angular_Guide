@@ -440,3 +440,4 @@ You can create nested form groups to organize your form controls hierarchically.
       
       </form>
    ```
+   > Note that we have used the directive *formGroupName* to bind the group of form controls with the nested FormGroup inside the form object created in the instance formGroupName="personalInfo", formGroupName="address"
