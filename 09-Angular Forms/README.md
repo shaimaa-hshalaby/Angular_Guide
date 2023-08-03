@@ -381,6 +381,17 @@ To create a custom validator in Angular, you can follow these steps
    ```
     import { AbstractControl, ValidationErrors } from '@angular/forms';
    ```
+3. Create and export a function for your custom validator. This function should accept an *AbstractControl* parameter and return a *ValidationErrors* object if the validation fails, or null if the validation passes.
+let's create a validator that validates that the employee code starts with the 'ABC' prefix or not
+   ```
+      export function validateEmployeeCode(control:AbstractControl):ValidationErrors|null{
+          let prefix = 'ABC'
+          if(!control.value.startsWith(prefix)){
+              return {notPrefixed:true}
+          }
+          return null
+      }
+   ```
 
 
 
