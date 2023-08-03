@@ -439,6 +439,16 @@ Let's modify the previous example of custom validator and pass the prefix as a p
 ```
 
 #### Use error codes
+
+You can access the FormControls errors to print error messages according to the error code, Here's an example
+
+  ```
+    <small class="text-danger" *ngIf="form.get('personalInfo.employeeCode')?.errors && 
+                    form.get('personalInfo.employeeCode')?.hasError('notPrefixed')">
+                        The code should start with HP
+    </small>
+  ```
+
 -------------------------------------------
 ### Adding Nested Form Groups
 
