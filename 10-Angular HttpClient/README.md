@@ -7,8 +7,8 @@
 
 ## Http Request
   
-  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/f4f47db9-f4f6-4831-b721-0cd4ef91ea5a)
-    
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/304408e3-b7f3-4d8a-86fe-295688fe33af)
+
 The parts of an HTTP request include:
 
 -  **Request Line:** This is the first line of the request and contains the HTTP method (such as GET, POST, PUT, DELETE), the URL or URI (Uniform Resource Identifier) of the resource being requested, and the HTTP version.
