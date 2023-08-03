@@ -372,6 +372,7 @@ to apply validators to the form controls:
   ```
 
 ### Create Custom Validator
+
 A custom validator is a function with a specific signature that can be included in the same TypeScript file as the component or in a separate file.
 
 To create a custom validator in Angular, you can follow these steps
@@ -400,6 +401,24 @@ The structure of ValidationErrors Interface, is key-value paired, so it will acc
         [key: string]: any;
       }
    ```
+4. To enable the custom validator in your Angular component, you must import it and add it to the validators array of the FormControl or FormGroup that requires validation.
+
+   ```
+     import { validateEmployeeCode } from './custom.validators';
+   ```
+
+   ```
+    this.form = this.fb.group({
+        personalInfo :this.formBuilder.group({
+          //
+           ,'employeeCode':['',[Validators.required,validateEmployeeCode]]
+        })
+    })
+   ```
+
+5. The following GIF demonstrates the output
+   
+     ![Untitled design (11)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/5c6a7e74-5eeb-439e-a08b-c115048f97e0)
 
 -------------------------------------------
 ### Adding Nested Form Groups
