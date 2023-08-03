@@ -363,10 +363,7 @@ to apply validators to the form controls:
    > The syntax ?. is called the "safe navigation operator" or "optional chaining operator" in TypeScript and JavaScript.
    > It is used to access properties or call methods on an object that may be null or undefined without causing an error.
     
-- To access the FormControl states in the template, you can use the get() method of the FormGroup as follows
-
-
-- Use the ngIf directive to conditionally display error messages based on the form control's validity state.
+- To access the FormControl states in the template, you can use the get() method of the FormGroup with ngIf directive to conditionally display error messages based on the form control's validity state.
   ```
      <small class="form-text text-muted"
         *ngIf="signupForm.get('username')?.invalid && signupForm.get('username')?.touched" >
