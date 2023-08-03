@@ -404,5 +404,39 @@ You can create nested form groups to organize your form controls hierarchically.
 
 3. In the template, create the HTML code of your form and then bind the nested form groups to it using [formGroup] & [formControlName]  directives as follows:
    ```
+      <form [formGroup]="form">
+   
+        <div formGroupName="personalInfo" >
+            <div class="form-group">
+                <label for="fName">First Name</label>
+                <input class="form-control" name="fName" type="text" formControlName="firstName"/><br>
+            </div>
+            <div class="form-group">
+                <label for="lName">Last Name</label>
+                <input class="form-control"  name="lName" type="text" formControlName="lastName" /><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" type="text" formControlName="email" /><br>
+            </div>
+        </div>
+   
+        <div formGroupName="address">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input class="form-control" name="country" type="text" formControlName="country" /><br>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input class="form-control"  name="city" type="text" formControlName="city" /><br>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street</label>
+                    <input class="form-control" name="street" type="text" formControlName="street" /><br>
+                </div>
+        </div>
 
+       <button class="btn btn-success" type="submit" >submit</button>
+      
+      </form>
    ```
