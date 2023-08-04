@@ -32,7 +32,7 @@ When you import the HttpClientModule, you enable the use of the HttpClient servi
 
 Import the HttpClientModule from the '@angular/common/http' module into AppModule(the root module of your application). Add the following import statement at the top of the file, then add *HttpClientModule* to the declaration array:
   
-    ```
+   ```
     import { HttpClientModule } from '@angular/common/http';
      
     @NgModule({
@@ -47,30 +47,55 @@ Import the HttpClientModule from the '@angular/common/http' module into AppModul
       bootstrap: [AppComponent]
     })
     export class AppModule { }
-   ```
+  ```
 
--  Once you have imported the HttpClient service into your component, you can then inject it into the component constructor.
-    ```
-      import { HttpClient } from '@angular/common/http';
-    ```
+Import the HttpClient service into your component.
 
-    ```
-      constructor(private http: HttpClient) {}
-    ```
+  ```
+    import { HttpClient } from '@angular/common/http';
+  ```
 
-## Requesting data from a server
+To send and receive data from a server, you must inject the HttpClient service into your component constructor.
 
-Use the HttpClient.get() method to fetch data from a server. The asynchronous method sends an HTTP request, and returns an Observable that emits the requested data when the response is received. The return type varies based on the observe and responseType values that you pass to the call.
+  ```
+    constructor(private http: HttpClient) {}
+  ```
+
+## Send/Recieve data from a server (Making Requests)
+
+In Angular, the HttpClient module provides a powerful and convenient way to send and receive data from a server by making HTTP requests. With the HttpClient, you can easily perform operations such as GET, POST, PUT, DELETE, and more. To send data to a server, you can use the post() method to make a POST request and include the data in the request body. This allows you to send data such as form inputs, JSON payloads, or any other data required by the server. On the other hand, to retrieve data from a server, you can use the get() method to make a GET request and receive the response data. The HttpClient module also supports handling headers, query parameters, and other request options. By utilizing the HttpClient module, you can seamlessly communicate with a server and exchange data, enabling you to build dynamic and interactive applications.
+
+### Make a POST request
 
 
+### Request data from a server
+When you need to retrieve data from a server using Angular, you can make use of the HttpClient module's get() method. This method allows you to send a GET request to a specified URL and receive the response data from the server.
+the get method is an asynchronous method that sends an HTTP request and returns an Observable that emits the requested data when the response is received. 
+
+The get() method takes two arguments; the endpoint URL from which to fetch, and an options object that is used to configure the request.
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/ed7af483-ddad-4715-893a-fc50c8351f3e)
+
+Let's break down the parameters and options:
+
+| PARAMETER NAME | DESCRIPTION |
+|---|---|
+| url (required): | The URL of the server endpoint to send the GET request to. |
+| options (optional): | An object that allows you to specify additional options for the request, such as headers, parameters, response type, etc. This parameter is optional, and you can omit it if you don't need to customize the request.|
+| headers (optional): | An object representing the headers to be sent with the request. You can pass either an instance of HttpHeaders or an object with key-value pairs representing the headers. |
+| observe (optional): | Specifies the type of response to observe. The default value is 'body', which means the response body will be returned. Other options include 'response' (to get the full HTTP response) and 'events' (to get the progress events). |
+| params (optional): | An object representing the query parameters to be sent with the request. You can pass either an instance of HttpParams or an object with key-value pairs representing the parameters.|
+| reportProgress (optional): | A boolean value indicating whether to report the progress of the request. The default value is false. |
+| responseType (optional): | Specifies the expected type of the response. The default value is 'json', but you can also choose 'text', 'blob', or 'arraybuffer'.|
+| withCredentials (optional): | A boolean value indicating whether to include credentials (such as cookies) with the request. The default value is false.|
 
 
 -----------------------------------
 
 
-Importing HttpClientModule: Show how to import the HttpClientModule in the root module of your Angular application to make it available for use.
 
-Creating an instance of HttpClient: Explain how to create an instance of HttpClient in a component or service using dependency injection.
+
+
 
 Making GET requests: Demonstrate how to use the HttpClient instance to make GET requests to retrieve data from a server. Show examples of how to handle the response using subscribe() and handle errors using catchError().
 
