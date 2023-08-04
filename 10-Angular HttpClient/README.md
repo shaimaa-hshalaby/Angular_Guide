@@ -1,11 +1,14 @@
 ## Http Client Introduction
 
+Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services.
+
 - Angular HttpClient is a built-in module in Angular that allows you to make HTTP requests to a server and retrieve data. 
 - It provides a simplified API for handling HTTP requests and responses, making it easier to work with RESTful APIs.
 - With the Angular HttpClient module, you can perform various HTTP operations such as GET, POST, PUT, DELETE, etc.
 - It also supports features like request headers, query parameters, request/response interceptors, error handling, and more.
-
-## Http Request
+- You can find the official documentation for HttpClient by visiting this [link](https://angular.io/guide/understanding-communicating-with-http)
+  
+## HTTP Request
   
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/304408e3-b7f3-4d8a-86fe-295688fe33af)
 
@@ -21,4 +24,21 @@ The parts of an HTTP request include:
 -  APIs are commonly used in web development to build more dynamic and interactive applications. They provide a standardized way for different systems to interact and exchange information, enabling developers to leverage existing functionality and integrate different services into their applications.
 
 
+## Setup for server communication
+
+-  Before you can use HttpClient, you need to import the Angular HttpClientModule. Most apps do so in the root AppModule
+    ```
+     @NgModule({
+      declarations: [
+       //
+      ],
+      imports: [
+        //
+        HttpClientModule
+      ],
+      providers: [],
+      bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+   ```
   
