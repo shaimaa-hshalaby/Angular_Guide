@@ -93,13 +93,38 @@ Let's break down the parameters and options:
 
 The get() method returns an Observable that emits the response data when the request is successful. You can subscribe to this Observable to handle the response data or use operators like a map() or tap() to transform or process the data before subscribing.
 
-Here is an example of using get method without options:
+Here is an example of using the get() method without options:
 
   ```
    let url = "endpoint_url";
-   let data = this.http.get<{ [key: string]: { title: string, content: string } }>(url)
+   let data = this.http.get<{ title: string, content: string }>(url)
          .subscribe(posts => console.log(posts));
   
+  ```
+
+get() method is generic, So you can specify the type of expected response data for the type safety. This ensures that TypeScript can perform type checking and provide autocompletion for the response data, making your code more robust and less prone to runtime errors related to data types.  
+
+### Transforming HTTP Responses pipe() operators
+
+you can use the pipe() operator to chain multiple operators and perform various transformations on the response data before subscribing to it. The pipe() function allows you to apply a sequence of RxJS operators to process the observable stream.
+
+Here's an example of how you can use pipe() with httpClient.get() to perform some common data transformations:
+
+  ```
+    let url = "endpoint_url";
+  
+    let data = this.http.get<{ [key: string]: { title: string, content: string } }>(url)
+      .pipe(map(responseData => {
+        const postsArr = [];
+        for (let key in responseData) {
+          if (responseData.hasOwnProperty(key)) {
+            const post = { id: key, ...responseData[key] };
+            postsArr.push(post);
+          }
+        }
+        return postsArr;
+      }))
+      .subscribe(posts => console.log(posts));
   ```
 
 -----------------------------------
