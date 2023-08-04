@@ -2,8 +2,6 @@
 -  TypeScript is a syntactic superset of JavaScript which adds static typing.
 -  This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add types.
 -  TypeScript uses compile time type checking. This means it checks if the specified types match before running the code, not while running the code.
--  
-
 
 # Why do we use Typescript?
 -  Javascript is a dynamically typed programming language, functions do not expect specific types of parameters.
@@ -24,10 +22,9 @@ https://www.typescriptlang.org/play
   npm install typescript
   ```
 - to install typescript globally into your machine, you can add -g to your command
-- 
 
-```
-  npm install typescript
+  ```
+    npm install -g typescript
   ```
 # Typescript compiler
 
@@ -59,20 +56,24 @@ https://www.typescriptlang.org/play
          ```
 
       -  Objects
-         ```
-          let person:{
-              name:string;
-              age:number;
-              active:boolean;
-          }
-          
-          
-          person = {
-              name: 'Shaimaa',
-              age: 30,
-              active: false
-          }
-         ```
+        **Variable declaration**
+           ```
+              let person:{
+                  name:string;
+                  age:number;
+                  active:boolean;
+              }
+           ```
+           
+        **Variable assignment**
+    
+           ```
+              person = {
+                  name: 'Shaimaa',
+                  age: 30,
+                  active: false
+              }
+           ```
 
     -  Array of Objects
          ```
