@@ -68,7 +68,8 @@ In Angular, the HttpClient module provides a powerful and convenient way to send
 ### Make a POST request
 
 
-### Request data from a server
+### Request data from a server (GET request)
+
 When you need to retrieve data from a server using Angular, you can make use of the HttpClient module's get() method. This method allows you to send a GET request to a specified URL and receive the response data from the server.
 the get method is an asynchronous method that sends an HTTP request and returns an Observable that emits the requested data when the response is received. 
 
@@ -89,6 +90,17 @@ Let's break down the parameters and options:
 | responseType (optional): | Specifies the expected type of the response. The default value is 'json', but you can also choose 'text', 'blob', or 'arraybuffer'.|
 | withCredentials (optional): | A boolean value indicating whether to include credentials (such as cookies) with the request. The default value is false.|
 
+
+The get() method returns an Observable that emits the response data when the request is successful. You can subscribe to this Observable to handle the response data or use operators like a map() or tap() to transform or process the data before subscribing.
+
+Here is an example of using get method without options:
+
+  ```
+   let url = "endpoint_url";
+   let data = this.http.get<{ [key: string]: { title: string, content: string } }>(url)
+         .subscribe(posts => console.log(posts));
+  
+  ```
 
 -----------------------------------
 
