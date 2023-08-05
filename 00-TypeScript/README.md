@@ -146,8 +146,6 @@ https://www.typescriptlang.org/play
          ```
 
       -  Objects:
-        
-        -  Variable declaration
     
            ```
               let person:{
@@ -155,11 +153,7 @@ https://www.typescriptlang.org/play
                   age:number;
                   active:boolean;
               }
-           ```
-           
-        -  Variable assignment
-    
-           ```
+
               person = {
                   name: 'Shaimaa',
                   age: 30,
