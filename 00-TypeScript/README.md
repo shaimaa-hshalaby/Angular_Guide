@@ -53,14 +53,14 @@ https://www.typescriptlang.org/play
   
   ## Exercise 1
   
-    -  create a folder for your project
-    -  navigate to it
-    -  install typescript locally or globally
-    -  test that it is installed by the following command
-        ```
-          npx tsc --version
-        ```
-        > npx to run the local installation of tsc
+  -  create a folder for your project
+  -  navigate to it
+  -  install typescript locally or globally
+  -  test that it is installed by the following command
+      ```
+        npx tsc --version
+      ```
+      > npx to run the local installation of tsc
 
 ----------------------------------------------------------
   
@@ -69,6 +69,27 @@ https://www.typescriptlang.org/play
 -  TypeScript compiler is a tool that translates TypeScript code into plain JavaScript code.
 -  The TypeScript compiler, also known as tsc, takes TypeScript source files (usually with the .ts extension) as input and produces JavaScript files (with the .js extension) as output.
 -  The compiler also checks the code for syntax errors and performs static type checking, ensuring that the code adheres to the specified types.
+-  After installing TypeScript, you can run the tsc command followed by the names of the TypeScript files you want to compile. For example, to compile a single TypeScript file:
+     ```
+      npx tsc myfile.ts
+     ```
+     
+- Or, to compile all TypeScript files in a directory
+   
+     ```
+      npx tsc
+     ```
+- Or, you can add the compilation command as a script in package.json file as follows
+     ```
+       "scripts": {
+         "build": "tsc"
+        }
+     ```
+  and then you can run the build script by the following command:
+    ```
+      npm run build
+    ```
+    
 -  Configuration File (tsconfig.json): The TypeScript compiler can be configured using a tsconfig.json file, which allows developers to specify various compiler options and settings.
 -  To generate an intial copy of tsconfig.json file with default settings, you can utilize the following command for the global npm package
       ```
@@ -83,27 +104,38 @@ https://www.typescriptlang.org/play
 - To customize the development settings for your project, you can modify the default settings in the tsconfig.json file. For example, consider modifying the *outDir* option to specify the desired location for the compiler to generate the JavaScript files.
   
 ----------------------------------------------------------
+
 ## Exercise 2
 
-
+-  create tsconfig.json intial file
+-  change the *outDir* option to ./js
+-  add "strictPropertyInitialization": false to the compilerOptions object inside the tsconfig.json to not enforce you to intialize all class properties
+-  into your project directory, run the following command to install http server
+     ```
+      npm install -g http-server
+     ```
+- create index.html file
+- then run *http-server* command in the terminal to start the server and test the link http://localhost:8080/
+- create a very basic ts file then compile it, notice the generated js file, use it into your html file
+   
 ----------------------------------------------------------
 # Basic types in Typescript
  -  primitives:
      - number
          ```
-         let age:number;
-         age = 30;
+           let age:number;
+           age = 30;
          ```
      - string
          ```
-         let username:string;
-         username = 'Shaimaa';
+           let username:string;
+           username = 'Shaimaa';
          ```
      - boolean
         ```
          let active:boolean;
-          active = false;
-         ```
+         active = false;
+        ```
 
  -  Objects and Arrays
      -  Arrays
@@ -161,25 +193,26 @@ https://www.typescriptlang.org/play
           
           ]
         ```
-   # Type Inference
+
+## Type Inference
    In TypeScript, there are several places where type inference is used to provide type information when there is no explicit type annotation. For example, in this code
   ```
     let x = 30;
   ```
 
-The type of the x variable is inferred to be number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
-writing the type here condsidered a redundancy.
+The type of the x variable is inferred to be a number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
+writing the type here is considered a redundancy.
 
+## Union types
 
-# Union types
 Union types are used when a variable can hold more than a single type.
- ```
+  ```
     let code: string | number = 'C123';
     code = 123;
   ```
 
 
-# Type Aliases
+## Type Aliases
 it’s common to want to use the same type more than once and refer to it by a single name.
 So we can declare a type and use it as follows:
 
