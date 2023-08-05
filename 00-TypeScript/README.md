@@ -48,6 +48,21 @@ https://www.typescriptlang.org/play
     npm install -g typescript
   ```
   > the location of global package in windows is %USERPROFILE%\AppData\Roaming\npm\node_modules
+
+----------------------------------------------------------
+  
+  ## Exercise 1
+  
+    -  create a folder for your project
+    -  navigate to it
+    -  install typescript locally or globally
+    -  test that it is installed by the following command
+        ```
+          npx tsc --version
+        ```
+        > npx to run the local installation of tsc
+
+----------------------------------------------------------
   
 # Typescript compiler
 
@@ -66,8 +81,12 @@ https://www.typescriptlang.org/play
         npx tsc --init
       ```
 - To customize the development settings for your project, you can modify the default settings in the tsconfig.json file. For example, consider modifying the *outDir* option to specify the desired location for the compiler to generate the JavaScript files.
+  
+----------------------------------------------------------
+## Exercise 2
 
 
+----------------------------------------------------------
 # Basic types in Typescript
  -  primitives:
      - number
