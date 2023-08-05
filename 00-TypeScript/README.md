@@ -306,6 +306,16 @@ To write a TypeScript class, follow these steps:
 -  Optionally, add a constructor method to initialize the class properties.
 -  Optionally, add access modifiers (public, private, or protected) to control the visibility of properties and methods.
 - Here's an example:
+  
+  ```
+    interface USER{
+        id:number
+        firstName:string
+        lastName:string
+    
+    }
+  ```
+  
   ```
     class UserService{
 
@@ -334,13 +344,37 @@ To write a TypeScript class, follow these steps:
           }
     </script>         
   ```
+  
+**Access modifiers:**
+-  public: Members with the public access modifier are accessible from anywhere.
+-  private: Members with the private access modifier are only accessible within the class where they are declared.
+-  protected: Members with the protected access modifier are accessible within the class where they are declared and in subclasses that extend the class.
+  
+# Short hand notation in the classes
+In TypeScript, shorthand notation in classes allows you to define and initialize class properties directly within the constructor parameters. This shorthand is a concise way to declare properties and assign their values in one step. It helps reduce boilerplate code, especially when you have multiple properties to initialize.
 
-# short hand notation in the classes
-
+  ```
+    class Person {
+      constructor(private name: string, private age: number) {}
+    //
+    }
+  ```
+In the above example, the Person class uses shorthand notation to declare and initialize the name and age properties directly within the constructor parameters. This is achieved by adding the private access modifier to the constructor parameters.
 
 # interfaces
-Object type definition
+In TypeScript, interfaces are a powerful way to define the structure of an object. They act as contracts that describe the shape of objects and ensure that certain properties and methods exist on the object. Interfaces provide a level of abstraction and help in achieving strong typing, making it easier to catch errors during development.
 
+To define an interface in TypeScript, you use the interface keyword, followed by the interface's name and the list of properties and methods it should have. Here's the basic syntax of an interface:
 
-# class implements interface
+```
+  interface InterfaceName {
+    property1: type1;
+    property2: type2;
+    // ...
+    method1(): returnType;
+    method2(arg: argType): returnType;
+    // ...
+  }
+```
+
 
