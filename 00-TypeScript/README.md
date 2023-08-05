@@ -138,15 +138,17 @@ https://www.typescriptlang.org/play
         ```
 
  -  Objects and Arrays
-     -  Arrays
+     -  Arrays:
          ```
           // arrays
           let names:string[];
           names = ["Hamza","Omar","Ali"];
          ```
 
-      -  Objects
-        **Variable declaration**
+      -  Objects:
+        
+        -  Variable declaration
+    
            ```
               let person:{
                   name:string;
@@ -155,7 +157,7 @@ https://www.typescriptlang.org/play
               }
            ```
            
-        **Variable assignment**
+        -  Variable assignment
     
            ```
               person = {
@@ -165,7 +167,8 @@ https://www.typescriptlang.org/play
               }
            ```
 
-    -  Array of Objects
+      -  Array of Objects
+        
          ```
           let persons : {
               name:string;
