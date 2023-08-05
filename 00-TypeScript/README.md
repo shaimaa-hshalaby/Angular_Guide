@@ -237,24 +237,53 @@ So we can declare a type and use it as follows:
 # Functions and Types
 
 #### Return values
-    -  In the typescript, we can declare the return type as follows:
-       ```
-          function add(a: number, b:number): number{
-              return a+b;
-          }
-       ```
-    -  in the previous example, the return type is redundant because the typescript should infer this.
-    -  function can return void if there is no return value.
+-  In the typescript, we can declare the return type as follows:
+   ```
+      function add(a: number, b:number): number{
+          return a+b;
+      }
+   ```
+-  in the previous example, the return type is redundant because the typescript should infer this.
+-  function can return void if there is no return value.
 
 #### any
-      If the type of the parameter is not important, we can use the type **any**
-        ```
-          function print(value: any){
-              console.log(value);
-          }
-        ```
+-  If the type of the parameter is not important, we can use the type **any**
+  ```
+    function print(value: any){
+        console.log(value);
+    }
+  ```
 #### Generic
 
+- you can define generic function as follows:
+  ```
+    function identity<T>(arg: T): T {
+      return arg;
+    }
+    
+    // Usage
+    let result1 = identity<number>(42); // result1 will be of type number
+    let result2 = identity<string>("Hello"); // result2 will be of type string
+    let result3 = identity<boolean>(true); 
+  ```
+- or you can define generic class as follows:
+  ```
+    class Box<T> {
+      private value: T;
+    
+      constructor(value: T) {
+        this.value = value;
+      }
+    
+      getValue(): T {
+        return this.value;
+      }
+    }
+    
+    // Usage
+    const box1 = new Box<number>(42); // box1 stores a number
+    const box2 = new Box<string>("Hello"); // box2 stores a string
+  ```
 
 # Classes, Constructors, access modifiers
 
