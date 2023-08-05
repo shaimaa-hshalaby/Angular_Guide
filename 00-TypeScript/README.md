@@ -284,6 +284,18 @@ So we can declare a type and use it as follows:
     const box1 = new Box<number>(42); // box1 stores a number
     const box2 = new Box<string>("Hello"); // box2 stores a string
   ```
+- or you can define generic interfaces as follows:
+
+  ```
+    interface Pair<T, U> {
+      first: T;
+      second: U;
+    }
+    
+    // Usage
+    const pair1: Pair<number, string> = { first: 42, second: "Hello" };
+    const pair2: Pair<boolean, number> = { first: true, second: 100 };
+  ```
 
 # Classes, Constructors, access modifiers
 
