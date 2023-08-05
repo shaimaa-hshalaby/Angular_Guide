@@ -227,6 +227,12 @@ So we can declare a type and use it as follows:
     }
   
   ```
+-------------------------------------
+## Exercise 3
+
+- add some ts code to test different types that has been explained.
+- compile your code and run your html page.
+-------------------------------------
 
 # Functions and Types
 
