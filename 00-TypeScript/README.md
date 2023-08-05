@@ -164,30 +164,30 @@ https://www.typescriptlang.org/play
       -  Array of Objects
         
          ```
-            let persons : {
-                name:string;
-                age:number;
-                active:boolean;
-            }[];
-            
-            persons = [
-                {
-                    name: 'Hamza',
-                    age: 10,
-                    active: true
-                },
-                {
-                    name: 'Omar',
-                    age: 9,
-                    active: false
-                },
-                {
-                    name: 'Ali',
-                    age: 8,
-                    active: true
-                }
-            ]
-        ```
+          let persons : {
+              name:string;
+              age:number;
+              active:boolean;
+          }[];
+          
+          persons = [
+              {
+                  name: 'Hamza',
+                  age: 10,
+                  active: true
+              },
+              {
+                  name: 'Omar',
+                  age: 9,
+                  active: false
+              },
+              {
+                  name: 'Ali',
+                  age: 8,
+                  active: true
+              }
+          ]
+         ```
 
 ## Type Inference
    Type inference is a feature that allows the compiler to automatically deduce the data types of variables and expressions without the need for explicit type annotations or declarations by the programmer. In other words, the compiler "infers" the types based on the context and the values used in the code.
@@ -211,43 +211,43 @@ Union types are used when a variable can hold more than a single type.
 it’s common to want to use the same type more than once and refer to it by a single name.
 So we can declare a type and use it as follows:
 
-    ```
-      type Person = {
-          name: string
-          age: number
-          active: boolean
-      }
-      
-      let p1: Person;
-      
-      p1 = {
-          name: 'Aya',
-          age: 20,
-          active:true
-      }
+  ```
+    type Person = {
+        name: string
+        age: number
+        active: boolean
+    }
     
-    ```
+    let p1: Person;
+    
+    p1 = {
+        name: 'Aya',
+        age: 20,
+        active:true
+    }
+  
+  ```
 
 # Functions and Types
 
-  - Return values
-      In the typescript, we can declare the return type as follows:
-         ```
-            function add(a: number, b:number): number{
-                return a+b;
-            }
-         ```
-      -  in the previous example, the return type is redundant because the typescript should infer this.
-      -  function can return void if there is no return value.
+#### Return values
+    -  In the typescript, we can declare the return type as follows:
+       ```
+          function add(a: number, b:number): number{
+              return a+b;
+          }
+       ```
+    -  in the previous example, the return type is redundant because the typescript should infer this.
+    -  function can return void if there is no return value.
 
-  - any
+#### any
       If the type of the parameter is not important, we can use the type **any**
         ```
           function print(value: any){
               console.log(value);
           }
         ```
-  - Generic
+#### Generic
 
 
 # Classes, Constructors, access modifiers
