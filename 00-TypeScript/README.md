@@ -298,6 +298,42 @@ So we can declare a type and use it as follows:
   ```
 
 # Classes, Constructors, access modifiers
+To write a TypeScript class, follow these steps:
+
+-  Create a new TypeScript file with a .ts extension (e.g., MyClass.ts).
+-  Define the class using the class keyword.
+-  Declare class properties and methods within the class body.
+-  Optionally, add a constructor method to initialize the class properties.
+-  Optionally, add access modifiers (public, private, or protected) to control the visibility of properties and methods.
+- Here's an example:
+  ```
+    class UserService{
+
+      user:USER
+  
+      constructor(s:USER){
+          this.user =s
+      }
+  
+      setUser(id:number,fName:string,lName:string){
+          this.user = {id:id,firstName:fName,lastName:lName}
+      }
+  
+      printUserData(){
+          console.log(JSON.stringify(this.user))
+      }
+    }
+
+  ```
+
+  ```
+    <script>
+          function testUserService(){
+              const userService= new UserService({id:2,firstName:'amir',lastName:'omran'})
+              userService.printUserData()
+          }
+    </script>         
+  ```
 
 # short hand notation in the classes
 
