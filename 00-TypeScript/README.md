@@ -1,3 +1,6 @@
+
+
+
 # What is TypeScript?
 -  TypeScript is a syntactic superset of JavaScript which adds static typing.
 -  This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add types.
@@ -52,8 +55,20 @@ https://www.typescriptlang.org/play
 -  The TypeScript compiler, also known as tsc, takes TypeScript source files (usually with the .ts extension) as input and produces JavaScript files (with the .js extension) as output.
 -  The compiler also checks the code for syntax errors and performs static type checking, ensuring that the code adheres to the specified types.
 -  Configuration File (tsconfig.json): The TypeScript compiler can be configured using a tsconfig.json file, which allows developers to specify various compiler options and settings.
+-  To generate an intial copy of tsconfig.json file with default settings, you can utilize the following command for the global npm package
+      ```
+        tsc --init
+      ```
 
-# basic types in Typescript
+    or the following command for the local npm package
+
+      ```
+        npx tsc --init
+      ```
+- To customize the development settings for your project, you can modify the default settings in the tsconfig.json file. For example, consider modifying the *outDir* option to specify the desired location for the compiler to generate the JavaScript files.
+
+
+# Basic types in Typescript
  -  primitives:
      - number
          ```
