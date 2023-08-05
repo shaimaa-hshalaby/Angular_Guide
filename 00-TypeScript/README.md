@@ -164,41 +164,39 @@ https://www.typescriptlang.org/play
       -  Array of Objects
         
          ```
-          let persons : {
-              name:string;
-              age:number;
-              active:boolean;
-          }[];
-          
-          persons = [
-              {
-                  name: 'Hamza',
-                  age: 10,
-                  active: true
-              },
-              {
-                  name: 'Omar',
-                  age: 9,
-                  active: false
-              },
-              {
-                  name: 'Ali',
-                  age: 8,
-                  active: true
-              }
-          
-          
-          ]
+            let persons : {
+                name:string;
+                age:number;
+                active:boolean;
+            }[];
+            
+            persons = [
+                {
+                    name: 'Hamza',
+                    age: 10,
+                    active: true
+                },
+                {
+                    name: 'Omar',
+                    age: 9,
+                    active: false
+                },
+                {
+                    name: 'Ali',
+                    age: 8,
+                    active: true
+                }
+            ]
         ```
 
 ## Type Inference
-   In TypeScript, there are several places where type inference is used to provide type information when there is no explicit type annotation. For example, in this code
+   Type inference is a feature that allows the compiler to automatically deduce the data types of variables and expressions without the need for explicit type annotations or declarations by the programmer. In other words, the compiler "infers" the types based on the context and the values used in the code.
+   
   ```
     let x = 30;
   ```
 
-The type of the x variable is inferred to be a number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types.
-writing the type here is considered a redundancy.
+The type of the x variable is inferred to be a number. This kind of inference takes place when initializing variables and members, setting parameter default values, and determining function return types then writing the type in this case is considered a redundancy.
 
 ## Union types
 
@@ -230,28 +228,25 @@ So we can declare a type and use it as follows:
     
     ```
 
-
 # Functions and Types
 
   - Return values
-      In the typescript, we can declare the return type after parameters as follows:
+      In the typescript, we can declare the return type as follows:
          ```
             function add(a: number, b:number): number{
                 return a+b;
             }
          ```
-      -  in the previous example, the return type is redundant because typescript should infer this.
-      -  function can return void, if there is no return value.
+      -  in the previous example, the return type is redundant because the typescript should infer this.
+      -  function can return void if there is no return value.
 
   - any
-      If the type of paramter is not important, we can use the type **any**
+      If the type of the parameter is not important, we can use the type **any**
         ```
-        function print(value: any){
-            console.log(value);
-        }
-        
+          function print(value: any){
+              console.log(value);
+          }
         ```
-
   - Generic
 
 
