@@ -248,11 +248,11 @@ So we can declare a type and use it as follows:
 
 #### any
 -  If the type of the parameter is not important, we can use the type **any**
-  ```
-    function print(value: any){
-        console.log(value);
-    }
-  ```
+    ```
+      function print(value: any){
+          console.log(value);
+      }
+    ```
 #### Generic
 
 - you can define generic function as follows:
