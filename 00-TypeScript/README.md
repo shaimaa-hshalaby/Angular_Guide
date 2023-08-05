@@ -4,7 +4,25 @@
 -  TypeScript uses compile time type checking. This means it checks if the specified types match before running the code, not while running the code.
 
 # Why do we use Typescript?
--  Javascript is a dynamically typed programming language, functions do not expect specific types of parameters.
+- Javascript is a dynamically typed programming language, functions do not expect specific types of parameters.
+- On the other hand, TypeScript is a statically typed superset of JavaScript that brings several benefits to the table, especially for large-scale projects and development teams. Some of the key advantages of using TypeScript include:
+
+  -  **Static Typing:** TypeScript enforces strong typing, allowing developers to specify data types for variables, function parameters, and return values. This helps catch type-related errors during development, improving code quality and reducing bugs.
+  
+  -  **Enhanced IDE Support:** With TypeScript, IDEs and code editors can provide better code completion, auto-suggestions, and inline documentation. This leads to increased productivity and a more pleasant development experience.
+  
+  -  **Early Error Detection:** Since TypeScript performs static type checking, many errors can be caught at compile-time rather than runtime. This prevents certain classes of bugs from making their way into production code.
+  
+  -  **Code Maintainability and Readability:** The use of explicit types and interfaces in TypeScript makes the codebase more maintainable and easier to understand. It improves code documentation and makes it clear what each part of the code is expected to do.
+  
+  -  **Better Collaboration:** In team-based development environments, TypeScript helps improve collaboration among developers by providing a common understanding of the codebase through type annotations and interfaces.
+  
+  -  **Refactoring Support:** When refactoring code, TypeScript can quickly identify where changes are needed due to its static typing. This allows developers to confidently make changes without fear of breaking other parts of the codebase.
+  
+  -  **Compatibility with JavaScript:** TypeScript is a superset of JavaScript, meaning any existing JavaScript code is valid TypeScript code. Developers can incrementally adopt TypeScript in their projects without rewriting everything from scratch.
+  
+  -  **Tooling and Community:** TypeScript has robust tooling support and an active community that contributes to its continuous improvement. Many popular libraries and frameworks also provide TypeScript typings, making it easier to use them in TypeScript projects.
+  
 
 # official typescript website
 https://www.typescriptlang.org/
@@ -26,8 +44,14 @@ https://www.typescriptlang.org/play
   ```
     npm install -g typescript
   ```
+  > the location of global package in windows is %USERPROFILE%\AppData\Roaming\npm\node_modules
+  
 # Typescript compiler
 
+-  TypeScript compiler is a tool that translates TypeScript code into plain JavaScript code.
+-  The TypeScript compiler, also known as tsc, takes TypeScript source files (usually with the .ts extension) as input and produces JavaScript files (with the .js extension) as output.
+-  The compiler also checks the code for syntax errors and performs static type checking, ensuring that the code adheres to the specified types.
+-  Configuration File (tsconfig.json): The TypeScript compiler can be configured using a tsconfig.json file, which allows developers to specify various compiler options and settings.
 
 # basic types in Typescript
  -  primitives:
