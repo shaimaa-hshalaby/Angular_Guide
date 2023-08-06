@@ -117,7 +117,8 @@ When you generate an Angular application with the Angular CLI, the *app.componen
    Y: <input type="text" class="form-control" [(ngModel)]="y" ><br>
   ```
 
-- The following GIF illustrates the output after adding the 2 way binding
+- The following GIF illustrates the output after adding the 2 way binding:
+  
      ![Untitled design (13)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/51cdfa9e-68fc-4a38-a1ce-73ff370cf321)
 
 
