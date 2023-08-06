@@ -269,5 +269,11 @@ we will create a demo that has a button and paragraph, when clicking the button 
 
    ```
       <input #phone type="text" placeholder="enter the phone number">
-      <button (click)="onClickButton(phone.value)">Click Me!</button>
    ```
+- You can use template variables in various ways:
+     1. Accessing the Element in the Component Class
+     2. Local Reference within the Template
+ 
+### Accessing the Element in the Component Class
+
+### Local Reference within the Template
