@@ -275,11 +275,17 @@ we will create a demo that has a button and paragraph, when clicking the button 
    -   [Local Reference within the Template](accessing-the-element-in-the-component-class)
  
 ### Accessing the Element in the Component Class
-You can access the element in the component class by using the @ViewChild decorator , the bound property will be with type *ElementRef*.
+You can access the element in the component class by using the @ViewChild decorator , the bounded property should be with the type *ElementRef*.
 Using @ViewChild (for child components):
 
    ```
       @ViewChild('phone') phoneInput:ElementRef
+   ```
+
+To access the value of referenced element from the ElementRef, you can use the following code:
+
+   ```
+      this.phoneInput.nativeElement.value
    ```
 
 ### Local Reference within the Template
