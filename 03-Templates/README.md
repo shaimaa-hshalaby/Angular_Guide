@@ -289,3 +289,9 @@ To access the value of referenced element from the ElementRef, you can use the f
    ```
 
 ### Local Reference within the Template
+
+You can use the template variable directly within the template to access and modify the element's properties or trigger methods. here's an example:
+   ```
+      <input #phone type="text" placeholder="enter the phone number"><br>
+      <button (click)="onClickButton(phone.value)">Call Phone Number!</button>
+   ```
