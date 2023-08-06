@@ -1,6 +1,6 @@
 ## What is Angular Templates?
 -  Template is a blueprint for a fragment of a user interface (UI)
--  Templates are written in HTML and a special syntax for angular dynamic functionalities such as built-in template functions, variables, event listening, and data binding.
+-  Templates are written in HTML and have a special syntax for angular dynamic functionalities such as built-in template functions, variables, event listening, and data binding.
 -  it does not include elements such as "\<HTML\>", "\<body\>", or "\<base\>" because it is a fragment of the UI.
 -  Angular does not support the \<script\> element in templates to eliminate the risk of script injection attacks.
 
@@ -240,18 +240,3 @@ we will create a demo that has a button and paragraph, when clicking the button 
            ![Untitled design (12)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/802b9d9d-f02f-4469-a6e6-9a4d8bc8c0d8)
    
 
-
-
-
-
-
---------------------------
-
-#### To do 
-template variables
-https://angular.io/guide/template-reference-variables
-
-- template expression operators
-- attribute binding, class and style binding
-- Binding to passive events
-- Binding to keyboard events
