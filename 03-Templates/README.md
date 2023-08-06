@@ -260,4 +260,14 @@ we will create a demo that has a button and paragraph, when clicking the button 
         
            ![Untitled design (12)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/802b9d9d-f02f-4469-a6e6-9a4d8bc8c0d8)
    
+----------------
 
+## Template Variables
+
+-   Template variables help you use data from one part of a template in another part of the template. Use template variables to perform tasks such as respond to user input or finely tune your application's forms.
+-   In the template, you use the hash symbol, #, to declare a template variable. The following template variable, #phone, declares a phone variable with the <input> element as its value
+
+   ```
+      <input #phone type="text" placeholder="enter the phone number">
+      <button (click)="onClickButton(phone.value)">Click Me!</button>
+   ```
