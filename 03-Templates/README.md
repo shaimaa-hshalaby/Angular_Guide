@@ -271,8 +271,8 @@ we will create a demo that has a button and paragraph, when clicking the button 
       <input #phone type="text" placeholder="enter the phone number">
    ```
 - You can use template variables in various ways:
-     1. Accessing the Element in the Component Class
-     2. Local Reference within the Template
+   -   [Accessing the Element in the Component Class](accessing-the-element-in-the-component-class)
+   -   [Local Reference within the Template]()
  
 ### Accessing the Element in the Component Class
 
