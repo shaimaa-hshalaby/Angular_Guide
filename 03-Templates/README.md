@@ -95,11 +95,30 @@ When you generate an Angular application with the Angular CLI, the *app.componen
       -   The component's member names.
 ---------------------------
 ### Template Expressions
-In Angular, template expressions are computations or assignments done in the template inside the interpolation curly braces. This expression is considered local and only exists inside the template.
 
+-   In Angular, template expressions are computations or assignments done in the template inside the interpolation curly braces.
+-   This expression is considered local and only exists inside the template.
+-   Template expressions in Angular are used to evaluate and display values dynamically.
+-   They are enclosed in double curly braces {{ }} and can contain valid JavaScript expressions.
+-   Template expressions are used to display data from the component class in the view (template).
 
+#### Template Expressions Example
 
+- create component with 2 properties x and y with type number
+- intialize the 2 properties with intial values
+- add the template expression to the template to calculate the division of x/y as follows:
+  ```
+   <p>(X/Y) = {{x/y}}</p>
+  ```
 
+- you can add 2 way binding to x and y to dynamically read the values of them from user inpusts as follows:
+  ```
+   X: <input type="text" class="form-control" [(ngModel)]="x" ><br>
+   Y: <input type="text" class="form-control" [(ngModel)]="y" ><br>
+  ```
+
+- The following GIF illustrates the output after adding the 2 way binding
+     ![Untitled design (13)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/51cdfa9e-68fc-4a38-a1ce-73ff370cf321)
 
 
 ---------------------------
