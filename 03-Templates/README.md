@@ -272,7 +272,7 @@ we will create a demo that has a button and paragraph, when clicking the button 
    ```
 - You can use template variables in various ways:
    -   [Accessing the Element in the Component Class](accessing-the-element-in-the-component-class)
-   -   [Local Reference within the Template]()
+   -   [Local Reference within the Template](accessing-the-element-in-the-component-class)
  
 ### Accessing the Element in the Component Class
 
