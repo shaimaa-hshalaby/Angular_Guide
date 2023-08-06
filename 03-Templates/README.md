@@ -210,11 +210,17 @@ we will create a demo that has a button and paragraph, when clicking the button 
 -------
 
 ### Two-way binding
-Two-way binding combines property binding with event binding
-   property binding: Sets a specific element property.
-   event binding: Listens for an element change event.
+-   Two-way binding combines property binding with event binding
+   -   property binding: Sets a specific element property.
+   -   event binding: Listens for an element change event.
 
-Angular's two-way binding syntax is a combination of square brackets and parentheses, [()] to combine the brackets of property binding, [], with the parentheses of event binding, ()
+-   Angular's two-way binding syntax is a combination of square brackets and parentheses, [()] to combine the brackets of property binding, [], with the parentheses of event binding, ()
+-   In Angular, two-way binding is a data binding mechanism that allows data to flow bidirectionally between the component class and the template. It enables synchronization of data between the model (component class properties) and the view (template) without the need for explicit event handling or manual updating.
+
+-   Here's how it works:
+   - 
+
+-   Two-way binding is a convenient way to keep the model and view in sync without the need for handling input events and updating the model manually. However, it's important to use it judiciously, especially in performance-critical scenarios, as it can introduce some overhead due to the frequent synchronization between the component and the template.
 
 
 
