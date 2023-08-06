@@ -275,5 +275,7 @@ we will create a demo that has a button and paragraph, when clicking the button 
    -   [Local Reference within the Template](accessing-the-element-in-the-component-class)
  
 ### Accessing the Element in the Component Class
+You can access the element in the component class by using the @ViewChild decorator (if it's a child component) or ElementRef (if it's a DOM element).
+Using @ViewChild (for child components):
 
 ### Local Reference within the Template
