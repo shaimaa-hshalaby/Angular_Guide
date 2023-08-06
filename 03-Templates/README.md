@@ -34,6 +34,7 @@ When you generate an Angular application with the Angular CLI, the *app.componen
 -   Template statements are methods or properties that you can use in your HTML to respond to user events. 
 -   With template statements, your application can engage users through actions such as displaying dynamic content or submitting forms.
 -   Template statements use a language that looks like JavaScript
+-   the syntax of template statement is like (event)="statement"
 
 #### Template Statement Example
 1. Add a property *counter* and initialize it with zero into the component ts class in the *app.component.ts* as follows:
