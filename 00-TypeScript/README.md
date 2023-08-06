@@ -160,6 +160,7 @@ https://www.typescriptlang.org/play
                   active: false
               }
            ```
+           > for optional property you can add question mark as follows:  age?:number
 
       -  Array of Objects
         
