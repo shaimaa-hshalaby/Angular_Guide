@@ -215,12 +215,27 @@ we will create a demo that has a button and paragraph, when clicking the button 
    -   event binding: Listens for an element change event.
 
 -   Angular's two-way binding syntax is a combination of square brackets and parentheses, [()] to combine the brackets of property binding, [], with the parentheses of event binding, ()
--   In Angular, two-way binding is a data binding mechanism that allows data to flow bidirectionally between the component class and the template. It enables synchronization of data between the model (component class properties) and the view (template) without the need for explicit event handling or manual updating.
+-   In Angular, two-way binding is a data binding mechanism that allows data to flow bidirectionally between the component class and the template. It enables the synchronization of data between the model (component class properties) and the view (template) without the need for explicit event handling or manual updating.
+-   It is crucial to use it wisely, particularly in scenarios where performance is critical, as it could lead to some additional workload due to frequent synchronization between the component and the template.
 
--   Here's how it works:
-   - 
+-   Here's an example of two-way binding:
+   - create a component and add
 
--   Two-way binding is a convenient way to keep the model and view in sync without the need for handling input events and updating the model manually. However, it's important to use it judiciously, especially in performance-critical scenarios, as it can introduce some overhead due to the frequent synchronization between the component and the template.
+   - add \<input\> with type range into the component template, then bind its values to the *canvasWidth* using the 2 way binding, to update the value of the component property simultaneously with changing the range
+
+     ```
+       <input type="range" min="50" max="200" [(ngModel)]="canvasWidth"><br>
+     ```
+   - on the other hand, add a \<canvas\> element and use property binding to bind its width with *canvasWidth* as follows:
+     ```
+       <canvas [width]="canvasWidth"></canvas>
+     ```
+
+   - The following GIF should illustrate the output of the previous exercise:
+        ![Untitled design (12)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/802b9d9d-f02f-4469-a6e6-9a4d8bc8c0d8)
+
+
+
 
 
 
