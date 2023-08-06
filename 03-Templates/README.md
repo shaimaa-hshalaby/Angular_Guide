@@ -219,7 +219,10 @@ we will create a demo that has a button and paragraph, when clicking the button 
 -   It is crucial to use it wisely, particularly in scenarios where performance is critical, as it could lead to some additional workload due to frequent synchronization between the component and the template.
 
 -   Here's an example of two-way binding:
-   - create a component and add
+   - create a component and include a property called *canvasWidth* with data type number.
+     ```
+        canvasWidth:number
+     ```
 
    - add \<input\> with type range into the component template, then bind its values to the *canvasWidth* using the 2 way binding, to update the value of the component property simultaneously with changing the range
 
@@ -232,6 +235,7 @@ we will create a demo that has a button and paragraph, when clicking the button 
      ```
 
    - The following GIF should illustrate the output of the previous exercise:
+     
         ![Untitled design (12)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/802b9d9d-f02f-4469-a6e6-9a4d8bc8c0d8)
 
 
