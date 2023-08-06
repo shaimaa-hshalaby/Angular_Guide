@@ -101,6 +101,7 @@ When you generate an Angular application with the Angular CLI, the *app.componen
 -   Template expressions in Angular are used to evaluate and display values dynamically.
 -   They are enclosed in double curly braces {{ }} and can contain valid JavaScript expressions.
 -   Template expressions are used to display data from the component class in the view (template).
+-   Text interpollation is a template expression
 
 #### Template Expressions Example
 
