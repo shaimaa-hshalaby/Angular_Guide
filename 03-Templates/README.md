@@ -306,6 +306,9 @@ You can use the template variable directly within the template to access and mod
 
  |   TYPE | DESCRIPTION |
  |---|---|
- | Single-slot content projection | With this type of content projection, a component accepts content from a single source. |
- | Multi-slot content projection | In this scenario, a component accepts content from multiple sources. |
- | Conditional content projection | Components that use conditional content projection render content only when specific conditions are met. |
+ | **Single-slot content projection** | With this type of content projection, a component accepts content from a single source. |
+ | **Multi-slot content projection** | In this scenario, a component accepts content from multiple sources. |
+ | **Conditional content projection** | Components that use conditional content projection render content only when specific conditions are met. |
+
+ #### Single-slot content projection 
+ the passed html inside the selector tag of the component always ignored unless you added \<ng-content\> inside the component template, angular will compansate the passed html to the place of the ng-content tag
