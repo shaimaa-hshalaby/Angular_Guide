@@ -312,9 +312,9 @@ You can use the template variable directly within the template to access and mod
 
  #### Single-slot content projection 
  
-    the passed html inside the selector tag of the component always ignored unless you added \<ng-content\> inside the component template, angular will compansate the passed html to the place of the ng-content tag
+the passed html inside the selector tag of the component always ignored unless you added \<ng-content\> inside the component template, angular will compansate the passed html to the place of the \<ng-content\> tag
 
- 1. create component and add \<ng-content\> tag to its template as follows:
+ 1. create component and add \<ng-content\> tag where you want the projection html to appear as follows:
 
        ```
          @Component({
@@ -343,3 +343,30 @@ You can use the template variable directly within the template to access and mod
 3. The output should be as follows:
    
       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/dccc0511-cb23-4340-b296-d74c97b5789a)
+
+
+#### Multi-slot content projection
+1- create a component and add more than \<ng-content\> tag to its template as follows:
+      ```
+         <h1>Multi-slot content projection</h1>
+         
+         Default:
+         <ng-content></ng-content>
+         
+         selected
+         <ng-content select="[special]"></ng-content>
+      
+      ```
+2. The html with attribute "special" will be located in the place of  \<ng-content select="\[special\]"\>
+3. In the parent component add the following code
+      ```
+         <app-multi-slot-content-projection>
+             <div special>
+                 <p>The special content</p>
+             </div>
+         
+             <div>
+                 <p>The default content</p>
+             </div>
+         </app-multi-slot-content-projection>
+      ```
