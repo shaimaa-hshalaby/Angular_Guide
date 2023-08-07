@@ -311,4 +311,35 @@ You can use the template variable directly within the template to access and mod
  | **Conditional content projection** | Components that use conditional content projection render content only when specific conditions are met. |
 
  #### Single-slot content projection 
- the passed html inside the selector tag of the component always ignored unless you added \<ng-content\> inside the component template, angular will compansate the passed html to the place of the ng-content tag
+ 
+    the passed html inside the selector tag of the component always ignored unless you added \<ng-content\> inside the component template, angular will compansate the passed html to the place of the ng-content tag
+
+ 1. create component and add \<ng-content\> tag to its template as follows:
+
+       ```
+         @Component({
+           selector: 'app-single-slot-content-projection',
+           template: `
+             <h1> The header of the parent component</h1>
+             <ng-content></ng-content>
+           `,
+           styleUrls: ['./single-slot-content-projection.component.css']
+         })
+         export class SingleSlotContentProjectionComponent {
+         
+         }
+       ```
+
+2. In the parent component pass html inside \<the app-single-slot-content-projection\> selector as follows:
+
+      ```
+         <app-single-slot-content-projection>
+             <div class="projected-div">
+                 <p>This is passed paragraph to the ng-content</p>
+             </div>
+         </app-single-slot-content-projection>
+      ```
+
+3. The output should be as follows:
+   
+      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/dccc0511-cb23-4340-b296-d74c97b5789a)
