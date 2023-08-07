@@ -239,18 +239,26 @@ we will create a demo that has a button and paragraph, when clicking the button 
 -   Angular's two-way binding syntax is a combination of square brackets and parentheses, [()] to combine the brackets of property binding, [], with the parentheses of event binding, ()
 -   In Angular, two-way binding is a data binding mechanism that allows data to flow bidirectionally between the component class and the template. It enables the synchronization of data between the model (component class properties) and the view (template) without the need for explicit event handling or manual updating.
 -   It is crucial to use it wisely, particularly in scenarios where performance is critical, as it could lead to some additional workload due to frequent synchronization between the component and the template.
+-   you must import FormsModule to the AppModule to be able to use ngModel directive in the two binding
 
 -   Here's an example of two-way binding:
-      - create a component and include a property called *canvasWidth* with data type number.
-        ```
-           canvasWidth:number
-        ```
+      - Import FormsModule and Add it to the imports array inside the AppModule as follows:
+           ```
+             imports: [
+                BrowserModule,
+                FormsModule
+              ]
+           ```
+      - create a component and include a property called *canvasWidth* with a data type number.
+           ```
+              canvasWidth:number
+           ```
    
       - add \<input\> with type range into the component template, then bind its values to the *canvasWidth* using the 2 way binding, to update the value of the component property simultaneously with changing the range
    
-        ```
-          <input type="range" min="50" max="200" [(ngModel)]="canvasWidth"><br>
-        ```
+           ```
+             <input type="range" min="50" max="200" [(ngModel)]="canvasWidth"><br>
+           ```
       - on the other hand, add a \<canvas\> element and use property binding to bind its width with *canvasWidth* as follows:
         ```
           <canvas [width]="canvasWidth"></canvas>
