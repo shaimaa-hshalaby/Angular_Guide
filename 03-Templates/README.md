@@ -295,3 +295,17 @@ You can use the template variable directly within the template to access and mod
       <input #phone type="text" placeholder="enter the phone number"><br>
       <button (click)="onClickButton(phone.value)">Call Phone Number!</button>
    ```
+
+--------------------------------
+## Content projection
+
+ Content projection is used to create flexible, reusable components.
+ Content projection is a pattern in which you insert, or project, the content you want to use inside another component
+
+ ### content projection types
+
+ |   TYPE | DESCRIPTION |
+ |---|---|
+ | Single-slot content projection | With this type of content projection, a component accepts content from a single source. |
+ | Multi-slot content projection | In this scenario, a component accepts content from multiple sources. |
+ | Conditional content projection | Components that use conditional content projection render content only when specific conditions are met. |
