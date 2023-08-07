@@ -1,11 +1,14 @@
 Directives
 ===========
-Directives are classes that add additional behavior to elements in your Angular applications.
+Angular directives are a fundamental building block of Angular applications. They are used to extend and customize the behaviour of HTML elements in Angular templates. Directives allow you to create reusable components and manipulate the DOM (Document Object Model) in a declarative and efficient way. There are three main types of directives in Angular:
+
+
 | directive type | description |
 |---|---|
-| compnent | directive that has a template that add a UI fragment with dynamic functionalities. |
-| attribute directives | this type of directives affect the area that they added, either the appearance or the behaviour of the element. [ngClass,ngStyle] are examples of attribute directives.|
-| structural directive | these directives affect the dom by adding or removing elements from the dom [*ngFor,*ngIf] examples of structural directives|
+| **Component directives** | They are used to create custom elements with their own logic and appearance |
+| **Attributes directives** | These directives modify the behaviour or appearance of an existing HTML element. They are typically applied as attributes to existing HTML elements. [ngClass,ngStyle] are examples of attribute directives.|
+| **structural directive** | These directives alter the structure of the DOM by adding or removing elements based on conditions. They are preceded by an asterisk (*) in the template.
+[*ngFor,*ngIf] examples of structural directives|
 
 ---
 ## Attribute Directives
