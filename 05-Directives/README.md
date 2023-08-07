@@ -7,7 +7,7 @@ Angular directives are a fundamental building block of Angular applications. The
 |---|---|
 | **Component directives** | They are used to create custom elements with their own logic and appearance |
 | **Attributes directives** | These directives modify the behaviour or appearance of an existing HTML element. They are typically applied as attributes to existing HTML elements. [ngClass,ngStyle] are examples of attribute directives.|
-| **structural directive** | These directives alter the structure of the DOM by adding or removing elements based on conditions. They are preceded by an asterisk (*) in the template.\n [*ngFor,*ngIf] examples of structural directives|
+| **structural directive** | These directives alter the structure of the DOM by adding or removing elements based on conditions. They are preceded by an asterisk (*) in the template. [*ngFor,*ngIf] examples of structural directives|
 
 ---
 ## Attribute Directives
