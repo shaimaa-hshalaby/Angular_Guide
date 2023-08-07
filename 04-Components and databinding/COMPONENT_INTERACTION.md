@@ -1,6 +1,6 @@
 
 ### Sharing Data between parent and child components
-To share data between parent and child components, we use *@Input()* & *@Output()* decorators.
+We use *@Input()* & *@Output()* decorators to share data between parent and child components.
 In this tutorial, we are going to explain how to use these decorators.
 
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/c549391c-1b0a-4e93-aa3f-853c197b420d)
@@ -8,15 +8,15 @@ In this tutorial, we are going to explain how to use these decorators.
 
 ### Use @input() to pass data from the parent component to the child component
 
-As an HTML Tree, we call the parent element and the child element to the container element and its content.
+As an HTML Tree, we call the parent and child element to the container element and its content.
 
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/588fce15-df3f-4af5-8e4f-887263a3fe50)
 
-In the same manner, we call the host component the parent component and the nested component the child component 
+In the same manner, we call the host component the parent component, and the nested component the child component 
 
  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3192b5f9-ab12-4d22-a3e2-1dc8e5445321)
 
-For the parent to be able to pass a property value to the child component, the child component property must be marked as accessible from the parent by decorated it by *@Input()* follow the steps to pass value from parent to child:
+In order for parents to pass property values to child components, the child component property must be marked as accessible from the parent by using the *@Input()* decorator. Follow these steps to pass a value from the parent to the child:
 
  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/73d79188-5d9b-4637-85f7-5d5f03bbd1b1)
 
@@ -142,16 +142,6 @@ If you need to have control over the injecting property value process to apply a
             }
     
        ```
-----------------------
-## Understanding template variables
-
--  In the template, you use the hash symbol, #, to declare a template variable.
--  we can refer to the template variable anywhere in the template, but we cannot use it inside the component class.
--  
-
-
-
-
 
 ------------------------
 
