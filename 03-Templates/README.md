@@ -346,6 +346,7 @@ the passed html inside the selector tag of the component always ignored unless y
 
 
 #### Multi-slot content projection
+
 1- create a component and add more than \<ng-content\> tag to its template as follows:
       ```
          <h1>Multi-slot content projection</h1>
@@ -374,3 +375,35 @@ the passed html inside the selector tag of the component always ignored unless y
 4. The output should be as follows:
    
       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/07810624-ce4b-4c6e-be0f-eececfc75719)
+
+
+-------------------------------
+
+## ng-template
+
+-   ng-template is a powerful and flexible directive that allows you to define and store sections of HTML content that can be used later in the same template or in other parts of the application. It acts as a template placeholder and is often used in combination with structural directives like *ngIf, *ngFor
+
+-   The ng-template directive itself does not render any content on its own. Instead, it serves as a container for content that can be instantiated later in the template.
+
+### Example for using ng-template with *ngIf
+1. Create component and add boolean property *showSpecialTemplate*
+      ```
+         showSpecialTemplate:boolean= false
+      ```
+
+2. Add the following HTML code to the component template
+      ```
+         <h2> ng-template demo</h2>
+         <div *ngIf="showSpecialTemplate; then specialTemplate else defaultTemplate" ></div>
+         
+         <ng-template #specialTemplate>
+             <p>This is a special template content.</p>
+         </ng-template>
+         
+         <ng-template #defaultTemplate>
+             <p>This is a default template content.</p>
+         </ng-template>
+   
+      ```
+
+
