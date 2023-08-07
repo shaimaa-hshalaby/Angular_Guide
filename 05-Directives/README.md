@@ -11,6 +11,7 @@ Angular directives are a fundamental building block of Angular applications. The
 
 ----------------------------------
 ## Attribute Directives
+Attribute directives in Angular are a type of directive that allows you to modify the behavior, appearance, or layout of an existing HTML element. They are applied as attributes of HTML elements and are used to create reusable behaviors that can be conditionally applied to elements based on certain conditions.
 
 ### Built-in Attribute Directives
 
@@ -67,23 +68,6 @@ you can add CSS classes condititionally depending on an expression by this direc
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--  we cannot have more than one structural directive in the same element'
--  structural directive starts with *
-
-
 ## Create our own directive
 1. class decorated by @Directive and then specify the selector which is a unique selector
 2. constructor has a private argument with type elementRef, the angular is responsible for passing it to the directive constructor. this is a reference of the element that the directive setting on it.
@@ -122,7 +106,29 @@ annotate properties with @Input()
 ## ngSwitch
 [ngSwitch]="value"
 
-
+-  we cannot have more than one structural directive in the same element'
+-  structural directive starts with *
+-  
 To do lis
 ============
-1. ngClass with expression returns array, or an object
+1. ngClass with expression returns array or an object
+
+-------------------------------------------------------------------------
+
+## Renderer2
+
+allows us to manipulate the DOM elements, without accessing the DOM directly. It provides a layer of abstraction between the DOM element and the component code. 
+
+Renderer2 can do the following actions:
+
+-  create an element
+-  add a text node to it
+-  append child element using the appendchild method.
+-  add or remove styles
+-  add or remove HTML attributes, CSS Classes & properties
+-  attach and listen to events etc.
+
+## Why changing directly in DOM is not advisable?
+
+- DOM Manipulation works only in Browser. You will not able to use the App in other platforms like in a web worker, in Server (Server-side rendering), or in a Desktop, or in the mobile app, etc where there is no browser.
+
