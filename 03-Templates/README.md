@@ -282,7 +282,8 @@ we will create a demo that has a button and paragraph, when clicking the button 
    -   Accessing the Element in the Component Class
    -   Local Reference within the Template
  
-### Accessing the Element in the Component Class
+### Accessing the DOM Element in the Component Class
+
 You can access the element in the component class by using the @ViewChild decorator , the bounded property should be with the type *ElementRef*.
 Using @ViewChild (for child components):
 
@@ -441,3 +442,11 @@ To integrate Bootstrap with Angular, you can follow these steps:
       ```
 -   Step 4: Start using Bootstrap components
     Now that you have Bootstrap installed and imported, you can start using Bootstrap components in your Angular templates.
+
+------------------------------------------------
+## How to Debug Angular Code
+you can you the debugger attaced to the browser
+
+open developer tools -> sources -> webpack -> choose your file and add break point
+
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/13d44fef-5cf8-42b6-aef2-7c6c685968e1)
