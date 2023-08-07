@@ -131,4 +131,7 @@ Renderer2 can do the following actions:
 ## Why changing directly in DOM is not advisable?
 
 - DOM Manipulation works only in Browser. You will not able to use the App in other platforms like in a web worker, in Server (Server-side rendering), or in a Desktop, or in the mobile app, etc where there is no browser.
+- Accessing the DOM directly means that you are bypassing the Angular lifecycle to syncronize between the component instance and the template
+
+For more details about Renderer2, check the [documentation](https://angular.io/api/core/Renderer2)
 
