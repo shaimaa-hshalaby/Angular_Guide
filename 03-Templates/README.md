@@ -370,3 +370,7 @@ the passed html inside the selector tag of the component always ignored unless y
              </div>
          </app-multi-slot-content-projection>
       ```
+
+4. The output should be as follows:
+   
+      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/07810624-ce4b-4c6e-be0f-eececfc75719)
