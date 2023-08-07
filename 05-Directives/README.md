@@ -9,16 +9,17 @@ Angular directives are a fundamental building block of Angular applications. The
 | **Attributes directives** | These directives modify the behaviour or appearance of an existing HTML element. They are typically applied as attributes to existing HTML elements. [ngClass,ngStyle] are examples of attribute directives.|
 | **structural directive** | These directives alter the structure of the DOM by adding or removing elements based on conditions. They are preceded by an asterisk (*) in the template. [*ngFor,*ngIf] examples of structural directives|
 
----
+----------------------------------
 ## Attribute Directives
+
 ### Built-in Attribute Directives
 
--  *NgClass*:	Adds and removes a set of CSS classes.
--  *NgStyle*:	Adds and removes a set of HTML styles.
--  *NgModel*:	Adds two-way data binding to an HTML form element.
+-  *ngClass*:	Adds and removes a set of CSS classes.
+-  *ngStyle*:	Adds and removes a set of HTML styles.
+-  *ngModel*:	Adds two-way data binding to an HTML form element.
 
 
-#### NgClass:
+#### ngClass:
 you can add CSS classes condititionally depending on an expression by this directive
 
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/b23f8f13-c29b-44bf-a628-26944d7622c2)
