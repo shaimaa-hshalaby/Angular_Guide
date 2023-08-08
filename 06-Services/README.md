@@ -100,8 +100,21 @@
   
   Angular has two injector hierarchies:
   
-  -  **ModuleInjector hierarchy**: Configure a ModuleInjector in this hierarchy using an @NgModule() or @Injectable() annotation.
-  -  **ElementInjector hierarchy**: Created implicitly at each DOM element. An ElementInjector is empty by default unless you configure it in the providers property on @Directive() or @Component().
+ -  **Application-level Injector:** At the top level, there is a single injector known as the application-level injector. This injector is created when the Angular application is bootstrapped. It provides services that are shared throughout the entire application, including global services, configuration settings, and other resources needed by various components.
+
+-  **Module-level Injectors:** In Angular, an application is typically divided into modules, each responsible for a specific area of functionality. Each module has its own injector. Module-level injectors are responsible for providing dependencies to components and services within that module. This helps in encapsulating functionality and creating a clear separation of concerns. Module-level injectors can inherit services and configurations from the application-level injector.
+
+-  **Component-level Injectors:** Within each module, you have components. Each component can have its own injector, which is a child of the module-level injector. This allows components to access services and other dependencies specific to their instance. Component-level injectors can inherit services from both the module-level injector and the application-level injector.
+
+The injector hierarchy follows a hierarchical pattern, where injectors at lower levels (component-level) can access services from injectors at higher levels (module-level and application-level).
+
+When a component requests a dependency, Angular's DI system searches for the requested dependency in the following order:
+
+-  The component's own injector.
+-  The module-level injector (if the component is part of a module).
+-  The application-level injector.
+  
+If the dependency is not found in any of these injectors, Angular will throw an error indicating that the dependency is not provided.
 
 ### How to inject a service in a component or in another injectable service
 
