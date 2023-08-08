@@ -68,7 +68,8 @@ you can add CSS classes condititionally depending on an expression by this direc
 
 
 
-## Create our own directive
+## Create Custom Directive
+
 let's create a custom directive that adds a background colour to the element:
 
 1. To create a custom directive you need to create a class decorated by @Directive and then specify the selector which is a unique selector as follows:
@@ -114,42 +115,6 @@ let's create a custom directive that adds a background colour to the element:
         </div>
        ```
    
-## Renderer 
-in some cases angular does not access the dom -in some cases angular does not run inside the browser- so accessing the dom may throw errors in such cases.
-the better scenario is to access the renderer 
-the class is Renderer2
-try method setStyle()
-
-
-
-more about renderer 
-https://angular.io/api/core/Renderer2
-
-
-@HostListener() inside the directive
-
-@HostBinding('dom property name') for easier link the renderer properties to attribute
-
-**Binding to Directive properties** --> these properties can be added to the tag as attributes
-annotate properties with @Input()
-
-
-## Create Custom structural directive
--  TemplateRef
--  ViewContainerRef
--  property setter
-
-
-## ngSwitch
-[ngSwitch]="value"
-
--  we cannot have more than one structural directive in the same element'
--  structural directive starts with *
--  
-To do lis
-============
-1. ngClass with expression returns array or an object
-
 -------------------------------------------------------------------------
 
 ## Renderer2
@@ -172,3 +137,10 @@ Renderer2 can do the following actions:
 
 For more details about Renderer2, check the [documentation](https://angular.io/api/core/Renderer2)
 
+---------------------------------------------------------------------------------
+
+## Create Custom Directive Using Renderer
+
+#### Changing Style
+
+- you can follow the 
