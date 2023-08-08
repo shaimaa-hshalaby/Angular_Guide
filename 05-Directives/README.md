@@ -143,4 +143,53 @@ For more details about Renderer2, check the [documentation](https://angular.io/a
 
 #### Changing Style
 
-- you can follow the 
+- you can follow the steps in this [section](#create-custom-directive) To create custom directive class
+- to change style you can use Renderer2.setStyle() method that accept 3 parameters, the element, the DOM style property name, and the value of the property as follows:
+  
+    ```
+       this.renderer.setStyle(this.elementRef.nativeElement,'backgroundColor','pink')
+    ```
+
+#### Create Text 
+
+- Also you can append inner text to the element using the Render, Here's an example of *createText* directive class
+    ```
+      @Directive({
+        selector: '[createText]'
+      })
+      export class CreateTextDirective implements OnInit{
+      
+        constructor(private elementRef:ElementRef,private renderer:Renderer2 ) { }
+      
+        ngOnInit(): void {
+          const textEl = this.renderer.createText("This content is added by the directive")
+          this.renderer.appendChild(this.elementRef.nativeElement,textEl)
+        }
+      
+      }
+    ```
+
+#### Create HTML childern
+
+- By Renderer, you have a full control on the Element and you can do alot of things such creating elements and append childern to the provided element
+- Here's an example of a directive that add \<label\> and \<input\> as childern to the provided element
+    ```
+      @Directive({
+        selector: '[appendChild]'
+      })
+      export class appendChildDirective implements OnInit{
+      
+        constructor(private elementRef:ElementRef,private renderer:Renderer2 ) { }
+      
+        ngOnInit(): void {
+          const inputEl = this.renderer.createElement('input') as HTMLInputElement
+          const labelEl = this.renderer.createElement('label') as HTMLLabelElement
+          inputEl.placeholder="Enter the username"
+          inputEl.name="userName"
+          labelEl.htmlFor="userName"
+          labelEl.innerText="User Name:"
+          this.renderer.appendChild(this.elementRef.nativeElement,labelEl)
+          this.renderer.appendChild(this.elementRef.nativeElement,inputEl)
+        }
+  
+    ```
