@@ -193,3 +193,27 @@ For more details about Renderer2, check the [documentation](https://angular.io/a
         }
   
     ```
+------------------------------------------------------------
+
+## Using Properties & @HostBinding() with Directives
+
+What about changing the highlighter directive to accept the color as a property instead of setting a fixed value, here's the steps:
+
+- add a property to your directive class, you can give it a default value, then pass it to the setStyle() method as a value of the backgroundColor style property, Here's the directive after changing
+    ```
+      @Directive({
+        selector: '[highlighterWithProperties]'
+      })
+      export class HighlighterWithPropertiesDirective implements OnInit{
+      
+        backgroundColor = 'purple'
+      
+        constructor(private elementRef:ElementRef,private renderer:Renderer2 ) { }
+      
+        ngOnInit(): void {
+         this.renderer.setStyle(this.elementRef.nativeElement,'backgroundColor',this.backgroundColor)
+        }
+      
+      
+      }
+    ```
