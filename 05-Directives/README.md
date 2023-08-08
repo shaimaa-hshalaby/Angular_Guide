@@ -238,3 +238,14 @@ What about changing the highlighter directive to accept the color as a property 
    ```
       <div [directive_name]="'orange'">
    ```
+
+#### @HostBinding() decorator
+- The @HostBinding() decorator in Angular is used to bind a class property to a host element's property(DOM property). It allows you to set properties on the host element directly from the directive or component class, making it a concise way to manipulate the host element's attributes and properties.
+
+- Here's an example of binding the class property to the style.backgroundColor property and then we will not need Renderer to set the style
+  ```
+    @Input()
+    @HostBinding('style.backgroundColor') backgroundColor = 'blue'
+  ```
+  
+- the color blue is the default but you can change it by property binding
