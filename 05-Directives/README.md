@@ -69,9 +69,30 @@ you can add CSS classes condititionally depending on an expression by this direc
 
 
 ## Create our own directive
-1. class decorated by @Directive and then specify the selector which is a unique selector
-2. constructor has a private argument with type elementRef, the angular is responsible for passing it to the directive constructor. this is a reference of the element that the directive setting on it.
-3. add the directive to the declarations in the NgModule file
+1. To create a custom directive you need to create a class decorated by @Directive and then specify the selector which is a unique selector as follows:
+     ```
+        @Directive({
+          selector: '[appBasicHighlighter]'
+        })
+        export class BasicHighlighterDirective{}
+     ```
+     > \[\] is not part of the selector name, but it informs the angular that this directive will be used as an attribute directive 
+   
+2. Add the directive class to the *declarations* array into the AppModule
+     ```
+        @NgModule({
+        declarations: [
+          AppComponent,
+          BasicHighlighterDirective
+        ],
+     ```
+  
+3. you can use the dependency injection feature to inject the ElementRef parameter to the constructor, and then Angular will be responsible for passing the reference of the element that includes this directive.
+      ```
+        constructor(private elementRef:ElementRef) { }
+      ```
+   
+4. add the directive to the declarations in the NgModule file
 
 accessing element directly from the ElementRef is not a good practise, you can use Renderer
 
