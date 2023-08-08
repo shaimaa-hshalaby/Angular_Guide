@@ -69,6 +69,8 @@ you can add CSS classes condititionally depending on an expression by this direc
 
 
 ## Create our own directive
+let's create a custom directive that adds a background colour to the element:
+
 1. To create a custom directive you need to create a class decorated by @Directive and then specify the selector which is a unique selector as follows:
      ```
         @Directive({
@@ -87,14 +89,18 @@ you can add CSS classes condititionally depending on an expression by this direc
         ],
      ```
   
-3. you can use the dependency injection feature to inject the ElementRef parameter to the constructor, and then Angular will be responsible for passing the reference of the element that includes this directive.
+3. you can use the dependency injection feature to inject the ElementRef parameter to the directive constructor, and then Angular will be responsible for passing the reference of the element that includes this directive.
       ```
         constructor(private elementRef:ElementRef) { }
       ```
    
-4. add the directive to the declarations in the NgModule file
-
-accessing element directly from the ElementRef is not a good practise, you can use Renderer
+4. Because we have an element reference injected into the directive, we can change the colour of the element background on the ngOnInit() method as follows:
+   ```
+     ngOnInit(): void {
+        this.elementRef.nativeElement.style.backgroundColor = 'yellow'
+     }
+   ```
+  > Accessing elements directly from the ElementRef is not a good practice, you can use Renderer
 
 ## Renderer 
 in some cases angular does not access the dom -in some cases angular does not run inside the browser- so accessing the dom may throw errors in such cases.
