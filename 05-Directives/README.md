@@ -78,9 +78,14 @@ let's create a custom directive that adds a background colour to the element:
         })
         export class BasicHighlighterDirective{}
      ```
-     > \[\] is not part of the selector name, but it informs the angular that this directive will be used as an attribute directive 
-   
-2. Add the directive class to the *declarations* array into the AppModule
+     > \[\] is not part of the selector name, but it informs the angular that this directive will be used as an attribute directive
+     
+2. or you can create the directive by using Angular CLI, here's the command
+      ```
+        ng g d <directive_name>
+      ```
+      
+3. Add the directive class to the *declarations* array into the AppModule
      ```
         @NgModule({
         declarations: [
@@ -89,19 +94,26 @@ let's create a custom directive that adds a background colour to the element:
         ],
      ```
   
-3. you can use the dependency injection feature to inject the ElementRef parameter to the directive constructor, and then Angular will be responsible for passing the reference of the element that includes this directive.
+4. you can use the dependency injection feature to inject the ElementRef parameter to the directive constructor, and then Angular will be responsible for passing the reference of the element that includes this directive.
       ```
         constructor(private elementRef:ElementRef) { }
       ```
    
-4. Because we have an element reference injected into the directive, we can change the colour of the element background on the ngOnInit() method as follows:
-   ```
-     ngOnInit(): void {
-        this.elementRef.nativeElement.style.backgroundColor = 'yellow'
-     }
-   ```
-  > Accessing elements directly from the ElementRef is not a good practice, you can use Renderer
+5. Because we have an element reference injected into the directive, we can change the colour of the element background on the ngOnInit() method as follows:
+       ```
+         ngOnInit(): void {
+            this.elementRef.nativeElement.style.backgroundColor = 'yellow'
+         }
+       ```
+      > Accessing elements directly from the ElementRef is not a good practice, you can use Renderer
 
+6. To test our custom directive, you can add it as an attribute to any element in a component template as follows
+       ```
+        <div appBasicHighlighter>
+          <h1>Test Basic Highlighter</h1>
+        </div>
+       ```
+   
 ## Renderer 
 in some cases angular does not access the dom -in some cases angular does not run inside the browser- so accessing the dom may throw errors in such cases.
 the better scenario is to access the renderer 
@@ -109,8 +121,6 @@ the class is Renderer2
 try method setStyle()
 
 
-** creating directive by ng cli
-ng g d <directive_name>
 
 more about renderer 
 https://angular.io/api/core/Renderer2
