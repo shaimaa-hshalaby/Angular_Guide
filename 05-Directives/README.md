@@ -64,10 +64,37 @@ you can add CSS classes condititionally depending on an expression by this direc
      
        ![Untitled (2500 × 1080 px)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3f164e03-4fe7-4392-a1f6-f19c42f405ec)
 
+#### ngStyle directive
 
+The ngStyle directive in Angular is used to dynamically apply inline styles to an HTML element. It allows you to bind styles to an element based on the values of properties or expressions in your component class.
 
+Here's an example of using ngStyle directive
 
+- create a component and add 2 properties for styling
+    ```
+  
+      @Component({
+        selector: 'app-example-ng-style',
+        templateUrl: './example-ng-style.component.html',
+        styleUrls: ['./example-ng-style.component.css']
+      })
+      export class ExampleNgStyleComponent {
+      
+        fontSize = 20
+        isBold = true
+      
+      }
+  
+    ```
 
+- In the component template add a div with ngStyle directive and use an expression to determine the style dynamically as follows:
+    ```
+      <div [ngStyle]="{ 'font-size.px': fontSize, 'font-weight': isBold ? 'bold' : 'normal' }">
+        This div to test ng-Style.
+      </div>
+    ```
+
+--------------------------------------------------------
 ## Create Custom Directive
 
 let's create a custom directive that adds a background colour to the element:
