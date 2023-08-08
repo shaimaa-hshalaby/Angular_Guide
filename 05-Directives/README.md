@@ -249,3 +249,32 @@ What about changing the highlighter directive to accept the color as a property 
   ```
   
 - the color blue is the default but you can change it by property binding
+
+--------------------------------
+
+## Directives with @HostListener()
+The @HostListener() decorator in Angular is used to listen for events on the host element of a directive. It allows you to define event listeners in your directive or component class, so you can respond to events that occur on the element where your directive is applied.
+
+- Here's an example of highlighter directive that change color of the background with *mouseenter* and *mouseleave* events
+  ```
+    @Directive({
+      selector: '[highlighterWithHostListenter]'
+    })
+    export class HighlighterWithHostListenterDirective {
+      
+      @HostBinding('style.backgroundColor') backgroundColor = 'orange'
+      constructor(private elementRef:ElementRef) { }
+    
+      @HostListener('mouseenter')
+      onMouseEnter(){
+        this.backgroundColor = 'yellow'
+      }
+    
+      @HostListener('mouseleave')
+      onMouseLeave(){
+        this.backgroundColor = 'orange'
+      }
+    
+    }
+
+  ```
