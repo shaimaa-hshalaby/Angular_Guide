@@ -146,7 +146,10 @@ If you need to have control over the injecting property value process to apply a
 ------------------------
 
 ## Sending data from a child component to a parent component
+
 -  The child component uses the @Output() property to raise an event to notify the parent of the change
+-  Output properties are used to emit events from a child component to its parent component.
+-   This allows communication between components in a unidirectional flow, where the child component can notify the parent component about certain actions or changes.
 -  The property decorated with @Output() should be of the type EventEmitter<T>
 -  EventEmitter<T> is generic, So when you create a property of this type, you should specify the type of data this event is going to carry.
 
