@@ -199,14 +199,16 @@ For more details about Renderer2, check the [documentation](https://angular.io/a
 
 What about changing the highlighter directive to accept the color as a property instead of setting a fixed value, here's the steps:
 
-- add a property to your directive class, you can give it a default value, then pass it to the setStyle() method as a value of the backgroundColor style property, Here's the directive after changing
+#### Using @Input() Decorator
+
+- To add a property to your directive class that you can give it a default value, then pass it to the setStyle() method instead of passing a fixed value, you can use @Input() decorator to do that, Here's the directive after changing
     ```
       @Directive({
         selector: '[highlighterWithProperties]'
       })
       export class HighlighterWithPropertiesDirective implements OnInit{
       
-        backgroundColor = 'purple'
+        @Input() backgroundColor = 'purple'
       
         constructor(private elementRef:ElementRef,private renderer:Renderer2 ) { }
       
@@ -217,3 +219,22 @@ What about changing the highlighter directive to accept the color as a property 
       
       }
     ```
+- To use it you can add property binding to the element that is using the directive as follows:
+    ```
+      <div highlighterWithProperties [backgroundColor]="'aqua'">
+        <h1>Test Highlighter with property color</h1>
+      </div>
+    ```
+    
+#### Adding Directive Name as an alias to the main property
+
+- you can add an alias to the @Input() decorator with the name of the directive to bind the property direct to the directive attribute as follows:
+
+    ```
+      @Input('directive_name') backgroundColor = 'purple'
+    ```
+
+- you can use it as follows:
+   ```
+      <div [directive_name]="'orange'">
+   ```
