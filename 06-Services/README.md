@@ -2,8 +2,8 @@
 
   ### What is a service?
   A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well.
-  -  A component should use services for tasks that don't involve the view or application logic.
-  -  Services are good for tasks such as fetching data from the server, validating user input, or logging directly to the console.
+  -  A component should use services for tasks that don't involve the view logic, the services should do the business logic tasks.
+  -  Services are good for tasks such as fetching data from the server, validating user input, or logging directly into the console.
   -  Services can depend on other services. 
   
   ### Why services
