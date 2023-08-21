@@ -23,3 +23,7 @@
   | TitleCasePipe | Transforms text to title case (first letter of each word capitalized). |
   | I18nPluralPipe | Provides translations for different plural cases. |
   | I18nSelectPipe | Provides translations based on a key. |
+
+## Parameterizing Built-in Pipes
+-  You can parameterize pipes by passing arguments to them using the pipe syntax in your templates.
+-  This allows you to customize the behaviour of the pipes for specific use cases. Here's how you can parameterize pipes:
