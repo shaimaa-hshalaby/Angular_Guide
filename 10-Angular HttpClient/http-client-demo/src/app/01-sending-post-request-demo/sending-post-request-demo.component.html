@@ -1,0 +1,19 @@
+<div class="row mt-10">
+    <div class="col">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" [(ngModel)]="title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" name="content" [(ngModel)]="content"></textarea>
+            </div>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+        <!-- <button class="btn btn-primary" (click)="onFetch()">Fetch posts</button> -->
+    </div>
+</div>
+
+
+

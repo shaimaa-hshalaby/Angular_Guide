@@ -9,6 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { PropertyBindingComponent } from './04-property-binding/property-binding.component';
 import { EventBindingComponent } from './05-event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './06- two-way-binding/two-way-binding.component';
+import { TemplateVariablesComponent } from './07-template-variables/template-variables.component';
+import { SingleSlotContentProjectionComponent } from './08-single-slot-content-projection/single-slot-content-projection.component';
+import { MultiSlotContentProjectionComponent } from './09-multi-slot-content-projection/multi-slot-content-projection.component';
+import { NgTemplateDemoComponent } from './10-ng-template-demo/ng-template-demo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { TwoWayBindingComponent } from './06- two-way-binding/two-way-binding.co
     TemplateExpressionComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    TemplateVariablesComponent,
+    SingleSlotContentProjectionComponent,
+    MultiSlotContentProjectionComponent,
+    NgTemplateDemoComponent
   ],
   imports: [
     BrowserModule,

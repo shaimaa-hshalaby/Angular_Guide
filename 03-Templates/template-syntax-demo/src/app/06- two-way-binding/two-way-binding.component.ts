@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-two-way-binding',
   templateUrl: './two-way-binding.component.html',
-  styles:['span{"background-color":"yellow";}']
+  styles:['canvas {background-color: pink;}']
 })
 export class TwoWayBindingComponent {
 
-  spanWidth:number = 100
+  canvasWidth:number = 100
 
 }

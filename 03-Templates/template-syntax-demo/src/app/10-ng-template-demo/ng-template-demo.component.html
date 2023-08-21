@@ -1,0 +1,10 @@
+<h2> ng-template demo</h2>
+<div *ngIf="showSpecialTemplate; then specialTemplate else defaultTemplate" ></div>
+
+<ng-template #specialTemplate>
+    <p>This is a special template content.</p>
+</ng-template>
+
+<ng-template #defaultTemplate>
+    <p>This is a default template content.</p>
+</ng-template>
