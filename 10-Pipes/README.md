@@ -46,9 +46,17 @@ Here are some examples of how to use pipes:
 -  To pass parameters to Angular pipes, you can use the colon (:) syntax within the pipe expression in your template.
   Here are some examples of how to pass parameters to Pipes
   ```
-    <p>{{ myDate | date:'yyyy-MM-dd' }}</p>
+    {{ myDate | date:'yyyy-MM-dd' }}
   ```
   
   ```
     {{ numberValue | currency:'USD'}}
   ```
+
+- you can pass several parameters by using the colon (:) syntax as follows:
+  ```
+    {{ numberValue | currency:'EUR':'symbol'}}
+  ```
+
+## Resources
+Angular documentation https://angular.io/guide/pipes
