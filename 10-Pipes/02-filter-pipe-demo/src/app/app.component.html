@@ -1,0 +1,12 @@
+<select [(ngModel)]="filterStatus" >
+  <option value="ALL" >ALL</option>
+  <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+</select>
+
+<div *ngFor="let account of accounts | statusFilter:filterStatus">
+  <p>
+    <strong>Code: </strong> {{account.code}} || 
+    <strong>Name: </strong> {{account.customerName}} ||
+    <strong>Status: </strong> {{account.status}}
+  </p>
+</div>
