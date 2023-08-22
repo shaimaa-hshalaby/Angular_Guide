@@ -24,6 +24,22 @@
   | I18nPluralPipe | Provides translations for different plural cases. |
   | I18nSelectPipe | Provides translations based on a key. |
 
+## How to use Built-in pipes in your templates
+  Pipes are used within interpolation expressions ({{ }}) and binding expressions ([ ]) to modify the output of data before displaying it on the screen. 
+Here are some examples of how to use pipes:
+
+    ```
+     {{ value | uppercase}}
+    ```
+    
+    ```
+      {{ value | lowercase}}
+    ```
+    
+    ```
+      {{ value | percent}}
+    ```
+    
 ## Parameterizing Built-in Pipes
 -  You can parameterize pipes by passing arguments to them using the pipe syntax in your templates.
 -  This allows you to customize the behaviour of the pipes for specific use cases. Here's how you can parameterize pipes:
