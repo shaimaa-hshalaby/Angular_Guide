@@ -174,12 +174,12 @@ We will parameterize the pipe to allow dynamic filtering of the accounts array.
             { code: '4000', customerName:'Ali Amir', status:AccountStatus.ACTIVE},
         ]
        ```
-   -  Add a string parameter to recieve the value of the selected status
+   -  Add a string parameter to receive the value of the selected status
       ```
        filterStatus=''
       ```
 
-   - extract the AccountStatus Enum values to be used as options of a dropdown list
+   - Add the *statuses* parameter and assign the AccountStatus Enum values to it to be used as options of a dropdown list in the App Component template
      ```
       statuses = Object.values(AccountStatus)
      ```
