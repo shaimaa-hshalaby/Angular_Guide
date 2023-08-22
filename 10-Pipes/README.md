@@ -54,9 +54,10 @@ Here are some examples of how to use pipes:
   ```
 
 - you can pass several parameters by using the colon (:) syntax as follows:
-  ```
-    {{ numberValue | currency:'EUR':'symbol'}}
-  ```
+```
+  {{ numberValue | currency:'EUR':'symbol'}}
+```
 
 ## Resources
-Angular documentation https://angular.io/guide/pipes
+-  Angular documentation https://angular.io/guide/pipes
+-  Angular API reference https://angular.io/api?type=pipe
