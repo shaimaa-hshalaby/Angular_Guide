@@ -183,6 +183,25 @@ We will parameterize the pipe to allow dynamic filtering of the accounts array.
      ```
       statuses = Object.values(AccountStatus)
      ```
+
+  5. In the app.component.html file, add a drop down list that displays the available account statuses and link it with the component parameter *filterStatus* to change its value with the selection as follows:
+     ```
+      <select [(ngModel)]="filterStatus" >
+        <option value="ALL" >ALL</option>
+        <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+      </select>
+     ```
+
+6. you can use the *statusFilter* pipe and send the selected status as a parameter to show only the accounts with the selected status as follows:
+   ```
+    <div *ngFor="let account of accounts | statusFilter:filterStatus">
+      <p>
+        <strong>Code: </strong> {{account.code}} || 
+        <strong>Name: </strong> {{account.customerName}} ||
+        <strong>Status: </strong> {{account.status}}
+      </p>
+    </div>
+   ```
 ## Understanding the Promise
 
 ## Async pipe
