@@ -116,6 +116,77 @@ Let's consider a simple example of creating a custom pipe that capitalizes the f
   ```
     {{ 'hello world example' | capitalize}}
   ```
+
+## Paramaterize the Custom pipe
+In this example, we will walk through the process of creating a custom Angular pipe that filters an array of ACCOUNT objects based on their status. 
+We will parameterize the pipe to allow dynamic filtering of the accounts array. 
+
+1. Create ACCOUNT interface to clarify the structure of the ACCOUNT object
+   ```
+    export interface ACCOUNT{
+        code:string
+        customerName:string
+        status:AccountStatus
+    }
+   ```
+
+2. Create AccountStatus Enum that contains the available statues for the account as follows:
+   ```
+    export enum AccountStatus{
+        ACTIVE = 'ACTIVE',
+        INACTIVE = 'INACTIVE',
+        PENDING = 'PENDING'
+    }
+   ```
+
+3. Create *StatusFilterPipe* that accepts a value of type *ACCOUNT[]* and another parameter that represents the selected status to filter with. here is the code of the pipe
+   ```
+    import { Pipe, PipeTransform } from "@angular/core";
+    import { ACCOUNT } from "../models/account.model";
+    
+    @Pipe({
+        name: 'statusFilter'
+    })
+    export class StatusFilterPipe implements PipeTransform{
+    
+        transform(accounts:ACCOUNT[],status: string) {
+            if(status.toLowerCase() === 'all'){
+                return accounts
+            }
+            let selectedAccounts:ACCOUNT[]=[]
+            for(const account of accounts){
+                if(account.status === status){
+                    selectedAccounts.push(account)
+                }
+            }
+            return selectedAccounts
+        }
+    }
+   ```
+
+4. In the *AppComponent* class
+   -  Add accounts list as follows:
+       ```
+        accounts:ACCOUNT[] = [
+            { code: '1000', customerName:'Ahmed Hussin', status:AccountStatus.ACTIVE},
+            { code: '2000', customerName:'Hamza Omran', status:AccountStatus.INACTIVE},
+            { code: '3000', customerName:'Omar Mohamed', status:AccountStatus.PENDING},
+            { code: '4000', customerName:'Ali Amir', status:AccountStatus.ACTIVE},
+        ]
+       ```
+   -  Add a string parameter to recieve the value of the selected status
+      ```
+       filterStatus=''
+      ```
+
+   - extract the AccountStatus Enum values to be used as options of a dropdown list
+     ```
+      statuses = Object.values(AccountStatus)
+     ```
+## Understanding the Promise
+
+## Async pipe
+
 ## Resources
 -  Angular documentation https://angular.io/guide/pipes
 -  Angular API reference https://angular.io/api?type=pipe
