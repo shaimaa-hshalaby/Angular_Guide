@@ -67,7 +67,55 @@ Here's how you can chain pipes in your Angular
   {{ myDate | date:'medium' | uppercase }}
 ```
 
+## Creating a Custom Pipe
+Custom pipes in Angular allow you to perform specific transformations on data before rendering it in the template.
+Let's consider a simple example of creating a custom pipe that capitalizes the first letter of each word in a string.
 
+- use Angular CLI to create a pipe using the following command:
+  ```
+    ng generate pipe capitalize
+  ```
+
+  This command will create a class decorated by @Pipe() and add the pipe class to the declarations array of the module as follows:
+
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6a583b37-2681-4c17-839f-31fe4ea29a81)
+
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/d061663e-1d6d-4d6b-b3db-5d7ee5018f61)
+
+- The pipe class should implement *PipeTransform* interface to implement the mandatory function *transform(value:any)*
+- the pipe decorator has a name parameter which represents the name of the pipe that will be used in the text interpolation {{}}
+- The transform function is responsible for receiving a value to transform and returns the transformed value.
+- customize the pipe class to make the transformation that you need - in our example to capitalize the word- as follows:
+    ```
+      @Pipe({
+        name: 'capitalize'
+      })
+      export class CapitalizePipe implements PipeTransform {
+      
+        transform(value:string): string {
+          return value.charAt(0).toUpperCase()+value.slice(1)
+        }
+      
+      }
+  
+    ```
+
+    ```
+      {{ 'hamza' | capitalize}}
+    ```
+- To capitalize the whole statement, here is the code:
+  ```
+     transform(value:string): string {
+        return value.split(" ")
+                    .map(word => word.charAt(0).toUpperCase()+word.slice(1))
+                    .join(" ")
+        
+      }
+  ```
+
+  ```
+    {{ 'hello world example' | capitalize}}
+  ```
 ## Resources
 -  Angular documentation https://angular.io/guide/pipes
 -  Angular API reference https://angular.io/api?type=pipe
