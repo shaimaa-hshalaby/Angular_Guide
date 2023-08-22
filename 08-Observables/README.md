@@ -275,7 +275,7 @@ RxJS operators can be categorized into different types based on their functional
 | CATEGORY | DESCRIPTION |
 |---|---|
 | **Transformation Operators** | These operators transform the items emitted by an Observable. Examples include map, pluck, mergeMap (also known as flatMap), switchMap, and concatMap. |
-| **Filtering Operators: These operators filter the items emitted by an Observable based on certain conditions. Examples include filter, take, skip, distinctUntilChanged, and debounceTime. |
+| **Filtering Operators**| These operators filter the items emitted by an Observable based on certain conditions. Examples include filter, take, skip, distinctUntilChanged, and debounceTime. |
 | **Combination Operators** | These operators combine multiple Observables into a single Observable. Examples include combineLatest, zip, merge, concat, and forkJoin. |
 | **Utility Operators** | These operators provide utility functions to manipulate Observables and handle errors. Examples include tap, delay, finalize, and catchError.|
 | **Conditional Operators** | These operators evaluate conditions on items emitted by Observables. Examples include defaultIfEmpty, every, some, and isEmpty. |
