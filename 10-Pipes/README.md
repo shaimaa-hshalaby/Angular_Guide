@@ -209,6 +209,20 @@ We will parameterize the pipe to allow dynamic filtering of the accounts array.
 
 
 ## Async pipe
+The Angular framework provides the async pipe as a built-in feature to handle asynchronous data streams in templates.
+It's primarily used with Observables, but it can also work with Promises and other asynchronous data sources. 
+The async pipe simplifies data binding and updating the UI when the data changes.
+
+- create an observable in your class, the example below creates an observale using interval function that provides an observable that emits numbers in ascending order every specific interval
+  
+  ```
+   counterObervable = interval(1000)
+  ```
+
+- you can use the *async* pipe as follows to automatically subscribe and update the value rendered in the template
+  ```
+   {{counterObervable | async}}
+  ```
 
 ## Resources
 -  Angular documentation https://angular.io/guide/pipes
