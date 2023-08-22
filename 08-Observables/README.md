@@ -318,7 +318,8 @@ Error handling operators in RxJS help you manage errors that occur within an Obs
        }
    ```
 
-3. you can catch the error using the catchError() operator to handle the caught error and then the observer complete() method will be called after catching the error.
+3. We can use the catchError() operator to handle errors. When an error occurs, the provided error handler function logs the error and returns an Observable with a fallback value (of(-1) in this case). then the observer complete() method will be called after catching the error.
+   
     ```
       safeSource = this.source.pipe(
         catchError(error => {
@@ -336,3 +337,4 @@ Error handling operators in RxJS help you manage errors that occur within an Obs
         })
     
     ```
+5. 
