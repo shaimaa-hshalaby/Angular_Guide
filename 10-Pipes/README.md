@@ -202,7 +202,10 @@ We will parameterize the pipe to allow dynamic filtering of the accounts array.
       </p>
     </div>
    ```
-## Understanding the Promise
+
+7. This GIF illustrates the behavior of the previous exercise.
+     ![Untitled design (14)](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/bf224e8d-7db0-4345-af0a-e929e8b9cecb)
+
 
 ## Async pipe
 
