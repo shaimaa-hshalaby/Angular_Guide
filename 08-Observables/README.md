@@ -283,3 +283,7 @@ RxJS operators can be categorized into different types based on their functional
 | **Multicasting Operators** | These operators help manage the sharing of data among multiple subscribers. Examples include share, publish, publishReplay, and shareReplay. |
 | **Error Handling Operators** | These operators handle errors that occur within Observables. Examples include catchError, retry, and retryWhen. |
 | **Transformational Higher-Order Mapping Operators** | These operators are used to manipulate Observables of Observables, often called "higher-order Observables." Examples include switchMap, mergeMap, concatMap, and exhaustMap. |
+
+
+### Error Handling with catchError() operator
+Error handling operators in RxJS help you manage errors that occur within an Observable stream. They allow you to catch errors, handle them, and potentially recover from them. Here's an example that demonstrates the use of the catchError() operator to handle errors gracefully:
