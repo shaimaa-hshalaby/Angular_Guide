@@ -287,3 +287,52 @@ RxJS operators can be categorized into different types based on their functional
 
 ### Error Handling with catchError() operator
 Error handling operators in RxJS help you manage errors that occur within an Observable stream. They allow you to catch errors, handle them, and potentially recover from them. Here's an example that demonstrates the use of the catchError() operator to handle errors gracefully:
+
+1. Create an Observable that emits values and then throws an error
+   ```
+     source = new Observable(obs => {
+     let stream:any[] = [1,2,3,4,5,'not a number',6,7,8]
+     stream.forEach((val) => {
+        if(typeof(val) === 'number') {
+          obs.next(val)
+        }else{
+          obs.error("the value is not a number")
+        }
+      })
+      obs.complete()
+     })
+ 
+   ```
+
+2. When subscribing directly to this observable, the behaviour will be that when an error occurs, the observable will not emit the remaining values and the complete() function will not be called.
+   
+   ```
+     onSubscribe(){
+        this.source.subscribe({
+          next: (value) => {
+            console.log(value)
+          }
+          ,error: (err) => console.error(err)
+          ,complete: () => console.log("the stream is completed")
+        })
+       }
+   ```
+
+3. you can catch the error using the catchError() operator to handle the caught error and then the observer complete() method will be called after catching the error.
+    ```
+      safeSource = this.source.pipe(
+        catchError(error => {
+          console.error('An error occurred:', error);
+          return of(-1); 
+        })
+       )
+      
+      this.safeSource.subscribe({
+          next: (value) => {
+            console.log(value)
+          }
+          ,error: (err) => console.error(err)
+          ,complete: () => console.log("the stream is completed")
+        })
+    
+    ```
