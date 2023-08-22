@@ -58,6 +58,16 @@ Here are some examples of how to use pipes:
   {{ numberValue | currency:'EUR':'symbol'}}
 ```
 
+## Pipe Chaining 
+-  you can chain multiple pipes together to apply a series of transformations to your data. Pipe chaining allows you to perform multiple formatting or manipulation steps on your data in a single template expression.
+- Just remember that the order of the pipes matters – the data flows from left to right through the chain.
+- Each pipe in the chain processes the output of the previous one, and the result of the final pipe is displayed in the template.
+Here's how you can chain pipes in your Angular 
+```
+  {{ myDate | date:'medium' | uppercase }}
+```
+
+
 ## Resources
 -  Angular documentation https://angular.io/guide/pipes
 -  Angular API reference https://angular.io/api?type=pipe
