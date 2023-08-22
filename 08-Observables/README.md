@@ -254,8 +254,17 @@ Using the share() operator is a simple and efficient method to multicast an Obse
 
 - For more control over multicasting, check also the publish() and replay() operators.
   
-## To do 
-- more details about operators
-- catchError()
-- retry()
+## More about Rxjs operators
+### What are operators?
+Operators are functions. There are two kinds of operators:
+1. Pipeable Operators
+2. Creation Operators
 
+####  Pipeable Operators
+-  Pipeable Operators are the kind that can be piped to Observables using the syntax observableInstance.pipe(operator)
+-  When Pipeable Operators are called, they do not change the existing Observable instance. Instead, they return a new Observable, whose subscription logic is based on the first Observable.
+-  A Pipeable Operator is essentially a pure function which takes one Observable as input and generates another Observable as output. Subscribing to the output Observable will also subscribe to the input Observable.
+
+#### Creation Operators
+-  Creation Operators are the other kind of operator, which can be called standalone functions to create a new Observable. For example: of(1, 2, 3) creates an observable that will emit 1, 2, and 3, one right after another.
+- There are other creation operators like interval(), for()
