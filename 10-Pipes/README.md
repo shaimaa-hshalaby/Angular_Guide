@@ -28,18 +28,27 @@
   Pipes are used within interpolation expressions ({{ }}) and binding expressions ([ ]) to modify the output of data before displaying it on the screen. 
 Here are some examples of how to use pipes:
 
-    ```
-     {{ value | uppercase}}
-    ```
-    
-    ```
-      {{ value | lowercase}}
-    ```
-    
-    ```
-      {{ value | percent}}
-    ```
+  ```
+   {{ value | uppercase}}
+  ```
+  
+  ```
+   {{ value | lowercase}}
+  ```
+  
+  ```
+   {{ value | percent}}
+  ```
     
 ## Parameterizing Built-in Pipes
--  You can parameterize pipes by passing arguments to them using the pipe syntax in your templates.
--  This allows you to customize the behaviour of the pipes for specific use cases. Here's how you can parameterize pipes:
+
+-  pipes can accept parameters to customize their behaviour. This allows you to fine-tune how data is transformed and displayed using the pipes.
+-  To pass parameters to Angular pipes, you can use the colon (:) syntax within the pipe expression in your template.
+  Here are some examples of how to pass parameters to Pipes
+  ```
+    <p>{{ myDate | date:'yyyy-MM-dd' }}</p>
+  ```
+  
+  ```
+    {{ numberValue | currency:'USD'}}
+  ```
