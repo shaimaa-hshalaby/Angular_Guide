@@ -340,7 +340,7 @@ Error handling operators in RxJS help you manage errors that occur within an Obs
         })
     
     ```  
-6. The output console in this case will be as follows:
+6. The console output in this case will be as follows:
    
       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/8b52e1e7-1af1-4f23-a6f0-9ab936d0b3f1)
 
