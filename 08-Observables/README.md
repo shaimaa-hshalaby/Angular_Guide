@@ -344,3 +344,6 @@ Error handling operators in RxJS help you manage errors that occur within an Obs
    
       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/8b52e1e7-1af1-4f23-a6f0-9ab936d0b3f1)
 
+#### throwError() function
+-  the throwError function is part of the rxjs library, which is used for handling asynchronous operations with Observables. 
+-  The throwError function is used to create an Observable that immediately emits an error.
