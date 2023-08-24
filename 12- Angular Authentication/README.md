@@ -37,7 +37,20 @@ By the end of this section, you'll have a Firebase project ready to handle user 
 
     ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/32032037-3610-4a0b-90b4-16eb3041c9a8)
 
-9. 
+## Implementing User Registration/Login
+1. User Angular CLI to generate authentication component
+   ```
+    ng g c authentication
+   ```
+
+2. for best practice, generate authenticationService to implement the logic related to the communication with the backend as follows
+   ```
+     ng g s authentication
+   ```
+
+3. create the login/register form in the authentication component template as follows:
+   
+## Creating the Authentication Service
     
 
 
@@ -50,10 +63,9 @@ By the end of this section, you'll have a Firebase project ready to handle user 
 
 
     
-Creating the Authentication Module
 
-Implementing User Registration
-Implementing User Login
+
+
 Implementing User Logout
 
 Handling Token Expiry and Refresh
