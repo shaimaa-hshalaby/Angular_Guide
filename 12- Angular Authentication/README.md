@@ -33,7 +33,26 @@ By the end of this section, you'll have a Firebase project ready to handle user 
           ```
            npm install firebase 
           ```
+9. Use the Angular CLI to generate environment files for the project. By default, Angular CLI generates the src/environments/environment.ts file for the development environment. To generate an environment file for the production environment, you can use the following command:
+    ```
+      ng generate environments
+    ```
+10. To configure firebase, open the src/environments/environment.ts file. then Paste the Firebase configuration object obtained in Step 7 inside the firebase property.
 
+    ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/32032037-3610-4a0b-90b4-16eb3041c9a8)
+
+11. 
+
+
+
+
+
+
+
+
+
+
+    
 Creating the Authentication Module
 
 Implementing User Registration
