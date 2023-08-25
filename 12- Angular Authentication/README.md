@@ -127,13 +127,21 @@ By the end of this section, you'll have a Firebase project ready to handle user 
 
     - In the authenticationComponent, you must subscribe into the observable returned from the service as follows:
       ```
-        onSubmit(form:NgForm){
+       onSubmit(form:NgForm){
+          if(!this.isLoginMode){
+              this.handleSignUp(form)
+          }
+        }
+      
+        private handleSignUp(form:NgForm){
           this.authService.signup(form.value.email,form.value.password).subscribe({
-            next: (response)=>{console.log(response)}
+            next: (response)=>{
+              // handling code
+            }
           })
         }
       ```
-      > the response is the objected recieved from the backend -firebase in our case here
+      > the response is the object recieved from the backend -firebase in our case here
 
 6. Implement AuthenticationService Login
 
@@ -170,7 +178,16 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```  
 
-
+  - add Loginhandling to the component that is called when the login button is clicked then it subscribes into the login observable returned from the service as follows
+  ```
+    private handleLogin(form:NgForm){
+      this.authService.login(form.value.email,form.value.password).subscribe({
+        next: (response)=>{
+          // handling code
+        }
+      })
+    }
+  ```
 
 
 
