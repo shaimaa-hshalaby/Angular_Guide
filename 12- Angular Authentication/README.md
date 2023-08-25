@@ -178,24 +178,24 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```  
 
-  - add Loginhandling to the component that is called when the login button is clicked then it subscribes into the login observable returned from the service as follows
-  ```
-    onSubmit(form:NgForm){
-      if(this.isLoginMode){
-          this.handleLogin(form)
-      }else{
-          this.handleSignUp(form)
-      }    
-    }
-  
-    private handleLogin(form:NgForm){
-        this.authService.login(form.value.email,form.value.password).subscribe({
-          next: (response)=>{
-            // handling code
-          }
-        })
-    }
-  ```
+    - add Loginhandling to the component that is called when the login button is clicked then it subscribes into the login observable returned from the service as follows
+      ```
+        onSubmit(form:NgForm){
+          if(this.isLoginMode){
+              this.handleLogin(form)
+          }else{
+              this.handleSignUp(form)
+          }    
+        }
+      
+        private handleLogin(form:NgForm){
+            this.authService.login(form.value.email,form.value.password).subscribe({
+              next: (response)=>{
+                // handling code
+              }
+            })
+        }
+      ```
 
 
 
