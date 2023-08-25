@@ -76,7 +76,7 @@ By the end of this section, you'll have a Firebase project ready to handle user 
          ```
         > for more details about how to create angular form, go to [Angular Forms guide](https://github.com/shaimaa-hshalaby/Angular_Guide/tree/main/09-Angular%20Forms)
           
-4. Implment AuthenticationService to communicate with back-end
+4. Implment AuthenticationService Signup
     Notice that the endpoint, request body and response body will be changed according to the backend APIs, So the following endpoint, request and response are specific to the firebase
 
    - The following is a screenshot from the Firebase Authentication documentation
@@ -104,12 +104,57 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```
 
-  - inject the *HttpClient* into the *AuthenticationService* to be able to send the signup and login requests to the backend
-    ```
-      constructor(private http:HttpClient) { }
-    ```
+    - Inject the *HttpClient* into the *AuthenticationService* to be able to send the signup and login requests to the backend
+      
+      ```
+        constructor(private http:HttpClient) { }
+      ```
 
-  
+    - Here is the implementation of the signup function to communicate with the firebase authentication module to get a signup observable to subscribe on it in the AuthenticationComponent 
+        
+      ```
+         signup(email:string,password:string){
+            let signupUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.firebase.apiKey}`
+            let request:AuthenticationRequest = {
+              email:email,
+              password:password,
+              returnSecureToken:true
+            }
+            return this.http.post(signupUrl,request)
+          }
+      ```
+
+    - In the authenticationComponent, you must subscribe into the observable returned from the service as follows:
+      ```
+        onSubmit(form:NgForm){
+          this.authService.signup(form.value.email,form.value.password).subscribe({
+            next: (response)=>{console.log(response)}
+          })
+        }
+      ```
+      > the response is the objected recieved from the backend -firebase in our case here
+
+5. Implement AuthenticationService Login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
