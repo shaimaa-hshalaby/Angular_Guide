@@ -86,8 +86,23 @@ By the end of this section, you'll have a Firebase project ready to handle user 
       > you can check the documentation from [here](https://firebase.google.com/docs/reference/rest/auth#section-create-email-password)
 
 
-
-
+   - add a declaration for AuthenticationRequest and AuthenticationResponse as follows:
+     
+      ```
+        interface AuthenticationRequest{
+          email:string,
+          password:string,
+          returnSecureToken:boolean
+        }
+        
+        interface AuthenticationResponse{
+          idToken:string,
+          email:string,
+          refreshToken:string,
+          expiresIn:string,
+          localId:string
+        }
+      ```
 
 
     
