@@ -104,8 +104,12 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```
 
+  - inject the *HttpClient* into the *AuthenticationService* to be able to send the signup and login requests to the backend
+    ```
+      constructor(private http:HttpClient) { }
+    ```
 
-    
+  
 
 
 
