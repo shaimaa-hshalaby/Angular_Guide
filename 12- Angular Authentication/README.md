@@ -49,9 +49,33 @@ By the end of this section, you'll have a Firebase project ready to handle user 
    ```
 
 3. create the login/register form in the authentication component template as follows:
-   
-## Creating the Authentication Service
-    
+     - create boolean property in the *AuthenticationComponent* to switch between the login and register modes
+         ```
+          export class AuthenticationComponent {
+            isLoginMode = false
+          }
+         ```
+       
+      - Create form in the Auntentication.component.html file as follows:
+         ```
+            <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" name="email" class="form-control" email required ngModel>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" name="password" class="form-control" email required ngModel>
+                  </div>
+                  <div class="mt-3">
+                      <button class="btn btn-success">{{isLoginMode?'Login':'Signup'}}</button> |
+                      <button class="btn btn-primary">Switch to {{!isLoginMode?'Login':'Signup'}}</button>
+                  </div>
+              </form>
+      
+         ```
+        > for more details about how to create angular form, go to [Angular Forms guide](https://github.com/shaimaa-hshalaby/Angular_Guide/tree/main/09-Angular%20Forms)
+          
 
 
 
