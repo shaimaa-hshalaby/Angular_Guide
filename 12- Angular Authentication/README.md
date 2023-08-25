@@ -77,9 +77,13 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         > for more details about how to create angular form, go to [Angular Forms guide](https://github.com/shaimaa-hshalaby/Angular_Guide/tree/main/09-Angular%20Forms)
           
 4. Implment AuthenticationService to communicate with back-end
+    Notice that the endpoint, request body and response body will be changed according to the backend APIs, So the following endpoint, request and response are specific to the firebase
 
+   - The following is a screenshot from the Firebase Authentication documentation
 
+      ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3ba9364d-57b4-4722-9675-5be6cebd2720)
 
+      > you can check the documentation from [here](https://firebase.google.com/docs/reference/rest/auth#section-create-email-password)
 
 
 
