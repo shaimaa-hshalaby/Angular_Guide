@@ -197,9 +197,16 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```
 
+## Registeration and Login Error Handling
+In the documentation of the Firebase, you can find the common errors of signup and login as follows
 
+#### Login Common Errors
 
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/509dbded-5052-420d-b0a8-fd7370a76725)
 
+#### Signup Common Errors
+
+  ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/9eb2fab0-6dee-4efc-8b4a-0bf396f297fd)
 
 
 
