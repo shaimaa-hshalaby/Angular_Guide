@@ -156,6 +156,19 @@ By the end of this section, you'll have a Firebase project ready to handle user 
         }
       ```
 
+    - The implementation of login() method in the *AuthenticationService*
+      
+      ```
+        login(email:string,password:string){
+          let loginUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${environment.firebase.apiKey}`
+          let request:AuthenticationRequest = {
+            email:email,
+            password:password,
+            returnSecureToken:true
+          }
+          return this.http.post(loginUrl,request)
+        }
+      ```  
 
 
 
