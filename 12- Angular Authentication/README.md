@@ -76,7 +76,8 @@ By the end of this section, you'll have a Firebase project ready to handle user 
          ```
         > for more details about how to create angular form, go to [Angular Forms guide](https://github.com/shaimaa-hshalaby/Angular_Guide/tree/main/09-Angular%20Forms)
           
-4. Implment AuthenticationService Signup
+4. Implment AuthenticationService Signup.
+   
     Notice that the endpoint, request body and response body will be changed according to the backend APIs, So the following endpoint, request and response are specific to the firebase
 
    - The following is a screenshot from the Firebase Authentication documentation
@@ -134,7 +135,7 @@ By the end of this section, you'll have a Firebase project ready to handle user 
       ```
       > the response is the objected recieved from the backend -firebase in our case here
 
-5. Implement AuthenticationService Login
+6. Implement AuthenticationService Login
 
 
 
