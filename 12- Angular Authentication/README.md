@@ -80,7 +80,7 @@ By the end of this section, you'll have a Firebase project ready to handle user 
    
     Notice that the endpoint, request body and response body will be changed according to the backend APIs, So the following endpoint, request and response are specific to the firebase
 
-   - The following is a screenshot from the Firebase Authentication documentation
+   - The following is a screenshot from the Firebase Authentication documentation for signup API
 
       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/3ba9364d-57b4-4722-9675-5be6cebd2720)
 
@@ -137,8 +137,24 @@ By the end of this section, you'll have a Firebase project ready to handle user 
 
 6. Implement AuthenticationService Login
 
+    - Here's a screenshot from the Firebase documentation about the Login API
 
+       ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/6213a060-a526-44cd-8a2c-a6bf3e8feb3a)
+  
+        > for more details from the documentation, you could check this [link](https://firebase.google.com/docs/reference/rest/auth?hl=en&authuser=0#section-sign-in-email-password)
+      
 
+    - From the documentation, you can find that the login response is similar to the signup response unless one property named *registered*, so you can add a change to the AuthenticationResponse interface as follows:
+      ```
+        interface AuthenticationResponse{
+          idToken:string,
+          email:string,
+          refreshToken:string,
+          expiresIn:string,
+          localId:string
+          registered?:boolean
+        }
+      ```
 
 
 
