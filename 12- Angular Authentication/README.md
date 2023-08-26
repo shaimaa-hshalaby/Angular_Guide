@@ -368,10 +368,11 @@ Here is the steps of the implemenation:
             tokenExpirationDate:userData.tokenExpirationDate.toString()
           }))
       }
-    > I had to extract data manually from UserData object because the stringify() method stored date with the differnt time zone, So I transformed date to string     > to keep the current time-zone
   
    ```
-   
+   > I had to extract data manually from UserData object because the stringify() method stored date with the differnt time zone, So I transformed date to 
+   > string to keep the current time-zone
+  
 
 
 
