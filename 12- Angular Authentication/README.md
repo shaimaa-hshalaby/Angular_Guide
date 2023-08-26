@@ -210,7 +210,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
 
 #### Error handling implementation
 
--  Handle different errors in a private method that will be used in Login and Signup scenarios
+1.  Handle different errors in a private method that will be used in Login and Signup scenarios
    ```
     handleErrors(errorResponse:HttpErrorResponse){
     if(!errorResponse.error || !errorResponse.error.error){
@@ -231,7 +231,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
     }
    ```
 
--  Use catchError() operator in the signup() and login() inside the AuthenticationService as follows:
+2.  Use catchError() operator in the signup() and login() inside the AuthenticationService as follows:
    ```
     signup(email:string,password:string){
       //
@@ -248,7 +248,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
     }
    ```
 
-- Set the error message in the component property
+3. Set the error message in the component property
     - add a string|null property to hold the error message if exists as follows:
       ```
         errorMsg:string|null = null
@@ -280,7 +280,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
         </div>
       ```
 
-
+## Store Logged-in User Data
 
 
 Implementing User Logout
