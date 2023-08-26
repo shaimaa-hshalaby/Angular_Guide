@@ -208,8 +208,45 @@ In the documentation of the Firebase, you can find the common errors of signup a
 
   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/9eb2fab0-6dee-4efc-8b4a-0bf396f297fd)
 
+#### Error handling implementation
 
+-  Handle different errors in a private method that will be used in Login and Signup scenarios
+   ```
+    handleErrors(errorResponse:HttpErrorResponse){
+    if(errorResponse.error || errorResponse.error.error){
+      return throwError(() => new Error("an error has been occured"))
+    }
+    switch(errorResponse.error.error.message){
+      case "EMAIL_EXISTS":
+        return throwError(() => new Error("The Email already exists"))
 
+      case "EMAIL_NOT_FOUND":
+        return throwError(() => new Error("The Email is not found"))
+        break
+      case  "INVALID_PASSWORD":
+        return throwError(() => new Error("invalid password"))
+        break
+      default:
+        return throwError(() => new Error("an error has been occured"))
+    }
+   ```
+
+-  Use catchError() operator in the signup() and login() inside the AuthenticationService as follows:
+   ```
+    signup(email:string,password:string){
+      //
+      return this.http.post(signupUrl,request)
+                      .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse)))
+    }
+   ```
+
+   ```
+    login(email:string,password:string){
+      //
+      return this.http.post(signupUrl,request)
+                      .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse)))
+    }
+   ```
 
 
 
