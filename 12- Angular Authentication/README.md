@@ -213,7 +213,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
 -  Handle different errors in a private method that will be used in Login and Signup scenarios
    ```
     handleErrors(errorResponse:HttpErrorResponse){
-    if(errorResponse.error || errorResponse.error.error){
+    if(!errorResponse.error || !errorResponse.error.error){
       return throwError(() => new Error("an error has been occured"))
     }
     switch(errorResponse.error.error.message){
