@@ -319,12 +319,12 @@ Here is the steps of the implemenation:
    ```
 
  4. Use the tap() operator with the *signup* and *login* observable to call *shareAndStoreUserData()*  without affecting the observable return.
-   ```
-    return this.http.post<AuthenticationResponse>(loginUrl,request)
-                    .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse))
-                    ,tap( response => this.shareAndStoreUserData(response))
-                    )
-   ```
+     ```
+      return this.http.post<AuthenticationResponse>(loginUrl,request)
+                      .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse))
+                      ,tap( response => this.shareAndStoreUserData(response))
+                      )
+     ```
 
 ## Store Logged-in User Data
 
