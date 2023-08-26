@@ -248,9 +248,30 @@ In the documentation of the Firebase, you can find the common errors of signup a
     }
    ```
 
+- Set the error message in the component property
+    - add a string property to hold the error message as follows
+    ```
+      errorMsg =''
+    ```
 
+    - add the implementation of the error() function of the observer-that subscribe to the signup and login observables- to set the errorMsg property from the recieved error as follows:
+    ```
+     private handleSignUp(form:NgForm){
+        this.authService.signup(form.value.email,form.value.password).subscribe({
+           next: //
+          ,error: (error) => this.errorMsg = error
+        })
+      }
+    ```
 
-
+    ```
+     private handleLogin(form:NgForm){
+        this.authService.signup(form.value.email,form.value.password).subscribe({
+           next: //
+          ,error: (error) => this.errorMsg = error
+        })
+      }
+    ```
 
 
 
