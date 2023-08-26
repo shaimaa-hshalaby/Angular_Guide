@@ -249,9 +249,9 @@ In the documentation of the Firebase, you can find the common errors of signup a
    ```
 
 - Set the error message in the component property
-    - add a string property to hold the error message as follows
+    - add a string|null property to hold the error message if exists as follows:
     ```
-      errorMsg =''
+      errorMsg:string|null = null
     ```
 
     - add the implementation of the error() function of the observer-that subscribe to the signup and login observables- to set the errorMsg property from the recieved error as follows:
@@ -273,7 +273,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
       }
     ```
 
-
+    - add a <div> to the authentication component template to show the error message if it is exist  
 
 
 
