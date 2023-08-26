@@ -356,44 +356,20 @@ Here is the steps of the implemenation:
       ```
 ## Store Logged-in User Data
 
-1. Create Model class User that holds the data recived from the backend, encapsulate the token and token expiry data as these data will be used to check the validity of the user
-   ```
-    export class User{
-        constructor(public email:string,public id:string
-            ,private _token:string, private _tokenExpirationDate:Date ){}
-    
-        get token(){
-            return this._token
-        }
-    
-        get tokenExpirationDate(){
-            return this._tokenExpirationDate
-        }
-    }
-   ```
 
-2. Use tap() operator with the *signup* and *login* observable to implmenet the user data storage without affecting the observable return.
-   you can use localStorage object to store the user object in the browser localStorage. Here is the implmementation:
+2. you can use localStorage object to store the user object in the browser localStorage. Here is the implmementation:
    ```
-      private storeUserData(response:AuthenticationResponse){
-          let expirationDate = new Date(new Date().getTime() + +response.expiresIn*1000)
-          let userData = new User(response.email,response.localId,response.idToken,expirationDate)
+      private shareAndStoreUserData(response:AuthenticationResponse){
+          // ...
           localStorage.setItem('userData',JSON.stringify({
             email:userData.email,
             id:userData.id,
             token:userData.token,
             tokenExpirationDate:userData.tokenExpirationDate.toString()
           }))
-        }
-
-    login(email:string,password:string){
-         //
-        return this.http.post<AuthenticationResponse>(loginUrl,request)
-                        .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse))
-                        ,tap( response => this.storeUserData(response))
-                        )
-                        
       }
+    > I had to extract data manually from UserData object because the stringify() method stored date with the differnt time zone, So I transformed date to string     > to keep the current time-zone
+  
    ```
    
 
