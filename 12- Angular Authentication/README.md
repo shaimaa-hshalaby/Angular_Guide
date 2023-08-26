@@ -281,8 +281,50 @@ In the documentation of the Firebase, you can find the common errors of signup a
       ```
 
 ## Share the Logged-in userData through the application
-we can use the BehaviourSubject to share the user data through the application as the BehaviourSubject is a subject that represents an observable sequence with a current value. It's commonly used for implementing data sharing and communication between different components, services, or parts of an Angular application.
-One unique feature of a BehaviorSubject is that it keeps track of the most recent value that has been emitted. This allows subscribers to immediately receive the latest value when they subscribe, even if they missed previous emissions. So it will keep track of the userData and emits it to the subscribers even if they missed the prvious emissions 
+-  we can use the *BehaviourSubject* to share the user data through the application.
+-  As the *BehaviourSubject* is a subject that represents an observable sequence with a current value.
+-  It's commonly used for implementing data sharing and communication between different components, services, or parts of an Angular application.
+-  One unique feature of a BehaviorSubject is that it keeps track of the most recent value that has been emitted. This allows subscribers to immediately receive the latest value when they subscribe, even if they missed previous emissions.
+-  So it will keep track of the userData and emits it to the subscribers even if they missed the prvious emissions 
+
+Here is the steps of the implemenation:
+1. Create Model class User that holds the data recived from the backend, encapsulate the token and token expiry data as these data will be used to check the validity of the user
+   ```
+    export class User{
+        constructor(public email:string,public id:string
+            ,private _token:string, private _tokenExpirationDate:Date ){}
+    
+        get token(){
+            return this._token
+        }
+    
+        get tokenExpirationDate(){
+            return this._tokenExpirationDate
+        }
+    }
+   ```
+   
+2. Create a BehaviourSubject in the *AuthenticationService* and pass a null as an intial value indicating that there is no logged-in user yet
+   ```
+     authenticatedUserSubject:BehaviorSubject<User|null> = new BehaviorSubject<User|null>(null)
+   ```
+
+3. Create a private handler method that has the implementation of the user data sharing and storing, then create a user object using the extracted data from the response
+   ```
+     private shareAndStoreUserData(response:AuthenticationResponse){
+        let expirationDate = new Date(new Date().getTime() + +response.expiresIn*1000)
+        let userData = new User(response.email,response.localId,response.idToken,expirationDate)
+        this.authenticatedUserSubject.next(userData)
+     }
+   ```
+
+ 4. Use the tap() operator with the *signup* and *login* observable to call *shareAndStoreUserData()*  without affecting the observable return.
+   ```
+    return this.http.post<AuthenticationResponse>(loginUrl,request)
+                    .pipe(catchError((errorResponse)=>this.handleErrors(errorResponse))
+                    ,tap( response => this.shareAndStoreUserData(response))
+                    )
+   ```
 
 ## Store Logged-in User Data
 
