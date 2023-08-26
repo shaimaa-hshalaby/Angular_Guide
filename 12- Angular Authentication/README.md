@@ -288,6 +288,7 @@ In the documentation of the Firebase, you can find the common errors of signup a
 -  So it will keep track of the userData and emits it to the subscribers even if they missed the prvious emissions 
 
 Here is the steps of the implemenation:
+
 1. Create Model class User that holds the data recived from the backend, encapsulate the token and token expiry data as these data will be used to check the validity of the user
    ```
     export class User{
@@ -326,6 +327,33 @@ Here is the steps of the implemenation:
                       )
      ```
 
+5. subscribe to the BehaviourSubject from the component that will validate the login status of the user, in my case, I have created headerComponent and subscribed to the subject from its ngOnInit() method as follows:
+      ```
+        import { Component, OnInit } from '@angular/core';
+        import { AuthenticationService } from '../services/authentication.service';
+        
+        @Component({
+          selector: 'app-header',
+          templateUrl: './header.component.html',
+          styleUrls: ['./header.component.css']
+        })
+        export class HeaderComponent implements OnInit{
+        
+          isLoggedIn = false
+          constructor(private authService:AuthenticationService){
+        
+          }
+        
+        ngOnInit(): void {
+          this.authService.authenticatedUserSubject.subscribe({
+            next:(user) =>{
+              this.isLoggedIn = (user)?true:false;
+            }
+          })
+        }
+        
+        }
+      ```
 ## Store Logged-in User Data
 
 1. Create Model class User that holds the data recived from the backend, encapsulate the token and token expiry data as these data will be used to check the validity of the user
