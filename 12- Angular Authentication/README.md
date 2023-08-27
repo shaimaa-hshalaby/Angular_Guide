@@ -354,10 +354,12 @@ Here is the steps of the implemenation:
         
         }
       ```
+
+6. use *isLoggedIn* to add or remove any components from the view
+
 ## Store Logged-in User Data
 
-
-2. you can use localStorage object to store the user object in the browser localStorage. Here is the implmementation:
+- you can use localStorage object to store the user object in the browser localStorage. Here is the implmementation:
    ```
       private shareAndStoreUserData(response:AuthenticationResponse){
           // ...
@@ -373,7 +375,7 @@ Here is the steps of the implemenation:
    > I had to extract data manually from UserData object because the stringify() method stored date with the differnt time zone, So I transformed date to 
    > string to keep the current time-zone
   
-
+## 
 
 
 
