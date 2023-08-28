@@ -158,8 +158,8 @@ A component includes:
     |---|---|---|---|
     | OnChanges |	ngOnChanges(changes: SimpleChanges)	| When an input or output binding value changes.| -  This happens frequently, so any operation you perform here impacts performance significantly.<br /> -  If your component has no inputs or you use it without providing any inputs, the framework will not call ngOnChanges(). |
     | OnInit |	ngOnInit	| After the first ngOnChanges.|-   Constructors should do no more than set the initial local variables to simple values.<br />-  An ngOnInit() is a good place for a component to fetch its initial data.|
-    | DoCheck |	ngDoCheck	| Developer's custom change detection.|---|
-    | AfterContentInit |	ngAfterContentInit	| After component content is initialized.|---|
+    | DoCheck |	ngDoCheck	| Developer's custom change detection.|: Angular triggers change detection automatically whenever an event occurs in your application, such as user interactions, asynchronous operations completing, or changes to the data bound to the component|
+    | AfterContentInit |	ngAfterContentInit	| After component content is initialized.|hook is called after the component's content, including projected content, has been initialized but before the view is rendered.|
     | AfterContentChecked | ngAfterContentChecked	| After every check of component content.|---|
     | AfterViewInit	 |	ngAfterViewInit	| After the views of a component are initialized.|---|
     | AfterViewChecked |	ngAfterViewChecked	| After every check of the views of a component.|---|
