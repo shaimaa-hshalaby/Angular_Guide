@@ -1,9 +1,0 @@
-<form (submit)="addHero(id.value,name.value)">
-   Id <input name="id" #id /><br>
-   Name <input name="name" #name /><br>
-   <button>Add</button>
-</form>
-
-<p *ngFor="let hero of heroes">
-    Id: {{hero.id}}, Name: {{hero.name}}
-</p>

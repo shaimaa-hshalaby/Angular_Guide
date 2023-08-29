@@ -1,0 +1,7 @@
+<h3>Parent component</h3>
+<h4>Registered Names</h4>
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+<hr>
+<app-child (newNameAdded)="handleNewNameAdded($event)" ></app-child>
