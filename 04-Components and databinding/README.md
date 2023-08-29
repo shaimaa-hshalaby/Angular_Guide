@@ -208,6 +208,7 @@ Here is an Example of interaction using @Output()
    ```
 
 8. The following GIF illustrated the Output of the Exercise:
+   
    ![Recording 2023-08-29 at 9 39 49 AM](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/47530375-833b-41e9-9b13-c102716992f5)
 
 -----------------------
