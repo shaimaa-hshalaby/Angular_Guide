@@ -176,7 +176,7 @@ Here is an Example of interaction using @Output()
     @Output() newNameAdded = new EventEmitter<string>()
    ```
 
-4. Add a handler to the button that emits the EventEmitter property and sent the added name as an event data, here is the implementation:
+4. Add a handler to the button that emits the EventEmitter property and send the added name as event data, here is the implementation:
    ```
     addNewName(name:string){
       this.newNameAdded.emit(name)
@@ -195,6 +195,21 @@ Here is an Example of interaction using @Output()
         <li *ngFor="let name of names">{{name}}</li>
     </ul>
    ```
+
+7. Add the child component tag to the parent component template with handling to the event emitted from the child component as follows:
+   ```
+    <app-child (newNameAdded)="handleNewNameAdded($event)" ></app-child>
+   ```
+
+   ```
+    handleNewNameAdded(name:string){
+      this.names.push(name)
+    }
+   ```
+
+8. The following GIF illustrated the Output of the Exercise:
+   ![Recording 2023-08-29 at 9 39 49 AM](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/47530375-833b-41e9-9b13-c102716992f5)
+
 -----------------------
 ## View encapsulation
 -    In Angular, a component's styles can be encapsulated within the component's host element so that they don't affect the rest of the application.
