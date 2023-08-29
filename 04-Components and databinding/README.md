@@ -153,6 +153,48 @@ If you need to have control over the injecting property value process to apply a
 -  The property decorated with @Output() should be of the type EventEmitter<T>
 -  EventEmitter<T> is generic, So when you create a property of this type, you should specify the type of data this event is going to carry.
 
+Here is an Example of interaction using @Output()
+
+1. Use Angular CLI to create ParentComponent & ChildComponent using the following commands
+   ```
+    ng g c child
+    ng g c parent
+   ```
+2. add an input and button to the template of the child component, here is the code
+   ```
+      <h3> Child Component </h3>
+      <div>
+          <input type="text" placeholder="enter new name" #name><br>
+          <button (click)="addNewName(name.value)">Add</button>
+      </div>
+   ```
+ 
+   ![image](https://github.com/shaimaa-hshalaby/Angular_Guide/assets/3264417/a9df0ffd-12f2-4d9a-9bfa-f32e13813e70)
+
+3. In the ChildComponent ts class, add a property of type EventEmitter<string> and decorate it with @Output(), you should import @Output decorator from '@angular/core':
+   ```
+    @Output() newNameAdded = new EventEmitter<string>()
+   ```
+
+4. Add a handler to the button that emits the EventEmitter property and sent the added name as an event data, here is the implementation:
+   ```
+    addNewName(name:string){
+      this.newNameAdded.emit(name)
+    }
+   ```
+
+5. In the ParentComponent ts class, add a property of type list of strings to hold all emitted names from the child component
+   ```
+    names:string[] = []
+   ```
+
+6. In the Parent Component html template, add the following code to loop via the names list and print it in an unordered list
+   ```
+    <h4>Registered Names</h4>
+    <ul>
+        <li *ngFor="let name of names">{{name}}</li>
+    </ul>
+   ```
 -----------------------
 ## View encapsulation
 -    In Angular, a component's styles can be encapsulated within the component's host element so that they don't affect the rest of the application.
