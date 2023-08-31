@@ -114,7 +114,7 @@ The **patchValue()** method is used to update the values of one or more form con
 the reset() method in Angular is used to reset the form back to its initial state. It clears all the form controls and resets their values to their initial values. Here is an example
 
 ```
-  (click)="form.reset()"
+  (click)="form.resetForm()"
 ```
 
 ----------------
